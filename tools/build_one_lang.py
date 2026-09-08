@@ -175,6 +175,17 @@ def main() -> int:
         print(f"[{code}] {min(start + batch_size, len(pending))}/{len(pending)}", flush=True)
         time.sleep(0.12)
 
+    # Some built-in RU strings contain literal percent sequences that look like
+    # printf tokens although the canonical English key does not. Never let a
+    # generated pack introduce/remove placeholders: fall back to the canonical
+    # source for only those rare dynamic entries.
+    sanitized = 0
+    for source in all_sources:
+        value = output.get(source)
+        if isinstance(value, str) and PLACEHOLDER_RE.findall(source) != PLACEHOLDER_RE.findall(value):
+            output[source] = source
+            sanitized += 1
+
     missing = [source for source in all_sources if source not in output]
     if missing:
         raise RuntimeError(f"{code}: {len(missing)} missing strings")
@@ -187,7 +198,7 @@ def main() -> int:
     LOCALES.mkdir(parents=True, exist_ok=True)
     path = LOCALES / f"{code}.json"
     path.write_text(json.dumps(output, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"Wrote {path.relative_to(ROOT)}: {len(output)} entries, unchanged={len(unchanged)}", flush=True)
+    print(f"Wrote {path.relative_to(ROOT)}: {len(output)} entries, unchanged={len(unchanged)}, sanitized={sanitized}", flush=True)
     return 0
 
 
