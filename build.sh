@@ -27,15 +27,16 @@ CLANG="$(xcrun --sdk iphoneos --find clang)"
   -framework Foundation \
   -framework UIKit \
   -Wl,-dead_strip \
-  -Wl,-install_name,@rpath/WhiteGramMultiLang-iKiraPlus.dylib \
+  -Wl,-install_name,@rpath/LanguageWhitegram-ikiraplus.dylib \
   "$ROOT/Sources/Tweak.m" \
   "$ROOT/Sources/WGTranslations.m" \
+  "$ROOT/Sources/WGLanguageOverlay.m" \
   -I"$ROOT/Sources" \
-  -o "$BUILD_DIR/WhiteGramMultiLang-iKiraPlus.dylib"
+  -o "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 
-codesign --force --sign - "$BUILD_DIR/WhiteGramMultiLang-iKiraPlus.dylib"
+codesign --force --sign - "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 
-file "$BUILD_DIR/WhiteGramMultiLang-iKiraPlus.dylib"
-otool -L "$BUILD_DIR/WhiteGramMultiLang-iKiraPlus.dylib"
+file "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
+otool -L "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 
-echo "Built: $BUILD_DIR/WhiteGramMultiLang-iKiraPlus.dylib"
+echo "Built: $BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
