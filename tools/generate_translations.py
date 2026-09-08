@@ -21,10 +21,26 @@ def objc_escape(value: str) -> str:
 
 
 def emit_dict(lines: list[str], fn: str, data: dict[str, str]) -> None:
-    lines += [f"static NSDictionary<NSString *, NSString *> *{fn}(void) {{", "    return @{"]
+    # Runtime performance is important here. These dictionaries can contain
+    # hundreds/thousands of entries and the translation hooks run very often.
+    # Build each dictionary once instead of recreating an NSDictionary literal
+    # for every label/attributed-string lookup.
+    lines += [
+        f"static NSDictionary<NSString *, NSString *> *{fn}(void) {{",
+        "    static NSDictionary<NSString *, NSString *> *table;",
+        "    static dispatch_once_t onceToken;",
+        "    dispatch_once(&onceToken, ^{",
+        "        table = @{",
+    ]
     for source, target in sorted(data.items(), key=lambda item: item[0].casefold()):
-        lines.append(f'        @"{objc_escape(source)}": @"{objc_escape(target)}",')
-    lines += ["    };", "}", ""]
+        lines.append(f'            @"{objc_escape(source)}": @"{objc_escape(target)}",')
+    lines += [
+        "        };",
+        "    });",
+        "    return table;",
+        "}",
+        "",
+    ]
 
 
 def main() -> None:
@@ -47,11 +63,9 @@ def main() -> None:
             if isinstance(key, str) and key and key not in aliases:
                 aliases[key] = en
 
-    # Important for a runtime dylib: one hook may receive text that another hook
-    # has already localized. Map every generated target string back to the same
-    # canonical English key, so switching ar -> es, fa -> fr, etc. works even if
-    # Whitegram/Texture reuses a previously localized string in the construction
-    # path. Device/app locale no longer matters to the lookup chain.
+    # Map every generated target back to canonical English. This lets a string
+    # that was already localized by an earlier construction path be converted
+    # correctly after switching to another Whitegram language.
     for table in locales.values():
         for source, target in table.items():
             if not isinstance(source, str) or not source or not isinstance(target, str) or not target:
