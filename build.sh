@@ -11,9 +11,8 @@ python3 "$ROOT/tools/verify_runtime_safety.py"
 python3 "$ROOT/tools/generate_translations.py"
 python3 "$ROOT/tools/generate_known_strings.py"
 
-# Runtime-performance patching.
-# Keep the working translation engine and gestures, but remove the expensive
-# global/repeating work that made Telegram Settings and Whitegram feel heavy.
+# Minimal runtime build. Old overlay/root/offline translation layers are kept in
+# the repository for reference but are intentionally not linked into the dylib.
 python3 - "$ROOT" "$PATCH_DIR" <<'PY'
 from pathlib import Path
 import sys
@@ -21,92 +20,100 @@ import sys
 root = Path(sys.argv[1])
 out = Path(sys.argv[2])
 
-names = [
-    "WGLanguageOverlay.m",
-    "WGWindowLanguageGestures.m",
-    "WGTwoFingerHoldGesture.m",
-]
 
-for name in names:
-    text = (root / "Sources" / name).read_text(encoding="utf-8")
+def replace_function(text: str, signature: str, replacement: str) -> str:
+    start = text.find(signature)
+    if start < 0:
+        raise SystemExit(f"function signature not found: {signature}")
+    brace = text.find('{', start)
+    if brace < 0:
+        raise SystemExit(f"opening brace not found: {signature}")
+    depth = 0
+    for i in range(brace, len(text)):
+        ch = text[i]
+        if ch == '{':
+            depth += 1
+        elif ch == '}':
+            depth -= 1
+            if depth == 0:
+                return text[:start] + replacement + text[i + 1:]
+    raise SystemExit(f"closing brace not found: {signature}")
 
-    # Keep branding directly in the language sheets; no global UIAlert swizzle.
-    text = text.replace(
-        'message:@"Whitegram Features Language"',
-        'message:@"Whitegram Features Language\\nTelegram : @ikiraplus"'
-    )
+# Translation lookup fast path: cache selected language and lowercase tables.
+translations = (root / "Sources" / "WGTranslations.m").read_text(encoding="utf-8")
+translations = translations.replace(
+    'static NSString *const WGMLSelectionKey = @"WGMultiLanguageSelection";\n',
+    'static NSString *const WGMLSelectionKey = @"WGMultiLanguageSelection";\n'
+    'static NSString *WGMLCachedLanguageCode = nil;\n'
+)
+translations = replace_function(
+    translations,
+    'NSString *WGCustomLanguageCode(void)',
+    '''NSString *WGCustomLanguageCode(void) {
+    @synchronized(NSUserDefaults.standardUserDefaults) {
+        if (WGMLCachedLanguageCode.length > 0) return WGMLCachedLanguageCode;
+        NSString *stored = [NSUserDefaults.standardUserDefaults stringForKey:WGMLSelectionKey];
+        WGMLCachedLanguageCode = (stored.length > 0 && ![stored isEqualToString:@"builtin"])
+            ? [stored.lowercaseString copy] : @"ar";
+        return WGMLCachedLanguageCode;
+    }
+}'''
+)
+translations = replace_function(
+    translations,
+    'void WGSetCustomLanguageCode(NSString *languageCode)',
+    '''void WGSetCustomLanguageCode(NSString *languageCode) {
+    NSString *code = languageCode.length > 0 ? languageCode.lowercaseString : @"ar";
+    @synchronized(NSUserDefaults.standardUserDefaults) {
+        WGMLCachedLanguageCode = [code copy];
+        [NSUserDefaults.standardUserDefaults setObject:code forKey:WGMLSelectionKey];
+    }
+}'''
+)
+translations = replace_function(
+    translations,
+    'static NSDictionary<NSString *, NSString *> *WGLowercaseTranslationTable(void)',
+    '''static NSDictionary<NSString *, NSString *> *WGLowercaseTranslationTable(void) {
+    static NSMutableDictionary<NSString *, NSDictionary<NSString *, NSString *> *> *tablesByCode;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{ tablesByCode = [NSMutableDictionary dictionary]; });
 
-    if name == "WGLanguageOverlay.m":
-        # Gesture-only: never instantiate the legacy globe button.
-        text = text.replace(
-            '    WGInstallLanguageButtonIfNeeded(controller);\n',
-            '    /* Gesture-only language access: visible language button disabled. */\n'
-        )
+    NSString *code = WGCustomLanguageCode() ?: @"ar";
+    @synchronized(tablesByCode) {
+        NSDictionary<NSString *, NSString *> *cached = tablesByCode[code];
+        if (cached) return cached;
+        NSMutableDictionary<NSString *, NSString *> *result = [NSMutableDictionary dictionary];
+        [WGTranslationTable() enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+            (void)stop;
+            NSString *lower = key.lowercaseString;
+            if (!result[lower]) result[lower] = value;
+        }];
+        cached = [result copy];
+        tablesByCode[code] = cached;
+        return cached;
+    }
+}'''
+)
+(out / "WGTranslations.m").write_text(translations, encoding="utf-8")
 
-        # The old 0.65s heartbeat recursively rescanned up to thousands of views.
-        # Translation still runs on entry plus delayed refreshes and cache events.
-        text = text.replace(
-            '    WGScheduleHeartbeat();\n',
-            '    /* Continuous translation heartbeat disabled for performance. */\n'
-        )
+# Keep one translation hook layer. No viewDidAppear full-window scan and no old
+# Whitegram built-in language-picker retry. Global setters use exact lookups only.
+tweak = (root / "Sources" / "Tweak.m").read_text(encoding="utf-8")
+tweak = tweak.replace('WGTranslateString(', 'WGTranslateStringExact(')
+tweak = tweak.replace('WGTranslateAttributedString(', 'WGTranslateAttributedStringExact(')
+tweak = tweak.replace(
+    '        WGSwizzle(UIViewController.class, @selector(viewDidAppear:), @selector(wg_nf_viewDidAppear:));\n',
+    '        /* Global viewDidAppear scan disabled. */\n'
+)
+tweak = tweak.replace('            WGInstallWhitegramLanguagePickerHookWithRetry(0);\n', '')
+tweak = tweak.replace('            WGScheduleSafeUIKitScan(0.30);\n', '')
+(out / "Tweak.m").write_text(tweak, encoding="utf-8")
 
-    elif name == "WGWindowLanguageGestures.m":
-        # The language button is no longer created, so recursive globe purges are
-        # unnecessary. Avoid scanning the whole UIWindow on install/gesture.
-        text = text.replace('    WGWindowRemoveGlobes(self.window);\n', '')
-        text = text.replace('    WGWindowRemoveGlobes(window);\n', '')
-
-        old_scheduler = '''static void WGWindowScheduleInstaller(void) {
-    if (WGWindowGestureInstallerScheduled) return;
-    WGWindowGestureInstallerScheduled = YES;
-
-    __block NSUInteger remaining = 80; // ~24 seconds covers slow scene/controller creation.
-    __block void (^tick)(void) = nil;
-    tick = ^{
-        WGWindowInstallEverywhere();
-        if (remaining-- == 0) {
-            WGWindowGestureInstallerScheduled = NO;
-            return;
-        }
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.30 * NSEC_PER_SEC)), dispatch_get_main_queue(), tick);
-    };
-    dispatch_async(dispatch_get_main_queue(), tick);
-}
-'''
-        new_scheduler = '''static void WGWindowScheduleInstaller(void) {
-    // Three short installation attempts are enough for scene creation and avoid
-    // the previous 80 passes / ~24 seconds of repeated UIWindow traversal.
-    WGWindowInstallEverywhere();
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)),
-                   dispatch_get_main_queue(), ^{ WGWindowInstallEverywhere(); });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.10 * NSEC_PER_SEC)),
-                   dispatch_get_main_queue(), ^{ WGWindowInstallEverywhere(); });
-}
-'''
-        if old_scheduler not in text:
-            raise SystemExit("expected old window installer scheduler not found")
-        text = text.replace(old_scheduler, new_scheduler)
-
-    (out / name).write_text(text, encoding="utf-8")
-
-patched_overlay = (out / "WGLanguageOverlay.m").read_text(encoding="utf-8")
-patched_window = (out / "WGWindowLanguageGestures.m").read_text(encoding="utf-8")
-
-if "WGInstallLanguageButtonIfNeeded(controller);" in patched_overlay:
-    raise SystemExit("legacy language-button call still present")
-if "    WGScheduleHeartbeat();" in patched_overlay:
-    raise SystemExit("continuous heartbeat call still present")
-if "remaining = 80" in patched_window:
-    raise SystemExit("old 24-second gesture polling still present")
-if "WGWindowRemoveGlobes(self.window);" in patched_window or "WGWindowRemoveGlobes(window);" in patched_window:
-    raise SystemExit("window-wide globe purge call still present")
-
-for name in names:
-    text = (out / name).read_text(encoding="utf-8")
-    if "Whitegram Features Language\\nTelegram : @ikiraplus" not in text:
-        raise SystemExit(f"branding line missing from patched {name}")
-
-print("Prepared performance-optimized gesture-only language sources")
+if 'WGSwizzle(UIViewController.class, @selector(viewDidAppear:)' in tweak:
+    raise SystemExit('global viewDidAppear scan hook is still enabled')
+if 'static NSString *WGMLCachedLanguageCode' not in translations or 'tablesByCode' not in translations:
+    raise SystemExit('translation caches were not applied')
+print('Prepared minimal fast runtime sources')
 PY
 
 SDK_PATH="$(xcrun --sdk iphoneos --show-sdk-path)"
@@ -128,19 +135,33 @@ CLANG="$(xcrun --sdk iphoneos --find clang)"
   -framework UIKit \
   -Wl,-dead_strip \
   -Wl,-install_name,@rpath/LanguageWhitegram-ikiraplus.dylib \
-  "$ROOT/Sources/Tweak.m" \
-  "$ROOT/Sources/WGTranslations.m" \
-  "$PATCH_DIR/WGLanguageOverlay.m" \
-  "$PATCH_DIR/WGWindowLanguageGestures.m" \
-  "$PATCH_DIR/WGTwoFingerHoldGesture.m" \
-  "$ROOT/Sources/WGRootTextureFixCompile.m" \
-  "$ROOT/Sources/WGOfflineLanguageFix.m" \
+  "$PATCH_DIR/Tweak.m" \
+  "$PATCH_DIR/WGTranslations.m" \
+  "$ROOT/Sources/WGLanguageGesturesLite.m" \
   -I"$ROOT/Sources" \
   -o "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 
 codesign --force --sign - "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 
-file "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
-otool -L "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
+BIN="$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
+STRINGS_FILE="$BUILD_DIR/runtime-strings.txt"
+strings "$BIN" > "$STRINGS_FILE"
 
-echo "Built: $BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
+# These markers belong only to obsolete globe/duplicate-hook implementations.
+for forbidden in \
+  'iKiraPlus.WhitegramLanguages' \
+  'WGRTFProbe' \
+  'WGOfflineProbe' \
+  'WhitegramLanguages.PhysicalRight'; do
+  if grep -Fq "$forbidden" "$STRINGS_FILE"; then
+    echo "Forbidden legacy runtime marker found: $forbidden" >&2
+    exit 1
+  fi
+done
+
+grep -Fq 'Telegram : @ikiraplus' "$STRINGS_FILE"
+grep -Fq 'Whitegram Features Language' "$STRINGS_FILE"
+
+file "$BIN"
+otool -L "$BIN"
+echo "Built minimal runtime: $BIN"
