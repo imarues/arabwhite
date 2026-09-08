@@ -1,4 +1,4 @@
-name: Build Whitegram MultiLang Dylib
+name: Build LanguageWhitegram Dylib
 
 on:
   workflow_dispatch:
@@ -53,21 +53,21 @@ jobs:
 
       - name: Inspect device output
         run: |
-          file build/WhiteGramMultiLang-iKiraPlus.dylib
-          otool -hv build/WhiteGramMultiLang-iKiraPlus.dylib
-          otool -L build/WhiteGramMultiLang-iKiraPlus.dylib
-          lipo -info build/WhiteGramMultiLang-iKiraPlus.dylib
-          codesign -dv --verbose=4 build/WhiteGramMultiLang-iKiraPlus.dylib 2>&1 || true
-          shasum -a 256 build/WhiteGramMultiLang-iKiraPlus.dylib | tee build/SHA256.txt
+          file build/LanguageWhitegram-ikiraplus.dylib
+          otool -hv build/LanguageWhitegram-ikiraplus.dylib
+          otool -L build/LanguageWhitegram-ikiraplus.dylib
+          lipo -info build/LanguageWhitegram-ikiraplus.dylib
+          codesign -dv --verbose=4 build/LanguageWhitegram-ikiraplus.dylib 2>&1 || true
+          shasum -a 256 build/LanguageWhitegram-ikiraplus.dylib | tee build/SHA256.txt
           cp coverage-report.txt build/coverage-report.txt
           cp data/source_build.json build/source_build.json
 
       - name: Upload dylib
         uses: actions/upload-artifact@v4
         with:
-          name: WhiteGramMultiLang-iKiraPlus-build70
+          name: LanguageWhitegram-ikiraplus-build70
           path: |
-            build/WhiteGramMultiLang-iKiraPlus.dylib
+            build/LanguageWhitegram-ikiraplus.dylib
             build/SHA256.txt
             build/coverage-report.txt
             build/source_build.json
