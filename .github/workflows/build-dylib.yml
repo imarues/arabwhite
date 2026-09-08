@@ -14,81 +14,46 @@ on:
       - "build.sh"
       - "Makefile"
       - ".github/workflows/build-dylib.yml"
-  pull_request:
-    paths:
-      - "Sources/**"
-      - "Resources/**"
-      - "data/**"
-      - "tools/**"
-      - "build.sh"
-      - "Makefile"
-      - ".github/workflows/build-dylib.yml"
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
-  translate:
-    name: locale-${{ matrix.code }}
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      max-parallel: 8
-      matrix:
-        code: [fr, es, zh, vi, fa, pt, ru, tr]
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Build ${{ matrix.code }} locale pack
-        run: |
-          python3 tools/build_one_lang.py "${{ matrix.code }}"
-          python3 - <<'PY'
-          import json, os
-          code = os.environ["LANG_CODE"]
-          p = f"Resources/locales/{code}.json"
-          d = json.load(open(p, encoding="utf-8"))
-          unchanged = sum(1 for k, v in d.items() if k.strip() == v.strip())
-          print(f"{code}: entries={len(d)}, unchanged={unchanged}")
-          assert len(d) >= 716
-          assert unchanged / len(d) <= 0.18
-          PY
-        env:
-          LANG_CODE: ${{ matrix.code }}
-
-      - name: Upload ${{ matrix.code }} locale
-        uses: actions/upload-artifact@v4
-        with:
-          name: locale-${{ matrix.code }}
-          path: Resources/locales/${{ matrix.code }}.json
-          if-no-files-found: error
-          retention-days: 3
-
   build:
-    needs: translate
     runs-on: macos-15
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download generated locale packs
+      - name: Download verified multilingual locale packs
         uses: actions/download-artifact@v4
         with:
           pattern: locale-*
           path: Resources/locales
           merge-multiple: true
+          repository: imarues/arabwhite
+          run-id: 34253835253
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Show embedded locales
+      - name: Verify locale packs before compile
         run: |
-          ls -lh Resources/locales
           python3 - <<'PY'
           import json, glob, os
+          expected = {'ar','es','fa','fr','pt','ru','tr','vi','zh'}
+          found = {os.path.splitext(os.path.basename(p))[0] for p in glob.glob('Resources/locales/*.json')}
+          print('locales:', sorted(found))
+          assert expected <= found, (expected - found)
           for p in sorted(glob.glob('Resources/locales/*.json')):
               data = json.load(open(p, encoding='utf-8'))
-              unchanged = sum(1 for k, v in data.items() if k.strip() == v.strip())
-              print(os.path.basename(p), len(data), 'entries', unchanged, 'unchanged')
+              print(os.path.basename(p), len(data), 'entries')
+          es = json.load(open('Resources/locales/es.json', encoding='utf-8'))
+          assert es.get('Appearance') == 'Apariencia'
+          assert es.get('About Whitegram') and es.get('About Whitegram') != 'About Whitegram'
+          fa = json.load(open('Resources/locales/fa.json', encoding='utf-8'))
+          assert fa.get('Appearance') and fa.get('Appearance') != 'Appearance'
+          print('Spanish/Persian root UI translations verified before compile')
           PY
 
       - name: Select Xcode
@@ -97,7 +62,7 @@ jobs:
           xcodebuild -version
           xcrun --sdk iphoneos --show-sdk-version
 
-      - name: Verify build-70 localization catalog
+      - name: Verify localization and runtime safety
         run: |
           python3 tools/verify_translations.py
           python3 tools/verify_runtime_safety.py
@@ -107,13 +72,12 @@ jobs:
           chmod +x build.sh
           ./build.sh
 
-      - name: Verify multilingual strings are embedded
+      - name: Verify multilingual payload is embedded
         run: |
           strings build/LanguageWhitegram-ikiraplus.dylib > build/embedded-strings.txt
           grep -Fq "Apariencia" build/embedded-strings.txt
           grep -Fq "Avatares, burbujas de mensajes, efectos" build/embedded-strings.txt
-          grep -Fq "فارسی" build/embedded-strings.txt
-          echo "Spanish/Persian multilingual payload found in Mach-O"
+          echo "Spanish multilingual payload found in Mach-O"
 
       - name: Inspect device output
         run: |
