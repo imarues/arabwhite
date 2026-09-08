@@ -37,6 +37,8 @@ CLANG="$(xcrun --sdk iphoneos --find clang)"
   "$ROOT/Sources/WGTwoFingerHoldGesture.m" \
   "$ROOT/Sources/WGRootTextureFixCompile.m" \
   "$ROOT/Sources/WGOfflineLanguageFix.m" \
+  "$ROOT/Sources/WGLanguageMenuBranding.m" \
+  "$ROOT/Sources/WGNoLanguageIconGuard.m" \
   -I"$ROOT/Sources" \
   -o "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 
