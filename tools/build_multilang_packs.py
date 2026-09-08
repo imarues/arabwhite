@@ -6,6 +6,7 @@ import re
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -64,7 +65,7 @@ def google_translate(text: str, target: str) -> str:
         },
         method="POST",
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
+    with urllib.request.urlopen(request, timeout=25) as response:
         payload = json.loads(response.read().decode("utf-8"))
     if not isinstance(payload, list) or not payload or not isinstance(payload[0], list):
         raise RuntimeError("unexpected Google Translate response")
@@ -98,18 +99,17 @@ def translate_batch(batch: list[tuple[int, str]], target: str) -> dict[int, str]
         end = matches[pos + 1].start() if pos + 1 < len(matches) else len(translated_blob)
         value = translated_blob[start:end].strip(" \t\r\n:-")
         placeholders = protected[index][1]
-        value = unprotect(value, placeholders)
-        result[index] = value
+        result[index] = unprotect(value, placeholders)
     return result
 
 
-def translate_one(index: int, source: str, target: str) -> str:
+def translate_one(source: str, target: str) -> str:
     safe, placeholders = protect(source)
     translated = google_translate(safe, target)
     return unprotect(translated, placeholders)
 
 
-def build_language(code: str, target: str, sources: list[str]) -> dict[str, str]:
+def build_language(code: str, target: str, sources: list[str]) -> tuple[str, dict[str, str]]:
     output: dict[str, str] = {}
     batch_size = 28
     for start in range(0, len(sources), batch_size):
@@ -124,17 +124,17 @@ def build_language(code: str, target: str, sources: list[str]) -> dict[str, str]
                 break
             except Exception as exc:
                 last_error = exc
-                time.sleep(0.6 * (attempt + 1))
+                time.sleep(0.35 * (attempt + 1))
 
         if translated is None:
-            print(f"[{code}] batch {start}-{start + len(batch_sources) - 1} fallback: {last_error}")
+            print(f"[{code}] batch {start}-{start + len(batch_sources) - 1} fallback: {last_error}", flush=True)
             translated = {}
             for index, source in batch:
                 try:
-                    translated[index] = translate_one(index, source, target)
-                    time.sleep(0.08)
+                    translated[index] = translate_one(source, target)
+                    time.sleep(0.04)
                 except Exception as exc:
-                    print(f"[{code}] keeping source for {index}: {exc}")
+                    print(f"[{code}] keeping source for {index}: {exc}", flush=True)
                     translated[index] = source
 
         for index, source in batch:
@@ -142,14 +142,14 @@ def build_language(code: str, target: str, sources: list[str]) -> dict[str, str]
             if not value:
                 value = source
             if PLACEHOLDER_RE.findall(source) != PLACEHOLDER_RE.findall(value):
-                print(f"[{code}] placeholder guard kept source: {source!r}")
+                print(f"[{code}] placeholder guard kept source: {source!r}", flush=True)
                 value = source
             output[source] = value
 
-        print(f"[{code}] {min(start + batch_size, len(sources))}/{len(sources)}")
-        time.sleep(0.12)
+        print(f"[{code}] {min(start + batch_size, len(sources))}/{len(sources)}", flush=True)
+        time.sleep(0.05)
 
-    return output
+    return code, output
 
 
 def main() -> None:
@@ -158,12 +158,26 @@ def main() -> None:
         raise ValueError("invalid current string catalog")
 
     LOCALES.mkdir(parents=True, exist_ok=True)
-    for code, target in LANGUAGES.items():
+    completed: dict[str, dict[str, str]] = {}
+
+    # Four workers keeps build time reasonable while avoiding a burst of hundreds
+    # of concurrent requests from the GitHub runner.
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        futures = {
+            executor.submit(build_language, code, target, sources): code
+            for code, target in LANGUAGES.items()
+        }
+        for future in as_completed(futures):
+            code, table = future.result()
+            completed[code] = table
+
+    for code in sorted(completed):
         path = LOCALES / f"{code}.json"
-        print(f"Building {code} -> {target}")
-        table = build_language(code, target, sources)
-        path.write_text(json.dumps(table, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-        print(f"Wrote {path.relative_to(ROOT)} ({len(table)} entries)")
+        path.write_text(
+            json.dumps(completed[code], ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        print(f"Wrote {path.relative_to(ROOT)} ({len(completed[code])} entries)", flush=True)
 
 
 if __name__ == "__main__":
