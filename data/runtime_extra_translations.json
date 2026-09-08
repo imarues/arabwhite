@@ -1,0 +1,68 @@
+{
+  "Lets you scan received files with VirusTotal from the message menu. Requires your own API key.": {
+    "ar": "يتيح لك فحص الملفات المستلمة عبر VirusTotal من قائمة الرسالة. يتطلب مفتاح API خاصًا بك.",
+    "fr": "Permet d’analyser les fichiers reçus avec VirusTotal depuis le menu du message. Nécessite votre propre clé API.",
+    "es": "Te permite analizar los archivos recibidos con VirusTotal desde el menú del mensaje. Requiere tu propia clave API.",
+    "zh": "允许你从消息菜单使用 VirusTotal 扫描收到的文件。需要你自己的 API 密钥。",
+    "vi": "Cho phép bạn quét các tệp đã nhận bằng VirusTotal từ menu tin nhắn. Yêu cầu khóa API riêng của bạn.",
+    "fa": "به شما امکان می‌دهد فایل‌های دریافتی را از منوی پیام با VirusTotal اسکن کنید. به کلید API شخصی خود نیاز دارید.",
+    "pt": "Permite verificar os arquivos recebidos com o VirusTotal a partir do menu da mensagem. Requer a sua própria chave de API.",
+    "ru": "Позволяет сканировать полученные файлы через VirusTotal из меню сообщения. Требуется собственный API-ключ.",
+    "tr": "Alınan dosyaları mesaj menüsünden VirusTotal ile taramanızı sağlar. Kendi API anahtarınız gereklidir."
+  },
+  "Your VirusTotal API key — file scanning does not work without it.": {
+    "ar": "مفتاح VirusTotal API الخاص بك — لن يعمل فحص الملفات من دونه.",
+    "fr": "Votre clé API VirusTotal — l’analyse des fichiers ne fonctionne pas sans elle.",
+    "es": "Tu clave API de VirusTotal — el análisis de archivos no funciona sin ella.",
+    "zh": "你的 VirusTotal API 密钥——没有它，文件扫描将无法工作。",
+    "vi": "Khóa API VirusTotal của bạn — tính năng quét tệp sẽ không hoạt động nếu thiếu khóa này.",
+    "fa": "کلید API سرویس VirusTotal شما — بدون آن اسکن فایل‌ها کار نمی‌کند.",
+    "pt": "Sua chave de API do VirusTotal — a verificação de arquivos não funciona sem ela.",
+    "ru": "Ваш API-ключ VirusTotal — без него сканирование файлов не работает.",
+    "tr": "VirusTotal API anahtarınız — bu olmadan dosya tarama çalışmaz."
+  },
+  "Video wallpaper across the interface: Not Selected": {
+    "ar": "خلفية فيديو في كامل الواجهة: غير محددة",
+    "fr": "Fond d’écran vidéo dans toute l’interface : non sélectionné",
+    "es": "Fondo de video en toda la interfaz: no seleccionado",
+    "zh": "整个界面的视频壁纸：未选择",
+    "vi": "Hình nền video trên toàn giao diện: Chưa chọn",
+    "fa": "پس‌زمینه ویدیویی در سراسر رابط: انتخاب نشده",
+    "pt": "Papel de parede em vídeo em toda a interface: não selecionado",
+    "ru": "Видеообои во всём интерфейсе: не выбрано",
+    "tr": "Arayüz genelinde video duvar kağıdı: Seçilmedi"
+  },
+  "Video wallpaper across the interface": {
+    "ar": "خلفية فيديو في كامل الواجهة",
+    "fr": "Fond d’écran vidéo dans toute l’interface",
+    "es": "Fondo de video en toda la interfaz",
+    "zh": "整个界面的视频壁纸",
+    "vi": "Hình nền video trên toàn giao diện",
+    "fa": "پس‌زمینه ویدیویی در سراسر رابط",
+    "pt": "Papel de parede em vídeo em toda a interface",
+    "ru": "Видеообои во всём интерфейсе",
+    "tr": "Arayüz genelinde video duvar kağıdı"
+  },
+  "Not Selected": {
+    "ar": "غير محدد",
+    "fr": "Non sélectionné",
+    "es": "No seleccionado",
+    "zh": "未选择",
+    "vi": "Chưa chọn",
+    "fa": "انتخاب نشده",
+    "pt": "Não selecionado",
+    "ru": "Не выбрано",
+    "tr": "Seçilmedi"
+  },
+  "Shrinks avatars and paddings in the chat list so more chats fit on screen. Not compatible with the new chat list style.": {
+    "ar": "يقلّل حجم الصور الشخصية والمسافات في قائمة المحادثات لعرض محادثات أكثر على الشاشة. غير متوافق مع نمط قائمة المحادثات الجديد.",
+    "fr": "Réduit la taille des avatars et les espacements dans la liste des discussions afin d’afficher davantage de conversations à l’écran. Non compatible avec le nouveau style de liste des discussions.",
+    "es": "Reduce los avatares y los espacios en la lista de chats para que quepan más conversaciones en pantalla. No es compatible con el nuevo estilo de lista de chats.",
+    "zh": "缩小聊天列表中的头像和间距，以便屏幕上显示更多聊天。与新的聊天列表样式不兼容。",
+    "vi": "Thu nhỏ ảnh đại diện và khoảng cách trong danh sách trò chuyện để hiển thị được nhiều cuộc trò chuyện hơn trên màn hình. Không tương thích với kiểu danh sách trò chuyện mới.",
+    "fa": "آواتارها و فاصله‌ها را در فهرست گفتگو کوچک‌تر می‌کند تا گفتگوهای بیشتری روی صفحه جا شوند. با سبک جدید فهرست گفتگو سازگار نیست.",
+    "pt": "Reduz os avatares e os espaçamentos na lista de chats para que mais conversas caibam na tela. Não é compatível com o novo estilo da lista de chats.",
+    "ru": "Уменьшает аватары и отступы в списке чатов, чтобы на экране помещалось больше чатов. Несовместимо с новым стилем списка чатов.",
+    "tr": "Sohbet listesinde daha fazla sohbetin ekrana sığması için avatarları ve boşlukları küçültür. Yeni sohbet listesi stiliyle uyumlu değildir."
+  }
+}
