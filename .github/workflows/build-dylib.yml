@@ -1,0 +1,75 @@
+name: Build Whitegram MultiLang Dylib
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "Sources/**"
+      - "Resources/**"
+      - "data/**"
+      - "tools/**"
+      - "build.sh"
+      - "Makefile"
+      - ".github/workflows/build-dylib.yml"
+  pull_request:
+    paths:
+      - "Sources/**"
+      - "Resources/**"
+      - "data/**"
+      - "tools/**"
+      - "build.sh"
+      - "Makefile"
+      - ".github/workflows/build-dylib.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+
+      - name: Verify build-70 localization catalog
+        run: |
+          python3 tools/verify_translations.py
+          python3 tools/verify_runtime_safety.py
+
+      - name: Build arm64 device dylib
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Inspect device output
+        run: |
+          file build/WhiteGramMultiLang-iKiraPlus.dylib
+          otool -hv build/WhiteGramMultiLang-iKiraPlus.dylib
+          otool -L build/WhiteGramMultiLang-iKiraPlus.dylib
+          lipo -info build/WhiteGramMultiLang-iKiraPlus.dylib
+          codesign -dv --verbose=4 build/WhiteGramMultiLang-iKiraPlus.dylib 2>&1 || true
+          shasum -a 256 build/WhiteGramMultiLang-iKiraPlus.dylib | tee build/SHA256.txt
+          cp coverage-report.txt build/coverage-report.txt
+          cp data/source_build.json build/source_build.json
+
+      - name: Upload dylib
+        uses: actions/upload-artifact@v4
+        with:
+          name: WhiteGramMultiLang-iKiraPlus-build70
+          path: |
+            build/WhiteGramMultiLang-iKiraPlus.dylib
+            build/SHA256.txt
+            build/coverage-report.txt
+            build/source_build.json
+          if-no-files-found: error
+          retention-days: 30
