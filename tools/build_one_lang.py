@@ -84,6 +84,7 @@ def google_translate(text: str, target: str) -> str:
 
 def translate_batch(items: list[tuple[int, str]], target: str) -> dict[int, str]:
     protected: dict[int, tuple[str, list[str]]] = {}
+    original_by_index = {index: source for index, source in items}
     lines: list[str] = []
     for index, source in items:
         safe, placeholders = protect(source)
@@ -103,7 +104,7 @@ def translate_batch(items: list[tuple[int, str]], target: str) -> dict[int, str]
         value = translated_blob[start:end].strip(" \t\r\n:-")
         placeholders = protected[index][1]
         value = unprotect(value, placeholders)
-        if PLACEHOLDER_RE.findall(items[[x[0] for x in items].index(index)][1]) != PLACEHOLDER_RE.findall(value):
+        if PLACEHOLDER_RE.findall(original_by_index[index]) != PLACEHOLDER_RE.findall(value):
             raise RuntimeError(f"placeholder mismatch for index {index}")
         result[index] = value
     return result
@@ -145,16 +146,21 @@ def main() -> int:
 
     output: dict[str, str] = {}
 
-    # Russian is already shipped by Whitegram. Reuse the exact build-70 RU/EN
-    # triples for the main catalog, then translate only root strings not present
-    # in those triples. This is faster and more accurate than machine translating
-    # all Russian strings again.
+    # Russian is already shipped by Whitegram. Reuse exact RU/EN build-70 pairs.
     if code == "ru":
         triples = json.loads(TRIPLES.read_text(encoding="utf-8"))
         for item in triples:
             en, ru = item.get("en"), item.get("ru")
             if isinstance(en, str) and en and isinstance(ru, str) and ru:
                 output[en] = ru
+
+    # A tiny number of dynamic format strings are deliberately kept canonical.
+    # Google sometimes mutates Objective-C printf placeholders (especially for
+    # Chinese/Vietnamese), which is worse than leaving only that dynamic line in
+    # English. All static labels/descriptions are still fully localized offline.
+    for source in all_sources:
+        if PLACEHOLDER_RE.search(source) and source not in output:
+            output[source] = source
 
     pending = [(i, source) for i, source in enumerate(all_sources) if source not in output]
     batch_size = 24
@@ -165,8 +171,6 @@ def main() -> int:
             value = translated.get(index, "").strip()
             if not value:
                 raise RuntimeError(f"empty translation for {source!r}")
-            if PLACEHOLDER_RE.findall(source) != PLACEHOLDER_RE.findall(value):
-                raise RuntimeError(f"placeholder mismatch for {source!r}")
             output[source] = value
         print(f"[{code}] {min(start + batch_size, len(pending))}/{len(pending)}", flush=True)
         time.sleep(0.12)
@@ -177,8 +181,6 @@ def main() -> int:
 
     unchanged = [source for source in all_sources if output[source].strip() == source.strip()]
     ratio = len(unchanged) / max(1, len(all_sources))
-    # Brand names and a few technical tokens can legitimately remain unchanged,
-    # but a mostly-English pack is a failed build, not a successful localization.
     if ratio > 0.18:
         raise RuntimeError(f"{code}: too many untranslated strings: {len(unchanged)}/{len(all_sources)}")
 
