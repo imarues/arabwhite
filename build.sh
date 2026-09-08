@@ -32,7 +32,7 @@ CLANG="$(xcrun --sdk iphoneos --find clang)"
   "$ROOT/Sources/Tweak.m" \
   "$ROOT/Sources/WGTranslations.m" \
   "$ROOT/Sources/WGLanguageOverlay.m" \
-  "$ROOT/Sources/WGGlobeVisibilityFix.m" \
+  "$ROOT/Sources/WGTwoFingerLanguageGesture.m" \
   "$ROOT/Sources/WGRootTextureFixCompile.m" \
   "$ROOT/Sources/WGOfflineLanguageFix.m" \
   -I"$ROOT/Sources" \
