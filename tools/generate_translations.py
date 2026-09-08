@@ -47,6 +47,19 @@ def main() -> None:
             if isinstance(key, str) and key and key not in aliases:
                 aliases[key] = en
 
+    # Important for a runtime dylib: one hook may receive text that another hook
+    # has already localized. Map every generated target string back to the same
+    # canonical English key, so switching ar -> es, fa -> fr, etc. works even if
+    # Whitegram/Texture reuses a previously localized string in the construction
+    # path. Device/app locale no longer matters to the lookup chain.
+    for table in locales.values():
+        for source, target in table.items():
+            if not isinstance(source, str) or not source or not isinstance(target, str) or not target:
+                continue
+            canonical = aliases.get(source, source)
+            aliases.setdefault(source, canonical)
+            aliases.setdefault(target, canonical)
+
     lines = ["// Generated. Do not edit by hand.", ""]
     for code, table in locales.items():
         emit_dict(lines, f"WGGeneratedTranslations_{code}", table)
@@ -62,7 +75,7 @@ def main() -> None:
     OUTPUT.write_text("\n".join(lines), encoding="utf-8")
     print(
         f"Generated {OUTPUT.relative_to(ROOT)} with "
-        f"{sum(len(v) for v in locales.values())} locale entries and {len(aliases)} source aliases."
+        f"{sum(len(v) for v in locales.values())} locale entries and {len(aliases)} cross-language aliases."
     )
 
 
