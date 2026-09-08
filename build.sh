@@ -6,8 +6,8 @@ BUILD_DIR="$ROOT/build"
 PATCH_DIR="$BUILD_DIR/patched"
 mkdir -p "$BUILD_DIR" "$PATCH_DIR"
 
-# Merge the few runtime-only strings into every locale before generating the
-# embedded tables. The final dylib therefore needs no network translation layer.
+# Merge runtime-only strings into every locale before generating embedded tables.
+# The final dylib therefore needs no network translation layer.
 python3 - "$ROOT" <<'PY'
 from pathlib import Path
 import json, sys
@@ -34,41 +34,128 @@ python3 "$ROOT/tools/verify_translations.py"
 python3 "$ROOT/tools/verify_runtime_safety.py"
 python3 "$ROOT/tools/generate_translations.py"
 
-# Tweak.m remains the one text-construction hook layer, but all whole-window and
-# controller lifecycle scans are removed. Global UIKit setters use exact O(1)
-# dictionary matching only; no regex/lowercase fallback runs on ordinary
-# Telegram UI strings.
+# Prepare the two hot-path sources. Ordinary Telegram UI is allowed only exact
+# hash-table lookups; it must never trigger recursive scans, lowercase-table
+# construction, regex matching, network requests or controller polling.
 python3 - "$ROOT" "$PATCH_DIR" <<'PY'
 from pathlib import Path
 import sys
 
 root = Path(sys.argv[1])
 out = Path(sys.argv[2])
-text = (root / "Sources" / "Tweak.m").read_text(encoding="utf-8")
 
-text = text.replace('WGTranslateString(', 'WGTranslateStringExact(')
-text = text.replace('WGTranslateAttributedString(', 'WGTranslateAttributedStringExact(')
-text = text.replace(
+
+def replace_function(text: str, signature: str, replacement: str) -> str:
+    start = text.find(signature)
+    if start < 0:
+        raise SystemExit(f"function signature not found: {signature}")
+    brace = text.find('{', start)
+    if brace < 0:
+        raise SystemExit(f"opening brace not found: {signature}")
+    depth = 0
+    for i in range(brace, len(text)):
+        if text[i] == '{':
+            depth += 1
+        elif text[i] == '}':
+            depth -= 1
+            if depth == 0:
+                return text[:start] + replacement + text[i + 1:]
+    raise SystemExit(f"closing brace not found: {signature}")
+
+# ---- One text hook layer; no UIViewController lifecycle scans ----
+tweak = (root / "Sources" / "Tweak.m").read_text(encoding="utf-8")
+tweak = tweak.replace('WGTranslateString(', 'WGTranslateStringExact(')
+tweak = tweak.replace('WGTranslateAttributedString(', 'WGTranslateAttributedStringExact(')
+tweak = tweak.replace(
     '        WGSwizzle(UIViewController.class, @selector(viewDidAppear:), @selector(wg_nf_viewDidAppear:));\n',
     '        /* Lean build: no global UIViewController lifecycle scan. */\n'
 )
-text = text.replace('            WGInstallWhitegramLanguagePickerHookWithRetry(0);\n', '')
-text = text.replace('            WGScheduleSafeUIKitScan(0.30);\n', '')
-
-if 'WGSwizzle(UIViewController.class, @selector(viewDidAppear:)' in text:
+tweak = tweak.replace('            WGInstallWhitegramLanguagePickerHookWithRetry(0);\n', '')
+tweak = tweak.replace('            WGScheduleSafeUIKitScan(0.30);\n', '')
+if 'WGSwizzle(UIViewController.class, @selector(viewDidAppear:)' in tweak:
     raise SystemExit('global viewDidAppear scan hook still enabled')
-if 'WGInstallWhitegramLanguagePickerHookWithRetry(0);' in text:
+if 'WGInstallWhitegramLanguagePickerHookWithRetry(0);' in tweak:
     raise SystemExit('legacy private picker retry still enabled')
-if 'WGScheduleSafeUIKitScan(0.30);' in text:
+if 'WGScheduleSafeUIKitScan(0.30);' in tweak:
     raise SystemExit('startup recursive UI scan still enabled')
+(out / "TweakLean.m").write_text(tweak, encoding="utf-8")
 
-(out / "TweakLean.m").write_text(text, encoding="utf-8")
-print('Prepared TweakLean.m: exact setter hooks only, no lifecycle/window scans')
+# ---- Strict O(1) exact lookup ----
+fast = (root / "Sources" / "WGTranslationsFast.m").read_text(encoding="utf-8")
+fast = replace_function(
+    fast,
+    'static NSString *WGFastTranslateCore(NSString *core, BOOL allowRegex)',
+    '''static NSString *WGFastTranslateCore(NSString *core, BOOL allowRegex) {
+    if (core.length == 0) return core;
+    NSString *code = WGCustomLanguageCode();
+
+    // English source is canonical. Exact mode performs one alias hash lookup
+    // only; slower case-insensitive aliasing is reserved for explicit fallback.
+    if ([code isEqualToString:@"en"]) {
+        NSString *canonicalEnglish = WGFastAliasTable()[core];
+        if (canonicalEnglish.length) return canonicalEnglish;
+        if (!allowRegex) return core;
+        return WGFastCanonicalEnglish(core);
+    }
+
+    NSDictionary *table = WGFastTranslationTableForCode(code);
+
+    // Hot path: exact source key.
+    NSString *translated = table[core];
+    if (translated.length) return translated;
+
+    // Cross-language exact alias: handles text already localized by another
+    // construction path without any lowercase-map work.
+    NSString *canonical = WGFastAliasTable()[core];
+    if (canonical.length) {
+        translated = table[canonical];
+        if (translated.length) return translated;
+    } else {
+        canonical = core;
+    }
+
+    // Cheap punctuation fallback still uses exact dictionary keys only.
+    if (canonical.length > 1) {
+        unichar last = [canonical characterAtIndex:canonical.length - 1];
+        if (last == ':' || last == '?' || last == '!' || last == '.') {
+            NSString *base = [canonical substringToIndex:canonical.length - 1];
+            NSString *baseTranslation = table[base];
+            if (baseTranslation.length) {
+                return [baseTranslation stringByAppendingString:[canonical substringFromIndex:canonical.length - 1]];
+            }
+        }
+    }
+
+    // All globally-hooked Telegram setters use exact mode and return here.
+    if (!allowRegex) return core;
+
+    NSDictionary *lowerTable = WGFastLowercaseTableForCode(code);
+    NSString *lowerCore = core.lowercaseString;
+    translated = lowerTable[lowerCore];
+    if (translated.length) return translated;
+
+    NSString *lowerCanonical = WGFastLowerAliasTable()[lowerCore];
+    if (lowerCanonical.length) {
+        translated = table[lowerCanonical] ?: lowerTable[lowerCanonical.lowercaseString];
+        if (translated.length) return translated;
+        canonical = lowerCanonical;
+    }
+
+    if ([code isEqualToString:@"ar"]) {
+        NSString *dynamic = WGFastApplyArabicRegex(canonical);
+        if (![dynamic isEqualToString:canonical]) return dynamic;
+    }
+    return core;
+}'''
+)
+(out / "WGTranslationsFast.m").write_text(fast, encoding="utf-8")
+
+print('Prepared strict O(1) exact translation path with zero lifecycle/window polling')
 PY
 
 ACTIVE_SOURCES=(
   "$PATCH_DIR/TweakLean.m"
-  "$ROOT/Sources/WGTranslationsFast.m"
+  "$PATCH_DIR/WGTranslationsFast.m"
   "$ROOT/Sources/WGLanguageGesturesLean.m"
 )
 
@@ -118,7 +205,7 @@ BIN="$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 STRINGS_FILE="$BUILD_DIR/runtime-strings.txt"
 strings "$BIN" > "$STRINGS_FILE"
 
-# Binary-level proof that none of the historical icon/duplicate hook modules was
+# Binary-level proof that none of the historical icon/duplicate-hook modules was
 # linked accidentally.
 for forbidden in \
   'iKiraPlus.WhitegramLanguages' \
@@ -133,8 +220,6 @@ for forbidden in \
     exit 1
   fi
 done
-
-# The literal used by all previous visible buttons must be absent too.
 if grep -Fiq 'globe' "$STRINGS_FILE"; then
   echo "ERROR: unexpected language-icon literal in final dylib" >&2
   grep -Fi 'globe' "$STRINGS_FILE" >&2 || true
@@ -149,5 +234,5 @@ grep -Fq 'VirusTotal' "$STRINGS_FILE"
 
 file "$BIN"
 otool -L "$BIN"
-echo "LEAN_OK: one translation layer, event-driven gestures, no visible icon, no polling, no network fallback"
+echo "LEAN_OK: strict exact lookup, one hook layer, event-driven gestures, no icon, no polling, no network fallback"
 echo "Built: $BIN"
