@@ -2,31 +2,24 @@
 #include "GeneratedTranslations.inc"
 
 static NSString *const WGMLSelectionKey = @"WGMultiLanguageSelection";
-static NSString *const WGMLBuiltinValue = @"builtin";
 
 NSString *WGCustomLanguageCode(void) {
     NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;
     NSString *stored = [defaults stringForKey:WGMLSelectionKey];
-    if (stored.length > 0) {
-        return [stored isEqualToString:WGMLBuiltinValue] ? nil : stored;
+    if (stored.length > 0 && ![stored isEqualToString:@"builtin"]) {
+        return stored.lowercaseString;
     }
 
-    // First-run convenience: Arabic devices get the Arabic Whitegram pack,
-    // while every other device keeps Whitegram's own built-in language.
-    NSString *preferred = NSLocale.preferredLanguages.firstObject.lowercaseString;
-    if ([preferred hasPrefix:@"ar"]) {
-        return @"ar";
-    }
-    return nil;
+    // LanguageWhitegram owns its language selection completely. Never derive it
+    // from iOS preferredLanguages or Telegram's interface language. Arabic is
+    // the first-run/default Whitegram language on every device.
+    return @"ar";
 }
 
 void WGSetCustomLanguageCode(NSString *languageCode) {
     NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;
-    if (languageCode.length > 0) {
-        [defaults setObject:languageCode.lowercaseString forKey:WGMLSelectionKey];
-    } else {
-        [defaults setObject:WGMLBuiltinValue forKey:WGMLSelectionKey];
-    }
+    NSString *code = languageCode.length > 0 ? languageCode.lowercaseString : @"ar";
+    [defaults setObject:code forKey:WGMLSelectionKey];
 }
 
 BOOL WGLocalizationEnabled(void) {
