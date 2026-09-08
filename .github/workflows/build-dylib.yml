@@ -28,12 +28,68 @@ permissions:
   contents: read
 
 jobs:
+  translate:
+    name: locale-${{ matrix.code }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        code: [fr, es, zh, vi, fa, pt, ru, tr]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ${{ matrix.code }} locale pack
+        run: |
+          python3 tools/build_one_lang.py "${{ matrix.code }}"
+          python3 - <<'PY'
+          import json, os
+          code = os.environ["LANG_CODE"]
+          p = f"Resources/locales/{code}.json"
+          d = json.load(open(p, encoding="utf-8"))
+          unchanged = sum(1 for k, v in d.items() if k.strip() == v.strip())
+          print(f"{code}: entries={len(d)}, unchanged={unchanged}")
+          assert len(d) >= 716
+          assert unchanged / len(d) <= 0.18
+          PY
+        env:
+          LANG_CODE: ${{ matrix.code }}
+
+      - name: Upload ${{ matrix.code }} locale
+        uses: actions/upload-artifact@v4
+        with:
+          name: locale-${{ matrix.code }}
+          path: Resources/locales/${{ matrix.code }}.json
+          if-no-files-found: error
+          retention-days: 3
+
   build:
+    needs: translate
     runs-on: macos-15
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Download generated locale packs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: locale-*
+          path: Resources/locales
+          merge-multiple: true
+
+      - name: Show embedded locales
+        run: |
+          ls -lh Resources/locales
+          python3 - <<'PY'
+          import json, glob, os
+          for p in sorted(glob.glob('Resources/locales/*.json')):
+              data = json.load(open(p, encoding='utf-8'))
+              unchanged = sum(1 for k, v in data.items() if k.strip() == v.strip())
+              print(os.path.basename(p), len(data), 'entries', unchanged, 'unchanged')
+          PY
 
       - name: Select Xcode
         run: |
@@ -50,6 +106,13 @@ jobs:
         run: |
           chmod +x build.sh
           ./build.sh
+
+      - name: Verify multilingual strings are embedded
+        run: |
+          strings build/LanguageWhitegram-ikiraplus.dylib | grep -q "Apariencia"
+          strings build/LanguageWhitegram-ikiraplus.dylib | grep -q "Avatares, burbujas de mensajes, efectos"
+          strings build/LanguageWhitegram-ikiraplus.dylib | grep -q "فارسی"
+          echo "Spanish/Persian multilingual payload found in Mach-O"
 
       - name: Inspect device output
         run: |
