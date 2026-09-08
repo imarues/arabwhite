@@ -4,16 +4,14 @@
 #import "WGTranslations.h"
 
 /*
- * iKiraPlus language overlay for Whitegram 7.0 / Telegram 12.9.2 (70)
+ * LanguageWhitegram — iKiraPlus
+ * Whitegram 7.0 / Telegram 12.9.2 build 70
  *
- * - Arabic is forced as the first-run default, independently of iOS language.
- * - A globe button is injected only on Whitegram's main features screen.
- * - Ten languages are offered from that button.
- * - Arabic keeps the bundled verified dictionary and uses a remote fallback only
- *   for still-uncovered visible Whitegram strings.
- * - Other languages are translated on demand, cached persistently per language,
- *   and applied only inside Whitegram feature controllers. Telegram's normal UI
- *   is intentionally left alone.
+ * The bundled Arabic pack remains the primary/offline path. A tightly scoped
+ * visible-UI fallback fills strings that are created dynamically or were not in
+ * the extracted build-70 catalog. The same fallback powers the extra languages,
+ * keeps a persistent per-language cache, and runs only while a Whitegram feature
+ * controller is visible. Telegram's normal UI is not translated by this layer.
  */
 
 static NSString *const WGSelectionDefaultsKey = @"WGMultiLanguageSelection";
@@ -29,6 +27,7 @@ static NSMutableDictionary<NSString *, NSMutableDictionary<NSString *, NSString 
 static NSMutableSet<NSString *> *WGRemoteInFlight;
 static NSURLSession *WGTranslationSession;
 static BOOL WGRefreshScheduled = NO;
+static BOOL WGHeartbeatScheduled = NO;
 
 #pragma mark - Languages
 
@@ -65,18 +64,16 @@ static BOOL WGCodeIsSupported(NSString *code) {
     return NO;
 }
 
-static NSDictionary<NSString *, NSString *> *WGLanguageInfo(NSString *code) {
-    for (NSDictionary<NSString *, NSString *> *language in WGLanguages()) {
-        if ([language[@"code"] isEqualToString:code]) return language;
-    }
-    return nil;
-}
-
-#pragma mark - First-run Arabic default
+#pragma mark - First-run / migration default
 
 static void WGEnsureArabicDefault(void) {
     NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;
-    if ([defaults objectForKey:WGSelectionDefaultsKey] == nil) {
+    NSString *stored = [defaults stringForKey:WGSelectionDefaultsKey];
+
+    // The previous build stored "builtin" when Whitegram's own picker was used.
+    // Migrate that old state too, so this build really starts Arabic regardless
+    // of the iPhone language. A language chosen from our new menu is preserved.
+    if (stored.length == 0 || [stored isEqualToString:@"builtin"]) {
         WGSetCustomLanguageCode(@"ar");
     }
 }
@@ -97,9 +94,7 @@ static void WGCollectMarkers(UIView *view, BOOL *sawVersion, BOOL *sawWhitegram,
     }
 
     if (text.length > 0) {
-        if ([text containsString:@"12.9.2 (70)"]) {
-            *sawVersion = YES;
-        }
+        if ([text containsString:@"12.9.2 (70)"]) *sawVersion = YES;
         NSString *lower = text.lowercaseString;
         if ([lower containsString:@"whitegram"] || [text containsString:@"وايت كرام"] ||
             [text containsString:@"وايتگرام"] || [text containsString:@"Вайтграм"]) {
@@ -114,14 +109,13 @@ static void WGCollectMarkers(UIView *view, BOOL *sawVersion, BOOL *sawWhitegram,
 
 static BOOL WGControllerLooksLikeWhitegramClass(UIViewController *controller) {
     if (!controller) return NO;
-    NSString *name = NSStringFromClass(controller.class);
-    NSString *lower = name.lowercaseString;
-    if ([lower containsString:@"whitegram"] || [lower containsString:@"wglanguage"] ||
-        [lower containsString:@"wgsettings"] || [lower containsString:@"wgappearance"] ||
-        [lower containsString:@"wgfeature"] || [lower containsString:@"wgbeta"]) {
-        return YES;
-    }
-    return NO;
+    NSString *lower = NSStringFromClass(controller.class).lowercaseString;
+    return [lower containsString:@"whitegram"] ||
+           [lower containsString:@"wglanguage"] ||
+           [lower containsString:@"wgsettings"] ||
+           [lower containsString:@"wgappearance"] ||
+           [lower containsString:@"wgfeature"] ||
+           [lower containsString:@"wgbeta"];
 }
 
 static BOOL WGControllerIsWhitegramRoot(UIViewController *controller) {
@@ -141,9 +135,7 @@ static BOOL WGControllerIsWhitegramRoot(UIViewController *controller) {
 
 static BOOL WGControllerIsWhitegram(UIViewController *controller) {
     if (!controller) return NO;
-    if (WGControllerIsWhitegramRoot(controller) || WGControllerLooksLikeWhitegramClass(controller)) {
-        return YES;
-    }
+    if (WGControllerIsWhitegramRoot(controller) || WGControllerLooksLikeWhitegramClass(controller)) return YES;
 
     UINavigationController *navigationController = controller.navigationController;
     if (navigationController) {
@@ -167,7 +159,7 @@ static BOOL WGControllerIsWhitegram(UIViewController *controller) {
     return NO;
 }
 
-#pragma mark - Translation cache and filtering
+#pragma mark - Translation cache and source filtering
 
 static NSMutableDictionary<NSString *, NSString *> *WGCacheForCode(NSString *code) {
     if (!WGRemoteCaches) WGRemoteCaches = [NSMutableDictionary dictionary];
@@ -224,15 +216,11 @@ static BOOL WGShouldIgnoreSource(NSString *text) {
     if (trimmed.length < 2 || trimmed.length > 1800) return YES;
     if ([trimmed hasPrefix:@"http://"] || [trimmed hasPrefix:@"https://"] || [trimmed hasPrefix:@"tg://"]) return YES;
 
-    BOOL hasLetter = NO;
     NSCharacterSet *letters = NSCharacterSet.letterCharacterSet;
     for (NSUInteger i = 0; i < trimmed.length; i++) {
-        if ([letters characterIsMember:[trimmed characterAtIndex:i]]) {
-            hasLetter = YES;
-            break;
-        }
+        if ([letters characterIsMember:[trimmed characterAtIndex:i]]) return NO;
     }
-    return !hasLetter;
+    return YES;
 }
 
 static NSDictionary<NSString *, NSString *> *WGArabicFallbacks(void) {
@@ -260,6 +248,8 @@ static NSString *WGImmediateTranslationForSource(NSString *source, NSString *cod
         if (bundled.length > 0 && ![bundled isEqualToString:source]) return bundled;
         if (WGHasArabicScript(source)) return source;
     } else if ([code isEqualToString:@"en"]) {
+        // Whitegram's build-70 source is EN/RU/UK. Plain Latin text is already
+        // English often enough that translating it again is unnecessary.
         if (WGHasLatinLetters(source) && !WGHasCyrillic(source) && !WGHasArabicScript(source) && !WGHasCJK(source)) {
             return source;
         }
@@ -370,6 +360,15 @@ static void WGRememberAppliedText(id object, NSString *text, NSString *code) {
     objc_setAssociatedObject(object, &WGAppliedTextKey, text, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+static NSAttributedString *WGAttributedWithBaseStyle(NSAttributedString *source, NSString *translated) {
+    if (translated.length == 0) return source;
+    NSDictionary<NSAttributedStringKey, id> *attributes = @{};
+    if (source.length > 0) {
+        attributes = [source attributesAtIndex:0 effectiveRange:NULL] ?: @{};
+    }
+    return [[NSAttributedString alloc] initWithString:translated attributes:attributes];
+}
+
 static void WGHandleStringForObject(NSString *source,
                                     id object,
                                     NSString *code,
@@ -397,16 +396,26 @@ static void WGProcessView(UIView *view, NSString *code, NSUInteger depth, NSUInt
 
     if ([view isKindOfClass:UILabel.class]) {
         UILabel *label = (UILabel *)view;
-        NSString *source = label.text;
+        NSAttributedString *originalAttributed = label.attributedText;
+        NSString *source = originalAttributed.length > 0 ? originalAttributed.string : label.text;
         WGHandleStringForObject(source, label, code, ^(NSString *translated) {
-            label.text = translated;
+            if (originalAttributed.length > 0) {
+                label.attributedText = WGAttributedWithBaseStyle(originalAttributed, translated);
+            } else {
+                label.text = translated;
+            }
             WGApplyDirectionToView(label, code);
         });
     } else if ([view isKindOfClass:UIButton.class]) {
         UIButton *button = (UIButton *)view;
-        NSString *source = [button titleForState:UIControlStateNormal];
+        NSAttributedString *originalAttributed = [button attributedTitleForState:UIControlStateNormal];
+        NSString *source = originalAttributed.length > 0 ? originalAttributed.string : [button titleForState:UIControlStateNormal];
         WGHandleStringForObject(source, button, code, ^(NSString *translated) {
-            [button setTitle:translated forState:UIControlStateNormal];
+            if (originalAttributed.length > 0) {
+                [button setAttributedTitle:WGAttributedWithBaseStyle(originalAttributed, translated) forState:UIControlStateNormal];
+            } else {
+                [button setTitle:translated forState:UIControlStateNormal];
+            }
             WGApplyDirectionToView(button, code);
         });
     } else if ([view isKindOfClass:UITextField.class]) {
@@ -426,9 +435,14 @@ static void WGProcessView(UIView *view, NSString *code, NSUInteger depth, NSUInt
     } else if ([view isKindOfClass:UITextView.class]) {
         UITextView *textView = (UITextView *)view;
         if (!textView.editable) {
-            NSString *source = textView.text;
+            NSAttributedString *originalAttributed = textView.attributedText;
+            NSString *source = originalAttributed.length > 0 ? originalAttributed.string : textView.text;
             WGHandleStringForObject(source, textView, code, ^(NSString *translated) {
-                textView.text = translated;
+                if (originalAttributed.length > 0) {
+                    textView.attributedText = WGAttributedWithBaseStyle(originalAttributed, translated);
+                } else {
+                    textView.text = translated;
+                }
                 WGApplyDirectionToView(textView, code);
             });
         }
@@ -439,20 +453,7 @@ static void WGProcessView(UIView *view, NSString *code, NSUInteger depth, NSUInt
     }
 }
 
-static void WGReloadListsInView(UIView *view, NSUInteger depth, NSUInteger *visited) {
-    if (!view || depth > 70 || *visited > 1800) return;
-    (*visited)++;
-    if ([view isKindOfClass:UITableView.class]) {
-        [(UITableView *)view reloadData];
-    } else if ([view isKindOfClass:UICollectionView.class]) {
-        [(UICollectionView *)view reloadData];
-    }
-    for (UIView *subview in view.subviews) {
-        WGReloadListsInView(subview, depth + 1, visited);
-    }
-}
-
-static void WGTranslateController(UIViewController *controller, BOOL reloadLists) {
+static void WGTranslateController(UIViewController *controller) {
     if (!controller || !controller.isViewLoaded || !WGControllerIsWhitegram(controller)) return;
     NSString *code = WGCustomLanguageCode().lowercaseString;
     if (!WGCodeIsSupported(code)) return;
@@ -467,10 +468,6 @@ static void WGTranslateController(UIViewController *controller, BOOL reloadLists
 
     NSUInteger visited = 0;
     WGProcessView(controller.view, code, 0, &visited);
-    if (reloadLists) {
-        NSUInteger listVisited = 0;
-        WGReloadListsInView(controller.view, 0, &listVisited);
-    }
 }
 
 static void WGRefreshVisibleWhitegramScreens(void) {
@@ -479,7 +476,7 @@ static void WGRefreshVisibleWhitegramScreens(void) {
         return;
     }
     for (UIViewController *controller in WGActiveWhitegramControllers.allObjects) {
-        WGTranslateController(controller, YES);
+        WGTranslateController(controller);
     }
 }
 
@@ -490,9 +487,20 @@ static void WGScheduleRefresh(void) {
     }
     if (WGRefreshScheduled) return;
     WGRefreshScheduled = YES;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.16 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.14 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         WGRefreshScheduled = NO;
         WGRefreshVisibleWhitegramScreens();
+    });
+}
+
+static void WGScheduleHeartbeat(void) {
+    if (WGHeartbeatScheduled) return;
+    WGHeartbeatScheduled = YES;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.65 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        WGHeartbeatScheduled = NO;
+        if (WGActiveWhitegramControllers.allObjects.count == 0) return;
+        WGRefreshVisibleWhitegramScreens();
+        WGScheduleHeartbeat();
     });
 }
 
@@ -606,19 +614,19 @@ static void WGOverlayViewDidAppear(id self, SEL _cmd, BOOL animated) {
     }
 
     UIViewController *controller = [self isKindOfClass:UIViewController.class] ? self : nil;
-    if (!controller) return;
+    if (!controller || !WGControllerIsWhitegram(controller)) return;
 
-    if (WGControllerIsWhitegram(controller)) {
-        if (!WGActiveWhitegramControllers) WGActiveWhitegramControllers = [NSHashTable weakObjectsHashTable];
-        [WGActiveWhitegramControllers addObject:controller];
-        WGInstallLanguageButtonIfNeeded(controller);
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            WGTranslateController(controller, NO);
-        });
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            WGTranslateController(controller, NO);
-        });
-    }
+    if (!WGActiveWhitegramControllers) WGActiveWhitegramControllers = [NSHashTable weakObjectsHashTable];
+    [WGActiveWhitegramControllers addObject:controller];
+    WGInstallLanguageButtonIfNeeded(controller);
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        WGTranslateController(controller);
+    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.28 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        WGTranslateController(controller);
+    });
+    WGScheduleHeartbeat();
 }
 
 static void WGOverlayViewDidDisappear(id self, SEL _cmd, BOOL animated) {
@@ -658,7 +666,7 @@ static void WGLanguageOverlayEntry(void) {
         WGActiveWhitegramControllers = [NSHashTable weakObjectsHashTable];
         WGRemoteInFlight = [NSMutableSet set];
 
-        // Install after the base NodeFix hooks so this layer chains through them.
+        // Chain after the existing NodeFix lifecycle hook.
         dispatch_async(dispatch_get_main_queue(), ^{
             WGInstallControllerHooks();
         });
