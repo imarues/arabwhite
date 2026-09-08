@@ -40,5 +40,11 @@
   "More",
   "All Settings",
   "The full list of settings",
-  "Whitegram Features"
+  "Whitegram Features",
+  "Lets you scan received files with VirusTotal from the message menu. Requires your own API key.",
+  "Your VirusTotal API key — file scanning does not work without it.",
+  "Video wallpaper across the interface: Not Selected",
+  "Video wallpaper across the interface",
+  "Not Selected",
+  "Shrinks avatars and paddings in the chat list so more chats fit on screen. Not compatible with the new chat list style."
 ]
