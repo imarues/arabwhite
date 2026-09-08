@@ -31,6 +31,7 @@ CLANG="$(xcrun --sdk iphoneos --find clang)"
   "$ROOT/Sources/Tweak.m" \
   "$ROOT/Sources/WGTranslations.m" \
   "$ROOT/Sources/WGLanguageOverlay.m" \
+  "$ROOT/Sources/WGRootTextureFix.m" \
   -I"$ROOT/Sources" \
   -o "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 
