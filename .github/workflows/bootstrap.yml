@@ -24,8 +24,7 @@ jobs:
           cat bootstrap/part-*.b64 > /tmp/project.b64
           base64 -d /tmp/project.b64 > /tmp/project.tar.xz
           rm -rf bootstrap
-          rm -f .github/workflows/bootstrap.yml
-          tar -xJf /tmp/project.tar.xz -C .
+          tar -xJf /tmp/project.tar.xz -C . --exclude='.github/workflows/build-dylib.yml'
 
       - name: Commit project
         shell: bash
