@@ -5,6 +5,10 @@ ROOT="$(cd "$(dirname "$0")" && pwd)"
 BUILD_DIR="$ROOT/build"
 mkdir -p "$BUILD_DIR"
 
+# Arabic is committed and verified by hand. The other eight translated packs
+# are generated in CI from the build-70 English catalog so the dylib ships
+# with real offline translations instead of waiting on runtime HTTP requests.
+python3 "$ROOT/tools/build_multilang_packs.py"
 python3 "$ROOT/tools/verify_translations.py"
 python3 "$ROOT/tools/verify_runtime_safety.py"
 python3 "$ROOT/tools/generate_translations.py"
@@ -32,6 +36,7 @@ CLANG="$(xcrun --sdk iphoneos --find clang)"
   "$ROOT/Sources/WGTranslations.m" \
   "$ROOT/Sources/WGLanguageOverlay.m" \
   "$ROOT/Sources/WGRootTextureFixCompile.m" \
+  "$ROOT/Sources/WGOfflineLanguageFix.m" \
   -I"$ROOT/Sources" \
   -o "$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 
