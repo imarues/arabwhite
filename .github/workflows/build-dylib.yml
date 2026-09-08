@@ -109,9 +109,10 @@ jobs:
 
       - name: Verify multilingual strings are embedded
         run: |
-          strings build/LanguageWhitegram-ikiraplus.dylib | grep -q "Apariencia"
-          strings build/LanguageWhitegram-ikiraplus.dylib | grep -q "Avatares, burbujas de mensajes, efectos"
-          strings build/LanguageWhitegram-ikiraplus.dylib | grep -q "فارسی"
+          strings build/LanguageWhitegram-ikiraplus.dylib > build/embedded-strings.txt
+          grep -Fq "Apariencia" build/embedded-strings.txt
+          grep -Fq "Avatares, burbujas de mensajes, efectos" build/embedded-strings.txt
+          grep -Fq "فارسی" build/embedded-strings.txt
           echo "Spanish/Persian multilingual payload found in Mach-O"
 
       - name: Inspect device output
