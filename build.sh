@@ -19,6 +19,7 @@ CLANG="$(xcrun --sdk iphoneos --find clang)"
   -miphoneos-version-min=15.0 \
   -dynamiclib \
   -fobjc-arc \
+  -fblocks \
   -fmodules \
   -O2 \
   -Wall \
@@ -32,7 +33,7 @@ CLANG="$(xcrun --sdk iphoneos --find clang)"
   "$ROOT/Sources/Tweak.m" \
   "$ROOT/Sources/WGTranslations.m" \
   "$ROOT/Sources/WGLanguageOverlay.m" \
-  "$ROOT/Sources/WGTwoFingerLanguageGesture.m" \
+  "$ROOT/Sources/WGWindowLanguageGestures.m" \
   "$ROOT/Sources/WGRootTextureFixCompile.m" \
   "$ROOT/Sources/WGOfflineLanguageFix.m" \
   -I"$ROOT/Sources" \
