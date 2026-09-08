@@ -1,0 +1,14 @@
+{
+  "bundle_id": "ph.telegra.Telegraph",
+  "display_name": "Whitegram",
+  "short_version": "12.9.2",
+  "whitegram_release": "7.0",
+  "build_version": "70",
+  "framework_sha256": "3c2610dc573b3cf3eff5b389fe9a672b5887ce428d8d6d7a3611ed53c2897ff5",
+  "verified_extracted_strings": 716,
+  "arabic_dictionary_entries": 1307,
+  "built_in_languages": ["ru", "uk", "en"],
+  "custom_languages": ["ar"],
+  "runtime_fix": "Immutable NSAttributedString + stable UIKit hooks + safe WGLanguagePicker UITableView interposition",
+  "version": "9.0.0-build70"
+}

@@ -1,0 +1,4298 @@
+[
+  {
+    "offset": 79051856,
+    "ru": "Наборы иконок, замена значков интерфейса",
+    "uk": "Набори іконок, заміна значків інтерфейсу",
+    "en": "Icon packs, replacing the interface icons"
+  },
+  {
+    "offset": 79052224,
+    "ru": "Улучшенный трафик",
+    "uk": "Покращений трафік",
+    "en": "Enhanced Traffic"
+  },
+  {
+    "offset": 79052352,
+    "ru": "Аватарки, пузыри сообщений, эффекты",
+    "uk": "Аватарки, бульбашки повідомлень, ефекти",
+    "en": "Avatars, message bubbles, effects"
+  },
+  {
+    "offset": 79052560,
+    "ru": "Стеклянные панели и размытие",
+    "uk": "Скляні панелі та розмиття",
+    "en": "Glass panels and blur"
+  },
+  {
+    "offset": 79052704,
+    "ru": "Удалённые, изменённые, кэш",
+    "uk": "Видалені, змінені, кеш",
+    "en": "Deleted, edited, cache"
+  },
+  {
+    "offset": 79052848,
+    "ru": "Зум, HD-отправка, кружки",
+    "uk": "Зум, HD-надсилання, кружечки",
+    "en": "Zoom, HD sending, video messages"
+  },
+  {
+    "offset": 79053008,
+    "ru": "Скрыть онлайн, прочтение и набор",
+    "uk": "Сховати онлайн, прочитання й набір",
+    "en": "Hide online, reads and typing"
+  },
+  {
+    "offset": 79053168,
+    "ru": "Защита контента и звонков",
+    "uk": "Захист контенту та дзвінків",
+    "en": "Content and call protection"
+  },
+  {
+    "offset": 79053312,
+    "ru": "Вибрация, реакции, ускорение",
+    "uk": "Вібрація, реакції, прискорення",
+    "en": "Vibration, reactions, speed"
+  },
+  {
+    "offset": 79053472,
+    "ru": "ID, дата-центр, дата создания",
+    "uk": "ID, дата-центр, дата створення",
+    "en": "ID, data centre, creation date"
+  },
+  {
+    "offset": 79053632,
+    "ru": "Что показывать в меню Telegram",
+    "uk": "Що показувати в меню Telegram",
+    "en": "What to show in the Telegram menu"
+  },
+  {
+    "offset": 79053792,
+    "ru": "Нижняя панель и её вкладки",
+    "uk": "Нижня панель та її вкладки",
+    "en": "The bottom bar and its tabs"
+  },
+  {
+    "offset": 79053952,
+    "ru": "Свой баланс звёзд на экране",
+    "uk": "Власний баланс зірок на екрані",
+    "en": "Your own star balance on screen"
+  },
+  {
+    "offset": 79054112,
+    "ru": "Свой шрифт для всего приложения",
+    "uk": "Власний шрифт для всього застосунку",
+    "en": "A custom font for the whole app"
+  },
+  {
+    "offset": 79054288,
+    "ru": "Сохранение входов в Keychain",
+    "uk": "Збереження входів у Keychain",
+    "en": "Saving logins to the Keychain"
+  },
+  {
+    "offset": 79054416,
+    "ru": "Онлайн и даты прочтения",
+    "uk": "Онлайн і дати прочитання",
+    "en": "Online & read dates"
+  },
+  {
+    "offset": 79054608,
+    "ru": "Перевод входящих и исходящих",
+    "uk": "Переклад вхідних і вихідних",
+    "en": "Translating incoming and outgoing"
+  },
+  {
+    "offset": 79054784,
+    "ru": "Маскировка трафика Telegram",
+    "uk": "Маскування трафіку Telegram",
+    "en": "Masking Telegram traffic"
+  },
+  {
+    "offset": 79054912,
+    "ru": "Проверка ссылок и файлов",
+    "uk": "Перевірка посилань і файлів",
+    "en": "Checking links and files"
+  },
+  {
+    "offset": 79055056,
+    "ru": "Изменение своего голоса в записях",
+    "uk": "Зміна свого голосу в записах",
+    "en": "Changing your voice in recordings"
+  },
+  {
+    "offset": 79055232,
+    "ru": "AI ассистент с функциями",
+    "uk": "AI асистент з функціями",
+    "en": "AI assistant with functions"
+  },
+  {
+    "offset": 79055360,
+    "ru": "Версия, канал, разработчик",
+    "uk": "Версія, канал, розробник",
+    "en": "Version, channel, developer"
+  },
+  {
+    "offset": 79055504,
+    "ru": "Полный список настроек",
+    "uk": "Повний список налаштувань",
+    "en": "The full list of settings"
+  },
+  {
+    "offset": 79055648,
+    "ru": "Русский 🇷🇺",
+    "uk": "Російська 🇷🇺",
+    "en": "Russian 🇷🇺"
+  },
+  {
+    "offset": 79055744,
+    "ru": "Украинский 🇺🇦",
+    "uk": "Українська 🇺🇦",
+    "en": "Ukrainian 🇺🇦"
+  },
+  {
+    "offset": 79055840,
+    "ru": "Английский 🇬🇧",
+    "uk": "Англійська 🇬🇧",
+    "en": "English 🇬🇧"
+  },
+  {
+    "offset": 79055936,
+    "ru": "Язык интерфейса",
+    "uk": "Мова інтерфейсу",
+    "en": "Interface Language"
+  },
+  {
+    "offset": 79056032,
+    "ru": "Выберите встроенный язык Whitegram. Изменения применятся сразу.",
+    "uk": "Виберіть вбудовану мову Whitegram. Зміни застосуються одразу.",
+    "en": "Choose a built-in Whitegram language. Changes apply immediately."
+  },
+  {
+    "offset": 79056336,
+    "ru": "Русский интерфейс",
+    "uk": "Російський інтерфейс",
+    "en": "Russian interface"
+  },
+  {
+    "offset": 79056464,
+    "ru": "Украинский интерфейс",
+    "uk": "Український інтерфейс",
+    "en": "Ukrainian interface"
+  },
+  {
+    "offset": 79056592,
+    "ru": "Английский интерфейс",
+    "uk": "Англійський інтерфейс",
+    "en": "English interface"
+  },
+  {
+    "offset": 79056912,
+    "ru": "Камера для кружков и видео",
+    "uk": "Камера для кружечків і відео",
+    "en": "Camera for Video Circles"
+  },
+  {
+    "offset": 79057168,
+    "ru": "Скрыть разделы настроек",
+    "uk": "Приховати розділи налаштувань",
+    "en": "Hide Settings Sections"
+  },
+  {
+    "offset": 79057472,
+    "ru": "Сессии аккаунта",
+    "uk": "Сесії акаунту",
+    "en": "Account Sessions"
+  },
+  {
+    "offset": 79057568,
+    "ru": "Квадратные аватарки\nвместо круглых",
+    "uk": "Квадратні аватарки\nзамість круглих",
+    "en": "Square avatars\ninstead of round"
+  },
+  {
+    "offset": 79057760,
+    "ru": "Компактный список чатов",
+    "uk": "Компактний список чатів",
+    "en": "Compact chat list"
+  },
+  {
+    "offset": 79057888,
+    "ru": "Обновлённый вид\nсписка чатов",
+    "uk": "Оновлений вигляд\nсписку чатів",
+    "en": "Updated chat list\nappearance"
+  },
+  {
+    "offset": 79058048,
+    "ru": "Размер стикеров в чатах",
+    "uk": "Розмір стікерів у чатах",
+    "en": "Sticker size in chats"
+  },
+  {
+    "offset": 79058176,
+    "ru": "Вернуть стоковые\nиконки Telegram",
+    "uk": "Повернути стокові\nіконки Telegram",
+    "en": "Restore stock\nTelegram icons"
+  },
+  {
+    "offset": 79058416,
+    "ru": "Отключить свайп влево\nв списке чатов, что бы\nне открывать\nкамеру",
+    "uk": "Вимкнути свайп вліво\nу списку чатів, щоб\nне відкривати\nкамеру",
+    "en": "Disable the left swipe\nin the chat list so it\ndoesn't open\nthe camera"
+  },
+  {
+    "offset": 79058752,
+    "ru": "Отключает свайп влево в списке чатов, который открывает камеру историй. Полезно, если камера постоянно открывается случайно при перелистывании папок.",
+    "uk": "Камера історій",
+    "en": "Disables the left swipe in the chat list that opens the story camera, so flipping between folders never launches it by accident."
+  },
+  {
+    "offset": 79059216,
+    "ru": "Скрыть бизнес-бота\nв личных чатах",
+    "uk": "Приховати бізнес-бота\nв особистих чатах",
+    "en": "Hide the business bot\nin private chats"
+  },
+  {
+    "offset": 79059408,
+    "ru": "Убирает панель бизнес-бота, которую Telegram показывает сверху в личных чатах у аккаунтов с подключённым бизнес-ботом. Сам бот продолжает работать.",
+    "uk": "Бізнес-бот",
+    "en": "Hides the business bot panel Telegram shows at the top of private chats. The bot itself keeps working."
+  },
+  {
+    "offset": 79059824,
+    "ru": "Неограниченное количество\nзакреплённых чатов",
+    "uk": "Необмежена кількість\nзакріплених чатів",
+    "en": "Unlimited number\nof pinned chats"
+  },
+  {
+    "offset": 79060048,
+    "ru": "Обновлённый вид меню\nдобавленных аккаунтов",
+    "uk": "Оновлений вигляд меню\nдоданих акаунтів",
+    "en": "Updated added-accounts\nmenu appearance"
+  },
+  {
+    "offset": 79060272,
+    "ru": "Круглые кнопки\nдействий в профиле",
+    "uk": "Круглі кнопки\nдій у профілі",
+    "en": "Round action\nbuttons in the profile"
+  },
+  {
+    "offset": 79060448,
+    "ru": "Рыбий глаз для кнопок",
+    "uk": "Ефект риб'ячого ока для кнопок",
+    "en": "Fisheye effect for buttons"
+  },
+  {
+    "offset": 79060592,
+    "ru": "Использовать персональный\nцвет на задний фон профиля",
+    "uk": "Використовувати персональний\nколір на фон профілю",
+    "en": "Use a personal color\non the profile background"
+  },
+  {
+    "offset": 79060944,
+    "ru": "Использовать размытую\nаватарку на задний фон профиля",
+    "uk": "Використовувати розмиту\nаватарку на фон профілю",
+    "en": "Use a blurred\navatar on the profile background"
+  },
+  {
+    "offset": 79061200,
+    "ru": "Убрать размытость\nаватарки",
+    "uk": "Прибрати розмитість\nаватарки",
+    "en": "Remove the avatar\nblur"
+  },
+  {
+    "offset": 79061360,
+    "ru": "Добавить затемнение\nна размытую аватарку",
+    "uk": "Додати затемнення\nна розмиту аватарку",
+    "en": "Add darkening\nto the blurred avatar"
+  },
+  {
+    "offset": 79061568,
+    "ru": "Использовать размытую\nобложку трека на задний фон плеера",
+    "uk": "Використовувати розмиту\nобкладинку треку на фон плеєра",
+    "en": "Use a blurred\ntrack cover on the player background"
+  },
+  {
+    "offset": 79061856,
+    "ru": "Добавлять затемнение от басса\nна задний фон плеера",
+    "uk": "Додавати затемнення від басу\nна фон плеєра",
+    "en": "Add bass-driven darkening\non the player background"
+  },
+  {
+    "offset": 79062096,
+    "ru": "В плеере фон пульсирует в такт низким частотам трека: чем сильнее бас, тем заметнее затемнение. Работает только при открытом полноэкранном плеере.",
+    "uk": "Ефект у плеєрі",
+    "en": "In the music player the background pulses with the track's low frequencies. Only active in the full-screen player."
+  },
+  {
+    "offset": 79062528,
+    "ru": "Упрощённый плеер",
+    "uk": "Спрощений плеєр",
+    "en": "Simplified Player"
+  },
+  {
+    "offset": 79062624,
+    "ru": "Выбрать бейдж\nWhitegram",
+    "uk": "Вибрати бейдж\nWhitegram",
+    "en": "Choose the Whitegram\nbadge"
+  },
+  {
+    "offset": 79062864,
+    "ru": "Прозрачные сообщения",
+    "uk": "Прозорі повідомлення",
+    "en": "Transparent messages"
+  },
+  {
+    "offset": 79062992,
+    "ru": "Полупрозрачные сообщения",
+    "uk": "Напівпрозорі повідомлення",
+    "en": "Semi-transparent messages"
+  },
+  {
+    "offset": 79063216,
+    "ru": "Liquid Glass сообщения",
+    "uk": "Liquid Glass повідомлення",
+    "en": "Liquid Glass Messages"
+  },
+  {
+    "offset": 79063328,
+    "ru": "Liquid Glass настройки",
+    "uk": "Liquid Glass налаштування",
+    "en": "Liquid Glass Settings"
+  },
+  {
+    "offset": 79063440,
+    "ru": "Liquid Glass профиль",
+    "uk": "Liquid Glass профіль",
+    "en": "Liquid Glass Profile"
+  },
+  {
+    "offset": 79063568,
+    "ru": "Налаштування камери",
+    "uk": "Liquid Glass кнопки",
+    "en": "Liquid Glass Buttons"
+  },
+  {
+    "offset": 79063680,
+    "ru": "Выбрать частицы\nна интерфейс",
+    "uk": "Вибрати частинки\nна інтерфейс",
+    "en": "Choose particles\nfor the interface"
+  },
+  {
+    "offset": 79063936,
+    "ru": "Плотность частиц",
+    "uk": "Щільність частинок",
+    "en": "Particle Density"
+  },
+  {
+    "offset": 79064112,
+    "ru": "Поверх всего",
+    "uk": "Поверх усього",
+    "en": "Above Everything"
+  },
+  {
+    "offset": 79064288,
+    "ru": "OLED тема\nв интерфейсе",
+    "uk": "OLED тема\nв інтерфейсі",
+    "en": "OLED theme\nin the interface"
+  },
+  {
+    "offset": 79064416,
+    "ru": "Чёрный фон на тёмной теме",
+    "uk": "Чорний фон у темній темі",
+    "en": "True black on dark theme"
+  },
+  {
+    "offset": 79064640,
+    "ru": "Показывать удалённые\nсообщения",
+    "uk": "Показувати видалені\nповідомлення",
+    "en": "Show deleted\nmessages"
+  },
+  {
+    "offset": 79064800,
+    "ru": "Прозрачность удалённых\nсообщений",
+    "uk": "Прозорість видалених\nповідомлень",
+    "en": "Deleted message\nopacity"
+  },
+  {
+    "offset": 79064960,
+    "ru": "Показывать оригинальный текст\nизменённых сообщений",
+    "uk": "Показувати оригінальний текст\nзмінених повідомлень",
+    "en": "Show the original text\nof edited messages"
+  },
+  {
+    "offset": 79065232,
+    "ru": "Добавлять кнопку сокращения\nсообщений в контекстное меню сообщения",
+    "uk": "Додавати кнопку скорочення\nповідомлень у контекстне меню повідомлення",
+    "en": "Add a message-shortening\nbutton to the message context menu"
+  },
+  {
+    "offset": 79065568,
+    "ru": "Счётчик символов\nпри вводе сообщения",
+    "uk": "Лічильник символів\nпри введенні повідомлення",
+    "en": "Character counter\nwhile typing a message"
+  },
+  {
+    "offset": 79065792,
+    "ru": "Счётчик символов\nв сообщениях",
+    "uk": "Лічильник символів\nу повідомленнях",
+    "en": "Character counter\nin messages"
+  },
+  {
+    "offset": 79065968,
+    "ru": "Не отображать мои\nудалённые сообщения",
+    "uk": "Не відображати мої\nвидалені повідомлення",
+    "en": "Don't show my\ndeleted messages"
+  },
+  {
+    "offset": 79066160,
+    "ru": "Не отображать оригинальный\nтекст моих изменённых сообщений",
+    "uk": "Не відображати оригінальний\nтекст моїх змінених повідомлень",
+    "en": "Don't show the original\ntext of my edited messages"
+  },
+  {
+    "offset": 79066464,
+    "ru": "Не отображать оригинальный\nтекст изменённых сообщений ботов",
+    "uk": "Не відображати оригінальний\nтекст змінених повідомлень ботів",
+    "en": "Don't show the original\ntext of bots' edited messages"
+  },
+  {
+    "offset": 79066784,
+    "ru": "Не отображать удалённые\nсообщения ботов",
+    "uk": "Не відображати видалені\nповідомлення ботів",
+    "en": "Don't show bots'\ndeleted messages"
+  },
+  {
+    "offset": 79067008,
+    "ru": "Открывать окно\nредактирования сообщения по двойному тапу",
+    "uk": "Відкривати вікно\nредагування повідомлення подвійним тапом",
+    "en": "Open the message\nedit window on double tap"
+  },
+  {
+    "offset": 79067280,
+    "ru": "Добавляет пузырям сообщений плавную глубину и инерцию в стиле iMessage при прокрутке.",
+    "uk": "Додає бульбашкам повідомлень плавну глибину та інерцію у стилі iMessage під час прокручування.",
+    "en": "Adds a fluid iMessage-style depth and inertia effect to message bubbles while scrolling."
+  },
+  {
+    "offset": 79068000,
+    "ru": "Очистить кэш\nудалённых сообщений",
+    "uk": "Очистити кеш\nвидалених повідомлень",
+    "en": "Clear the deleted\nmessages cache"
+  },
+  {
+    "offset": 79068192,
+    "ru": "Очистить кэш\nизменённых сообщений",
+    "uk": "Очистити кеш\nзмінених повідомлень",
+    "en": "Clear the edited\nmessages cache"
+  },
+  {
+    "offset": 79068352,
+    "ru": "Очистить кэш сохранённых\nудалённых сообщений в чатах",
+    "uk": "Очистити кеш збережених\nвидалених повідомлень у чатах",
+    "en": "Clear the cache of saved\ndeleted messages in chats"
+  },
+  {
+    "offset": 79068640,
+    "ru": "Восстановить копию удалённых\nсообщений в чатах",
+    "uk": "Відновити копію видалених\nповідомлень у чатах",
+    "en": "Restore a copy of deleted\nmessages in chats"
+  },
+  {
+    "offset": 79068880,
+    "ru": "Добавлять удалённые\nсообщения в базу данных",
+    "uk": "Додавати видалені\nповідомлення в базу даних",
+    "en": "Add deleted messages\nto the database"
+  },
+  {
+    "offset": 79069120,
+    "ru": "Экспортировать базу данных\nудалённых сообщений",
+    "uk": "Експортувати базу даних\nвидалених повідомлень",
+    "en": "Export the deleted\nmessages database"
+  },
+  {
+    "offset": 79069360,
+    "ru": "Импортировать базу данных\nудалённых сообщений",
+    "uk": "Імпортувати базу даних\nвидалених повідомлень",
+    "en": "Import the deleted\nmessages database"
+  },
+  {
+    "offset": 79069664,
+    "ru": "Использовать микрофон\nустройства при записи",
+    "uk": "Використовувати мікрофон\nпристрою при записі",
+    "en": "Use the device microphone\nwhen recording"
+  },
+  {
+    "offset": 79069904,
+    "ru": "Отправлять фотографии\nв HD качестве",
+    "uk": "Надсилати фотографії\nв HD якості",
+    "en": "Send photos\nin HD quality"
+  },
+  {
+    "offset": 79070144,
+    "ru": "При записи кружков,\nвыбирать последнюю использованную камеру",
+    "uk": "При записі кружечків\nвибирати останню використану камеру",
+    "en": "When recording video messages,\nuse the last used camera"
+  },
+  {
+    "offset": 79070448,
+    "ru": "Статичный зум\nв кружках",
+    "uk": "Статичний зум\nу кружечках",
+    "en": "Static zoom\nin video messages"
+  },
+  {
+    "offset": 79070576,
+    "ru": "Отправлять медиафайлы\nвсегда в HD качестве",
+    "uk": "Надсилати медіафайли\nзавжди в HD якості",
+    "en": "Always send media\nin HD quality"
+  },
+  {
+    "offset": 79070768,
+    "ru": "Отображать меня\nвсегда в онлайне",
+    "uk": "Відображати мене\nзавжди онлайн",
+    "en": "Always show me\nonline"
+  },
+  {
+    "offset": 79070928,
+    "ru": "Отображать меня\nвсегда в оффлайне",
+    "uk": "Відображати мене\nзавжди офлайн",
+    "en": "Always show me\noffline"
+  },
+  {
+    "offset": 79071088,
+    "ru": "Не дать знать,\nкогда я печатаю сообщение",
+    "uk": "Не давати знати,\nколи я друкую повідомлення",
+    "en": "Don't reveal\nwhen I'm typing a message"
+  },
+  {
+    "offset": 79071296,
+    "ru": "Не дать знать,\nкогда я записываю голосовое сообщение",
+    "uk": "Не давати знати,\nколи я записую голосове повідомлення",
+    "en": "Don't reveal\nwhen I'm recording a voice message"
+  },
+  {
+    "offset": 79071568,
+    "ru": "Не дать знать,\nкогда я отправляю файлы",
+    "uk": "Не давати знати,\nколи я надсилаю файли",
+    "en": "Don't reveal\nwhen I'm sending files"
+  },
+  {
+    "offset": 79071776,
+    "ru": "Не дать знать,\nчто я прочитал сообщение",
+    "uk": "Не давати знати,\nщо я прочитав повідомлення",
+    "en": "Don't reveal\nthat I've read a message"
+  },
+  {
+    "offset": 79071984,
+    "ru": "Не дать знать,\nчто я посмотрел сторис",
+    "uk": "Не давати знати,\nщо я переглянув сторіс",
+    "en": "Don't reveal\nthat I've viewed a story"
+  },
+  {
+    "offset": 79072192,
+    "ru": "Помечать сообщения\nпрочитанными при действиях",
+    "uk": "Позначати повідомлення\nпрочитаними при діях",
+    "en": "Mark messages as read\non actions"
+  },
+  {
+    "offset": 79072432,
+    "ru": "Отправлять сообщения\nс задержкой",
+    "uk": "Надсилати повідомлення\nіз затримкою",
+    "en": "Send messages\nwith a delay"
+  },
+  {
+    "offset": 79072608,
+    "ru": "Изменить название\nустройства в сессиях",
+    "uk": "Змінити назву\nпристрою в сесіях",
+    "en": "Change the device\nname in sessions"
+  },
+  {
+    "offset": 79072800,
+    "ru": "Подменять мою\nгеолокацию",
+    "uk": "Підміняти мою\nгеолокацію",
+    "en": "Spoof my\nlocation"
+  },
+  {
+    "offset": 79073024,
+    "ru": "Сохранять историю\nонлайна моих контактов",
+    "uk": "Зберігати історію\nонлайну моїх контактів",
+    "en": "Store the online\nhistory of my contacts"
+  },
+  {
+    "offset": 79073392,
+    "ru": "Убрать всю\nрекламу в каналах",
+    "uk": "Прибрати всю\nрекламу в каналах",
+    "en": "Remove all\nchannel ads"
+  },
+  {
+    "offset": 79073552,
+    "ru": "Обойти все\nограничения Telegram",
+    "uk": "Обійти всі\nобмеження Telegram",
+    "en": "Bypass all\nTelegram restrictions"
+  },
+  {
+    "offset": 79073712,
+    "ru": "Убрать весь скрытый\nтекст/контент с сообщений",
+    "uk": "Прибрати весь прихований\nтекст/контент з повідомлень",
+    "en": "Remove all hidden\ntext/content from messages"
+  },
+  {
+    "offset": 79073968,
+    "ru": "Защита от мошенников",
+    "uk": "Захист від шахраїв",
+    "en": "Scammer Protection"
+  },
+  {
+    "offset": 79074096,
+    "ru": "Предупреждать\nперед звонком",
+    "uk": "Попереджати\nперед дзвінком",
+    "en": "Warn\nbefore a call"
+  },
+  {
+    "offset": 79074256,
+    "ru": "Отображать ID и DC\nв профиле",
+    "uk": "Відображати ID та DC\nу профілі",
+    "en": "Show ID and DC\nin the profile"
+  },
+  {
+    "offset": 79074400,
+    "ru": "Отображать секунды\nво времени",
+    "uk": "Відображати секунди\nв часі",
+    "en": "Show seconds\nin timestamps"
+  },
+  {
+    "offset": 79074560,
+    "ru": "Отображать полные\nпросмотры на постах",
+    "uk": "Відображати повні\nперегляди на постах",
+    "en": "Show full view\ncounts on posts"
+  },
+  {
+    "offset": 79074752,
+    "ru": "Скрыть номер\nтелефона из профиля",
+    "uk": "Сховати номер\nтелефону з профілю",
+    "en": "Hide the phone\nnumber from the profile"
+  },
+  {
+    "offset": 79074928,
+    "ru": "Показывать дату\nсоздания чата/канала",
+    "uk": "Показувати дату\nстворення чату/каналу",
+    "en": "Show the chat/channel\ncreation date"
+  },
+  {
+    "offset": 79075136,
+    "ru": "Подменять свой\nюзернейм в профиле",
+    "uk": "Підміняти свій\nюзернейм у профілі",
+    "en": "Spoof your\nusername in the profile"
+  },
+  {
+    "offset": 79075344,
+    "ru": "Панель форматирования\nтекста",
+    "uk": "Панель форматування\nтексту",
+    "en": "Text formatting\ntoolbar"
+  },
+  {
+    "offset": 79075504,
+    "ru": "Локальный\nTelegram Premium",
+    "uk": "Локальний\nTelegram Premium",
+    "en": "Local\nTelegram Premium"
+  },
+  {
+    "offset": 79075632,
+    "ru": "✓ Локальный премиум активен",
+    "uk": "✓ Локальний преміум активний",
+    "en": "✓ Local Premium is active"
+  },
+  {
+    "offset": 79075792,
+    "ru": "Кнопка «Перевести»\nвсегда видима",
+    "uk": "Кнопка «Перекласти»\nзавжди видима",
+    "en": "The ‘Translate’ button\nis always visible"
+  },
+  {
+    "offset": 79075968,
+    "ru": "Перевод сообщений\nбез Telegram Premium",
+    "uk": "Переклад повідомлень\nбез Telegram Premium",
+    "en": "Message translation\nwithout Telegram Premium"
+  },
+  {
+    "offset": 79076144,
+    "ru": "Добавлять кнопку\n«С переводом» при отправке сообщений",
+    "uk": "Додавати кнопку\n«З перекладом» при надсиланні повідомлень",
+    "en": "Add a button\n‘With translation’ when sending messages"
+  },
+  {
+    "offset": 79076432,
+    "ru": "Переводить голосовые\nбез Telegram Premium",
+    "uk": "Перекладати голосові\nбез Telegram Premium",
+    "en": "Translate voice messages\nwithout Telegram Premium"
+  },
+  {
+    "offset": 79076624,
+    "ru": "Язык перевода",
+    "uk": "Мова перекладу",
+    "en": "Translation Language"
+  },
+  {
+    "offset": 79076720,
+    "ru": "Язык интерфейса берётся из настроек системы. Отключите, чтобы задать язык Whitegram вручную.",
+    "uk": "Мова пристрою",
+    "en": "Uses the system language for the interface. Turn off to pick the Whitegram language manually."
+  },
+  {
+    "offset": 79077024,
+    "ru": "Скрыть камеру\nв галерее",
+    "uk": "Сховати камеру\nв галереї",
+    "en": "Hide the camera\nin the gallery"
+  },
+  {
+    "offset": 79077152,
+    "ru": "Очищать метаданные\nмедиафайлов\nперед отправкой",
+    "uk": "Очищати метадані\nмедіафайлів\nперед надсиланням",
+    "en": "Clean metadata\nof media files\nbefore sending"
+  },
+  {
+    "offset": 79077392,
+    "ru": "Хранить удалённые\nсообщения из чатов",
+    "uk": "Зберігати видалені\nповідомлення з чатів",
+    "en": "Store deleted\nmessages from chats"
+  },
+  {
+    "offset": 79077664,
+    "ru": "Добавить дополнительную\nвибрацию\nпри разных действиях",
+    "uk": "Додати додаткову\nвібрацію\nпри різних діях",
+    "en": "Add extra\nvibration\non various actions"
+  },
+  {
+    "offset": 79077904,
+    "ru": "Скрыть реакции\nс сообщений",
+    "uk": "Сховати реакції\nз повідомлень",
+    "en": "Hide reactions\non messages"
+  },
+  {
+    "offset": 79078064,
+    "ru": "Отображать полное время\nу системных сообщений",
+    "uk": "Відображати повний час\nу системних повідомленнях",
+    "en": "Show the full time\non service messages"
+  },
+  {
+    "offset": 79078304,
+    "ru": "При просмотре одноразовых\nсообщений, сохранять их в галерею",
+    "uk": "При перегляді одноразових\nповідомлень зберігати їх у галерею",
+    "en": "When viewing view-once\nmessages, save them to the gallery"
+  },
+  {
+    "offset": 79078608,
+    "ru": "Неограниченное количество\nнедавних стикеров",
+    "uk": "Необмежена кількість\nнедавніх стікерів",
+    "en": "Unlimited number\nof recent stickers"
+  },
+  {
+    "offset": 79078832,
+    "ru": "Ускорение отправки",
+    "uk": "Прискорення відправки",
+    "en": "Send Acceleration"
+  },
+  {
+    "offset": 79079056,
+    "ru": "Авто-форматирование\nтекста при отправке",
+    "uk": "Авто-форматування\nтексту при надсиланні",
+    "en": "Auto-format text\non send"
+  },
+  {
+    "offset": 79079600,
+    "ru": "Не слушать\nследующее голосовое",
+    "uk": "Не слухати\nнаступне голосове",
+    "en": "Don't play\nthe next voice message"
+  },
+  {
+    "offset": 79079776,
+    "ru": "«В избранное» в меню",
+    "uk": "«В обране» в меню",
+    "en": "Favorites in Menu"
+  },
+  {
+    "offset": 79079888,
+    "ru": "Не переключаться\nмежду каналами",
+    "uk": "Не перемикатися\nміж каналами",
+    "en": "Don't switch\nbetween channels"
+  },
+  {
+    "offset": 79080048,
+    "ru": "Отображать в чатах онлайн\nчеловека рядом\nс его аватаркой",
+    "uk": "Показувати в чатах онлайн\nлюдини поряд\nз її аватаркою",
+    "en": "Show a person's online status\nnext to their avatar\nin chats"
+  },
+  {
+    "offset": 79080336,
+    "ru": "Переместить список\nпапок вниз",
+    "uk": "Перемістити список\nтек вниз",
+    "en": "Move the folder\nlist to the bottom"
+  },
+  {
+    "offset": 79080512,
+    "ru": "Скрыть вкладку\n«Подарки» в профиле",
+    "uk": "Сховати вкладку\n«Подарунки» в профілі",
+    "en": "Hide the ‘Gifts’\ntab in the profile"
+  },
+  {
+    "offset": 79080720,
+    "ru": "Делать сообщения собеседника\nполупрозрачными, когда он пишет вам в ответ",
+    "uk": "Робити повідомлення співрозмовника\nнапівпрозорими, коли він відповідає вам",
+    "en": "Make the contact's messages\nsemi-transparent when they reply to you"
+  },
+  {
+    "offset": 79081168,
+    "ru": "Скрыть описания",
+    "uk": "Приховати описи",
+    "en": "Hide Descriptions"
+  },
+  {
+    "offset": 79081264,
+    "ru": "Экспорт настроек в JSON",
+    "uk": "Експорт налаштувань у JSON",
+    "en": "Export Settings to JSON"
+  },
+  {
+    "offset": 79081392,
+    "ru": "Импорт настроек из JSON",
+    "uk": "Імпорт налаштувань з JSON",
+    "en": "Import Settings from JSON"
+  },
+  {
+    "offset": 79081776,
+    "ru": "Скрыть «Уведомления»",
+    "uk": "Сховати «Сповіщення»",
+    "en": "Hide Notifications"
+  },
+  {
+    "offset": 79082032,
+    "ru": "Скрыть «Данные и хранилище»",
+    "uk": "Сховати «Дані та сховище»",
+    "en": "Hide Data & Storage"
+  },
+  {
+    "offset": 79082272,
+    "ru": "Скрыть «Энергосбережение»",
+    "uk": "Сховати «Енергозбереження»",
+    "en": "Hide Energy Saving"
+  },
+  {
+    "offset": 79082496,
+    "ru": "Скрыть рейтинг аккаунта (щит)",
+    "uk": "Сховати рейтинг акаунту (щит)",
+    "en": "Hide Account Rating"
+  },
+  {
+    "offset": 79082816,
+    "ru": "Скрыть «Недавние звонки»",
+    "uk": "Сховати «Останні дзвінки»",
+    "en": "Hide Recent Calls"
+  },
+  {
+    "offset": 79082960,
+    "ru": "Скрыть «Telegram Premium»",
+    "uk": "Сховати «Telegram Premium»",
+    "en": "Hide Telegram Premium"
+  },
+  {
+    "offset": 79083264,
+    "ru": "Скрыть «Telegram для бизнеса»",
+    "uk": "Сховати «Telegram для бізнесу»",
+    "en": "Hide Telegram Business"
+  },
+  {
+    "offset": 79083696,
+    "ru": "Скрыть «Советы и функции»",
+    "uk": "Сховати «Поради та функції»",
+    "en": "Hide Tips & Features"
+  },
+  {
+    "offset": 79083840,
+    "ru": "Добавить кнопку для переключения\nмежду аккаунтами\nв списке чатов",
+    "uk": "Додати кнопку для перемикання\nміж акаунтами\nу списку чатів",
+    "en": "Add a button to switch\nbetween accounts\nin the chat list"
+  },
+  {
+    "offset": 79084144,
+    "ru": "Развернуть аккаунты (%d)",
+    "uk": "Розгорнути акаунти (%d)",
+    "en": "Show Accounts (%d)"
+  },
+  {
+    "offset": 79084272,
+    "ru": "Завернуть аккаунты",
+    "uk": "Згорнути акаунти",
+    "en": "Collapse Accounts"
+  },
+  {
+    "offset": 79084384,
+    "ru": "Упорядочить аккаунты",
+    "uk": "Впорядкувати акаунти",
+    "en": "Reorder Accounts"
+  },
+  {
+    "offset": 79084592,
+    "ru": "Убрать надпись «Чаты»\nв списке чатов",
+    "uk": "Прибрати напис «Чати»\nу списку чатів",
+    "en": "Remove the ‘Chats’ title\nin the chat list"
+  },
+  {
+    "offset": 79084800,
+    "ru": "Убрать Premium-значок\nв списке чатов",
+    "uk": "Прибрати Premium-значок\nу списку чатів",
+    "en": "Remove the Premium badge\nin the chat list"
+  },
+  {
+    "offset": 79084992,
+    "ru": "Скрыть вкладку «Контакты»\nв нижнем таббаре",
+    "uk": "Сховати вкладку «Контакти»\nу нижній панелі",
+    "en": "Hide the ‘Contacts’ tab\nin the bottom tab bar"
+  },
+  {
+    "offset": 79085216,
+    "ru": "Скрыть вкладку «Звонки»\nв нижнем таббаре",
+    "uk": "Сховати вкладку «Дзвінки»\nу нижній панелі",
+    "en": "Hide the ‘Calls’ tab\nin the bottom tab bar"
+  },
+  {
+    "offset": 79085424,
+    "ru": "Скрыть истории\nв списке чатов",
+    "uk": "Сховати сторіс\nу списку чатів",
+    "en": "Hide stories\nin the chat list"
+  },
+  {
+    "offset": 79085584,
+    "ru": "Кнопка поиска\nв нижнем таббаре",
+    "uk": "Кнопка пошуку\nу нижній панелі",
+    "en": "Search button\nin the bottom tab bar"
+  },
+  {
+    "offset": 79085760,
+    "ru": "Настройки и профиль сделать отдельными\nвкладками в нижнем таббаре",
+    "uk": "Налаштування та профіль зробити окремими\nвкладками у нижній панелі",
+    "en": "Split Settings and Profile into separate\ntabs in the bottom tab bar"
+  },
+  {
+    "offset": 79086224,
+    "ru": "Скрыть названия вкладок\nв нижнем таббаре",
+    "uk": "Сховати назви вкладок\nу нижній панелі",
+    "en": "Hide tab titles\nin the bottom tab bar"
+  },
+  {
+    "offset": 79086432,
+    "ru": "Высота нижнего таббара",
+    "uk": "Висота нижньої панелі",
+    "en": "Bottom tab bar height"
+  },
+  {
+    "offset": 79086560,
+    "ru": "Ширина нижнего таббара",
+    "uk": "Ширина нижньої панелі",
+    "en": "Bottom tab bar width"
+  },
+  {
+    "offset": 79086688,
+    "ru": "Изменить баланс звёзд",
+    "uk": "Змінити баланс зірок",
+    "en": "Change the star balance"
+  },
+  {
+    "offset": 79087136,
+    "ru": "Импортируйте .ttf, .otf или .zip архивы со шрифтами. Zip может содержать семейство шрифтов, поэтому варианты форматирования будут отображаться корректнее.",
+    "uk": "Імпортуйте .ttf, .otf або .zip архіви зі шрифтами. Zip може містити сімейство шрифтів, тому варіанти форматування відображатимуться коректніше.",
+    "en": "Import .ttf, .otf, or .zip archives with font files. Zip imports can include font families, so formatting variants stay visible."
+  },
+  {
+    "offset": 79087888,
+    "ru": "Нажмите +, чтобы импортировать шрифт или zip-архив.",
+    "uk": "Натисніть +, щоб імпортувати шрифт або zip-архів.",
+    "en": "Tap + to import a font or a zip archive."
+  },
+  {
+    "offset": 79088224,
+    "ru": "Добавлено шрифтов: %d.",
+    "uk": "Додано шрифтів: %d.",
+    "en": "%d font(s) added."
+  },
+  {
+    "offset": 79088352,
+    "ru": "Подходящие шрифты не найдены",
+    "uk": "Сумісних шрифтів не знайдено",
+    "en": "No compatible fonts found"
+  },
+  {
+    "offset": 79088640,
+    "ru": "Аккаунты в Keychain",
+    "uk": "Акаунти в Keychain",
+    "en": "Accounts in Keychain"
+  },
+  {
+    "offset": 79088736,
+    "ru": "Боты как аккаунты",
+    "uk": "Боти як акаунти",
+    "en": "Bots as accounts"
+  },
+  {
+    "offset": 79088976,
+    "ru": "Скопировать диагностику",
+    "uk": "Скопіювати діагностику",
+    "en": "Copy Diagnostics"
+  },
+  {
+    "offset": 79089312,
+    "ru": "Управління плагінами",
+    "uk": "Канал Whitegram",
+    "en": "Whitegram Channel"
+  },
+  {
+    "offset": 79089424,
+    "ru": "Разработчик хэйпэйн",
+    "uk": "Розробник хэйпэйн",
+    "en": "Developer heypain"
+  },
+  {
+    "offset": 79090192,
+    "ru": "Вертикали",
+    "uk": "Вертикалі",
+    "en": "Vertical Stripes"
+  },
+  {
+    "offset": 79090480,
+    "ru": "Все аватарки в приложении — в списке чатов, в чате, в профиле, в настройках и в поиске — становятся квадратными со скруглёнными углами. Кольцо историй вокруг таких аватарок скрывается.",
+    "uk": "Квадратні аватари",
+    "en": "Makes every avatar square with rounded corners across the app. The story ring around avatars is hidden in this mode."
+  },
+  {
+    "offset": 79091376,
+    "ru": "Список чатов рисуется карточками с закруглёнными краями вместо сплошных строк.",
+    "uk": "Новий список чатів (картки)",
+    "en": "Draws the chat list as rounded cards instead of plain rows."
+  },
+  {
+    "offset": 79091664,
+    "ru": "Задаёт размер, с которым стикеры отображаются в переписке. На отправку не влияет — меняется только показ у вас.",
+    "uk": "Розмір стікерів",
+    "en": "Sets how large stickers appear in chats. Affects only your view, not what you send."
+  },
+  {
+    "offset": 79092000,
+    "ru": "Возвращает стандартные иконки Telegram вместо иконок Whitegram в интерфейсе.",
+    "uk": "Оригінальні іконки Telegram",
+    "en": "Restores the stock Telegram icons instead of the Whitegram ones."
+  },
+  {
+    "offset": 79092256,
+    "ru": "Отключает действия по свайпу на чате (архив, отключение уведомлений, удаление), чтобы случайный жест ничего не менял.",
+    "uk": "Вимкнути свайп-опції в чатах",
+    "en": "Disables chat swipe actions (archive, mute, delete) so a stray gesture cannot change anything."
+  },
+  {
+    "offset": 79092640,
+    "ru": "Снимает лимит Telegram на число закреплённых чатов. Закрепления хранятся локально, на других устройствах лимит остаётся прежним.",
+    "uk": "Необмежене закріплення чатів",
+    "en": "Removes Telegram's pinned chat limit. The extra pins are local to this device."
+  },
+  {
+    "offset": 79093024,
+    "ru": "Аккаунты и кнопки редактирования в настройках показываются одной горизонтальной лентой круглых кнопок с аватарками, которые можно перетаскивать, меняя порядок аккаунтов.",
+    "uk": "Переключатель акаунтів",
+    "en": "Shows accounts and edit buttons as one scrollable row of round avatar buttons which can be dragged to reorder accounts."
+  },
+  {
+    "offset": 79093520,
+    "ru": "Кнопки действий в профиле (позвонить, видео, уведомления, поиск, ещё) рисуются отдельными круглыми кнопками вместо общей плашки.",
+    "uk": "Кнопки дій у профілі (подзвонити, відео, сповіщення, пошук, ще) малюються окремими круглими кнопками замість спільної плашки.",
+    "en": "Draws the profile action buttons as separate round buttons instead of one bar."
+  },
+  {
+    "offset": 79094400,
+    "ru": "Callback кнопок ботов",
+    "uk": "Callback кнопок ботів",
+    "en": "Bot Button Callback"
+  },
+  {
+    "offset": 79094528,
+    "ru": "В контекстное меню inline-кнопок ботов добавляется пункт для копирования их callback-данных. Нужно для отладки ботов.",
+    "uk": "Копіювати callback-дані кнопок",
+    "en": "Adds a menu item to copy the callback data of bot inline buttons — useful for bot debugging."
+  },
+  {
+    "offset": 79094896,
+    "ru": "Фон профиля заливается персональным цветом человека: цветом его NFT-подарка в статусе, цветом профиля Premium или цветом Whitegram, если он его задал.",
+    "uk": "Персональний колір у профілі",
+    "en": "Fills the profile background with the person's personal colour: their NFT gift status, Premium profile colour, or a Whitegram colour."
+  },
+  {
+    "offset": 79095376,
+    "ru": "При раскрытии аватарки фон вокруг неё размывается, оставляя фокус на фотографии.",
+    "uk": "Блюр аватара при збільшенні",
+    "en": "Blurs the background around the avatar while it is expanded."
+  },
+  {
+    "offset": 79095664,
+    "ru": "На задний фон профиля ставится размытая копия аватарки человека. Работает вместе с обоями профиля, если те не заданы.",
+    "uk": "Блюр аватара у профілі",
+    "en": "Uses a blurred copy of the person's avatar as the profile background."
+  },
+  {
+    "offset": 79096016,
+    "ru": "Уменьшает силу размытия аватарки на фоне профиля почти до нуля — фотография видна отчётливо.",
+    "uk": "Зменшити блюр до мінімуму",
+    "en": "Reduces the avatar blur on the profile background almost to zero, so the photo stays sharp."
+  },
+  {
+    "offset": 79096336,
+    "ru": "Добавляет затемняющий слой поверх размытой аватарки, чтобы текст и кнопки профиля читались на светлых фото.",
+    "uk": "Тонування блюру",
+    "en": "Adds a darkening layer over the blurred avatar so profile text stays readable on light photos."
+  },
+  {
+    "offset": 79096672,
+    "ru": "На фон плеера ставится размытая обложка играющего трека.",
+    "uk": "Блюр обкладинки треку в плеєрі",
+    "en": "Uses a blurred copy of the current track's cover art as the player background."
+  },
+  {
+    "offset": 79096928,
+    "ru": "Выбор бейджа Whitegram, который показывается на Динамическом острове поверх часов.",
+    "uk": "Колір бейджа острова",
+    "en": "Chooses the Whitegram badge shown on the Dynamic Island."
+  },
+  {
+    "offset": 79097200,
+    "ru": "Каждому сообщению добавляется тонкая обводка выбранного цвета. Сочетается с прозрачными и полупрозрачными сообщениями.",
+    "uk": "Обведення повідомлень",
+    "en": "Adds a thin outline of the chosen colour to every message bubble."
+  },
+  {
+    "offset": 79097824,
+    "ru": "Пузыри сообщений становятся полупрозрачными: обои просвечивают, но текст остаётся на подложке.",
+    "uk": "Напівпрозорі повідомлення (α=0.7)",
+    "en": "Makes message bubbles semi-transparent so the wallpaper shows through."
+  },
+  {
+    "offset": 79098624,
+    "ru": "Inline-кнопки под сообщениями рисуются стеклом Liquid Glass вместо плоской заливки.",
+    "uk": "Liquid Glass inline-кнопки",
+    "en": "Draws inline buttons under messages with the Liquid Glass material."
+  },
+  {
+    "offset": 79098896,
+    "ru": "Выбор анимированных частиц (снег, звёзды и т. п.), которые падают поверх интерфейса.",
+    "uk": "Ефект частинок",
+    "en": "Picks animated particles (snow, stars and so on) that fall over the interface."
+  },
+  {
+    "offset": 79099168,
+    "ru": "Удалённые собеседником сообщения остаются в чате и помечаются как удалённые. Работает только для сообщений, которые приложение успело получить.",
+    "uk": "Показувати видалені повідомлення",
+    "en": "Keeps messages deleted by others visible and marks them as deleted. Works only for messages the app already received."
+  },
+  {
+    "offset": 79099632,
+    "ru": "Насколько бледно показывать удалённые сообщения, чтобы отличать их от обычных.",
+    "uk": "Прозорість видалених",
+    "en": "How faded deleted messages appear compared to normal ones."
+  },
+  {
+    "offset": 79099904,
+    "ru": "У отредактированных сообщений можно посмотреть исходный текст до правки.",
+    "uk": "Оригінал відредагованих",
+    "en": "Lets you see the original text of edited messages."
+  },
+  {
+    "offset": 79100160,
+    "ru": "В контекстное меню сообщения добавляется пункт, который сокращает длинный текст через ИИ.",
+    "uk": "Кнопка «Скоротити» в меню",
+    "en": "Adds a menu item that shortens long messages with AI."
+  },
+  {
+    "offset": 79100448,
+    "ru": "Пока вы набираете сообщение, рядом с полем ввода показывается число символов.",
+    "uk": "Лічильник символів при введенні",
+    "en": "Shows a live character count next to the input field while typing."
+  },
+  {
+    "offset": 79100736,
+    "ru": "У каждого сообщения в чате показывается количество символов в нём.",
+    "uk": "Лічильник символів у повідомленнях",
+    "en": "Shows the character count of every message in the chat."
+  },
+  {
+    "offset": 79101008,
+    "ru": "Ваши собственные удалённые сообщения не показываются как удалённые — только чужие.",
+    "uk": "Ваші власні видалені повідомлення не показуються як видалені — лише чужі.",
+    "en": "Your own deleted messages are not shown as deleted — only other people's are."
+  },
+  {
+    "offset": 79101392,
+    "ru": "Исходный текст не показывается для ваших собственных отредактированных сообщений.",
+    "uk": "Початковий текст не показується для ваших власних відредагованих повідомлень.",
+    "en": "The original text is not shown for your own edited messages."
+  },
+  {
+    "offset": 79101776,
+    "ru": "Исходный текст отредактированных сообщений ботов не показывается. Боты правят сообщения часто, поэтому это выделено отдельно.",
+    "uk": "Початковий текст відредагованих повідомлень ботів не показується.",
+    "en": "The original text of edited bot messages is not shown — bots edit often, so this is a separate switch."
+  },
+  {
+    "offset": 79102256,
+    "ru": "Удалённые сообщения ботов не показываются вместе с остальными удалёнными.",
+    "uk": "Видалені повідомлення ботів не показуються разом з рештою видалених.",
+    "en": "Deleted bot messages are not shown along with the other deleted ones."
+  },
+  {
+    "offset": 79102608,
+    "ru": "Двойное нажатие по своему сообщению сразу открывает его редактирование.",
+    "uk": "Подвійний тап для редагування",
+    "en": "Double-tapping your own message opens it for editing right away."
+  },
+  {
+    "offset": 79102896,
+    "ru": "Полностью удаляет локальную базу сохранённых удалённых сообщений. Отменить нельзя.",
+    "uk": "Очистити кеш видалених повідомлень",
+    "en": "Permanently clears the local database of saved deleted messages."
+  },
+  {
+    "offset": 79103216,
+    "ru": "Полностью удаляет локальную базу исходных версий отредактированных сообщений.",
+    "uk": "Очистити кеш змінених повідомлень",
+    "en": "Permanently clears the local database of original versions of edited messages."
+  },
+  {
+    "offset": 79103520,
+    "ru": "Удаляет сохранённые копии истории чатов, которые Whitegram хранит для восстановления.",
+    "uk": "Очистити збережену історію чатів",
+    "en": "Deletes the saved chat history copies Whitegram keeps for restoring."
+  },
+  {
+    "offset": 79103824,
+    "ru": "Возвращает в чаты сообщения из локальной резервной копии Whitegram.",
+    "uk": "Відновити збережені чати",
+    "en": "Restores messages into chats from the local Whitegram backup."
+  },
+  {
+    "offset": 79104064,
+    "ru": "Каждое удалённое сообщение дополнительно записывается в локальную базу, которую можно экспортировать файлом.",
+    "uk": "Зберігати видалені до бази даних",
+    "en": "Also writes every deleted message into a local database you can export as a file."
+  },
+  {
+    "offset": 79104432,
+    "ru": "Сохраняет базу удалённых сообщений файлом, чтобы перенести её на другое устройство.",
+    "uk": "Експорт бази видалених повідомлень",
+    "en": "Saves the deleted-message database to a file you can move to another device."
+  },
+  {
+    "offset": 79104752,
+    "ru": "Загружает базу удалённых сообщений из ранее сохранённого файла.",
+    "uk": "Імпорт бази видалених повідомлень",
+    "en": "Loads a previously exported deleted-message database."
+  },
+  {
+    "offset": 79105424,
+    "ru": "Настройки камеры Whitegram: какая камера включается по умолчанию, зум и качество записи.",
+    "uk": "Керування камерою",
+    "en": "Whitegram camera settings: default camera, zoom and recording quality."
+  },
+  {
+    "offset": 79106064,
+    "ru": "0.5× для видео-кружков",
+    "uk": "0.5× для відео-кружків",
+    "en": "0.5× for Video Circles"
+  },
+  {
+    "offset": 79106192,
+    "ru": "Снимать кружки на широкоугольную камеру (0.5×). Только задняя камера.",
+    "uk": "Знімати кружечки на ширококутну камеру (0.5×). Тільки задня камера.",
+    "en": "Record circles with ultra-wide lens (0.5×). Back camera only."
+  },
+  {
+    "offset": 79106576,
+    "ru": "Битрейт записи",
+    "uk": "Бітрейт запису",
+    "en": "Recording Bitrate"
+  },
+  {
+    "offset": 79106704,
+    "ru": "Запись всегда идёт со встроенного микрофона устройства, даже когда подключены наушники или гарнитура.",
+    "uk": "Використовувати мікрофон пристрою",
+    "en": "Always records from the device microphone even when headphones are connected."
+  },
+  {
+    "offset": 79107056,
+    "ru": "Фотографии отправляются без пережатия Telegram, в максимальном качестве и размере.",
+    "uk": "Надсилати великі фото (2560px)",
+    "en": "Sends photos without Telegram's downscaling, at full quality and size."
+  },
+  {
+    "offset": 79107360,
+    "ru": "Степень сжатия JPEG при отправке фото: выше значение — лучше качество и больше размер файла.",
+    "uk": "Якість JPEG фото",
+    "en": "JPEG compression level for outgoing photos: higher means better quality and a bigger file."
+  },
+  {
+    "offset": 79107664,
+    "ru": "При записи кружка включается та камера, которой вы пользовались в прошлый раз.",
+    "uk": "Запам'ятовувати останню камеру",
+    "en": "Starts video message recording with the camera you used last time."
+  },
+  {
+    "offset": 79107952,
+    "ru": "Зум в кружках фиксируется и не меняется при переключении камеры во время записи.",
+    "uk": "Статичний зум при записі",
+    "en": "Locks the zoom level in video messages so it does not change when switching cameras."
+  },
+  {
+    "offset": 79108256,
+    "ru": "Все медиафайлы — фото, видео, кружки — отправляются в максимальном качестве.",
+    "uk": "Завжди надсилати в HD",
+    "en": "Sends every media file — photos, videos, video messages — at maximum quality."
+  },
+  {
+    "offset": 79108544,
+    "ru": "Ваш статус для всех остаётся «в сети», даже когда приложение закрыто. Требует, чтобы приложение периодически просыпалось.",
+    "uk": "Завжди онлайн",
+    "en": "Keeps your status as online for everyone even when the app is closed."
+  },
+  {
+    "offset": 79108880,
+    "ru": "Никто не видит вас в сети: статус всегда показывается как «был(а) недавно».",
+    "uk": "Приховати онлайн-статус",
+    "en": "Nobody sees you online — your status always stays offline."
+  },
+  {
+    "offset": 79109136,
+    "ru": "Собеседник не увидит статус «печатает», пока вы набираете сообщение.",
+    "uk": "Приховати статус набору тексту",
+    "en": "Stops the typing indicator from being sent while you write."
+  },
+  {
+    "offset": 79109392,
+    "ru": "Собеседник не увидит статус «записывает голосовое» во время записи.",
+    "uk": "Приховати статус запису голосового",
+    "en": "Stops the recording indicator from being sent while you record audio."
+  },
+  {
+    "offset": 79109680,
+    "ru": "Собеседник не увидит статус отправки файла, пока идёт загрузка.",
+    "uk": "Приховати статус завантаження файлів",
+    "en": "Stops the upload indicator from being sent while a file is sending."
+  },
+  {
+    "offset": 79109968,
+    "ru": "Отправитель не увидит, что вы прочитали его сообщение. Двойные галочки у него не появятся.",
+    "uk": "Приховати прочитання повідомлень",
+    "en": "Senders will not see that you read their message — no read receipts are sent."
+  },
+  {
+    "offset": 79110288,
+    "ru": "Автор истории не увидит вас в списке просмотревших.",
+    "uk": "Приховати перегляд сторіс",
+    "en": "Story authors will not see you in their viewer list."
+  },
+  {
+    "offset": 79110512,
+    "ru": "Сообщения помечаются прочитанными только при вашем действии (ответ, реакция), а не при простом открытии чата.",
+    "uk": "Читати при діях",
+    "en": "Marks messages as read only when you act on them, not when you merely open the chat."
+  },
+  {
+    "offset": 79110848,
+    "ru": "Отправка сообщения задерживается на 12 секунд — за это время его можно отменить.",
+    "uk": "Відкладена відправка (12 сек)",
+    "en": "Delays sending by 12 seconds so you can still cancel the message."
+  },
+  {
+    "offset": 79111376,
+    "ru": "Экспорт и импорт всех настроек Whitegram одним файлом — удобно при переустановке.",
+    "uk": "Експорт / Імпорт",
+    "en": "Exports and imports all Whitegram settings as a single file."
+  },
+  {
+    "offset": 79111616,
+    "ru": "Подменяет координаты, которые отправляются при отправке геопозиции и в геочатах.",
+    "uk": "Підміна геолокації",
+    "en": "Replaces the coordinates sent when you share your location."
+  },
+  {
+    "offset": 79111888,
+    "ru": "Whitegram запоминает, когда ваши контакты появлялись в сети, и строит по этому историю.",
+    "uk": "Історія онлайну (відстежувати статуси)",
+    "en": "Whitegram records when your contacts come online and builds a history from it."
+  },
+  {
+    "offset": 79112208,
+    "ru": "Открывает собранную историю онлайна ваших контактов.",
+    "uk": "Переглянути історію онлайну",
+    "en": "Opens the collected online history of your contacts."
+  },
+  {
+    "offset": 79112448,
+    "ru": "Удаляет всю собранную историю онлайна. Отменить нельзя.",
+    "uk": "Очистити історію онлайну",
+    "en": "Deletes the entire collected online history."
+  },
+  {
+    "offset": 79112656,
+    "ru": "Убирает спонсорские сообщения из каналов и из поиска.",
+    "uk": "Вимкнути рекламу в каналах",
+    "en": "Removes sponsored messages from channels and search."
+  },
+  {
+    "offset": 79112896,
+    "ru": "Позволяет копировать текст, пересылать и сохранять медиа из чатов с включённой защитой контента.",
+    "uk": "Обхід захищеного контенту",
+    "en": "Lets you copy, forward and save media from chats with content protection enabled."
+  },
+  {
+    "offset": 79113248,
+    "ru": "Скрытый спойлером текст и медиа показываются сразу, без нажатия.",
+    "uk": "Прибрати спойлери скрізь",
+    "en": "Reveals spoiler text and media immediately, without tapping."
+  },
+  {
+    "offset": 79113712,
+    "ru": "Перед исходящим звонком показывается подтверждение — защита от случайных нажатий.",
+    "uk": "Попереджати перед дзвінком",
+    "en": "Shows a confirmation before placing a call, protecting you from accidental taps."
+  },
+  {
+    "offset": 79114032,
+    "ru": "В профиле показываются числовой ID пользователя и его дата-центр Telegram.",
+    "uk": "Показувати ID та DC у профілі",
+    "en": "Shows the numeric user ID and Telegram data centre in profiles."
+  },
+  {
+    "offset": 79114288,
+    "ru": "У сообщений и статусов время показывается с секундами.",
+    "uk": "Показувати секунди в мітці часу",
+    "en": "Shows seconds in message and status timestamps."
+  },
+  {
+    "offset": 79114512,
+    "ru": "У постов в каналах показывается точное число просмотров вместо округлённого.",
+    "uk": "Повні перегляди",
+    "en": "Shows the exact view count on channel posts instead of a rounded number."
+  },
+  {
+    "offset": 79114768,
+    "ru": "Ваш номер телефона убирается из вашего же профиля на экране — чтобы не светить его при показе экрана.",
+    "uk": "Сховати номер телефону",
+    "en": "Hides your phone number in your own profile screen so it is not exposed when sharing your screen."
+  },
+  {
+    "offset": 79115120,
+    "ru": "В профиле чата или канала показывается дата его создания.",
+    "uk": "Дата створення чату/каналу",
+    "en": "Shows the creation date in a chat or channel profile."
+  },
+  {
+    "offset": 79115360,
+    "ru": "Подменяет отображаемый юзернейм в вашем профиле только визуально — для других он остаётся прежним.",
+    "uk": "Візуальний юзернейм",
+    "en": "Visually replaces the username shown in your profile; other people still see the real one."
+  },
+  {
+    "offset": 79115696,
+    "ru": "Над клавиатурой появляется панель форматирования: жирный, курсив, ссылка, код, цитата и другое.",
+    "uk": "Панель форматування над клавіатурою",
+    "en": "Adds a formatting toolbar above the keyboard: bold, italic, link, code, quote and more."
+  },
+  {
+    "offset": 79116048,
+    "ru": "Локально включает премиум-функции интерфейса. Серверные ограничения Telegram при этом не снимаются.",
+    "uk": "Локальний преміум (прибирає обмеження)",
+    "en": "Enables Premium interface features locally. Telegram's server-side limits still apply."
+  },
+  {
+    "offset": 79116416,
+    "ru": "Кнопка перевода в контекстном меню показывается всегда, даже если язык совпадает с вашим.",
+    "uk": "Кнопка «Перекласти» завжди видима",
+    "en": "Always shows the translate button, even when the language matches yours."
+  },
+  {
+    "offset": 79116736,
+    "ru": "Перевод сообщений идёт через Google вместо переводчика Telegram Premium.",
+    "uk": "Переклад повідомлень через Google",
+    "en": "Translates messages through Google instead of Telegram Premium's translator."
+  },
+  {
+    "offset": 79117008,
+    "ru": "В меню отправки появляется вариант «С переводом»: сообщение переводится перед отправкой.",
+    "uk": "Перекладати текст з меню надсилання",
+    "en": "Adds a send option that translates your message before sending it."
+  },
+  {
+    "offset": 79117344,
+    "ru": "Голосовые распознаются встроенным движком Apple, без подписки Telegram Premium.",
+    "uk": "Транскрипція голосових через Apple Speech",
+    "en": "Transcribes voice messages with Apple's on-device engine, no Telegram Premium needed."
+  },
+  {
+    "offset": 79117664,
+    "ru": "Дополнительно шифрует трафик приложения, чтобы обойти блокировки и анализ трафика провайдером.",
+    "uk": "Покращене шифрування трафіку",
+    "en": "Adds extra traffic encryption to bypass ISP blocking and inspection."
+  },
+  {
+    "offset": 79118000,
+    "ru": "Убирает плитку камеры из панели выбора медиа при отправке.",
+    "uk": "Сховати камеру в галереї",
+    "en": "Removes the camera tile from the media picker."
+  },
+  {
+    "offset": 79118496,
+    "ru": "Whitegram хранит копию сообщений чата, чтобы их можно было восстановить после удаления.",
+    "uk": "Зберігати історію чатів",
+    "en": "Whitegram keeps a copy of chat messages so they can be restored after deletion."
+  },
+  {
+    "offset": 79118784,
+    "ru": "Убирает «падающий» текст с комбинированными символами, который ломает вёрстку сообщений.",
+    "uk": "Zalgo-фільтр (прибрати спотворення тексту)",
+    "en": "Removes zalgo text with stacked combining characters that breaks message layout."
+  },
+  {
+    "offset": 79119136,
+    "ru": "Добавляет тактильный отклик на действия, где Telegram его не даёт: нажатия, свайпы, отправку.",
+    "uk": "Вібрація в застосунку",
+    "en": "Adds haptic feedback to actions where Telegram gives none: taps, swipes, sending."
+  },
+  {
+    "offset": 79119456,
+    "ru": "Реакции под сообщениями не показываются вовсе.",
+    "uk": "Сховати реакції",
+    "en": "Hides reactions under messages entirely."
+  },
+  {
+    "offset": 79119632,
+    "ru": "У системных сообщений (вход в группу, звонок и т. п.) показывается полное время.",
+    "uk": "Показувати час у дій",
+    "en": "Shows the full timestamp on service messages such as joins and calls."
+  },
+  {
+    "offset": 79119904,
+    "ru": "Одноразовые фото, видео и кружки сохраняются в галерею при просмотре.",
+    "uk": "Зберігати одноразові медіа в галерею",
+    "en": "Saves view-once photos, videos and video messages to your gallery when you open them."
+  },
+  {
+    "offset": 79120208,
+    "ru": "Снимает лимит на число недавних стикеров.",
+    "uk": "Безкінечні стікери",
+    "en": "Removes the limit on how many recent stickers are kept."
+  },
+  {
+    "offset": 79120944,
+    "ru": "Текст автоматически форматируется при отправке: ссылки, код и разметка распознаются без ручного выделения.",
+    "uk": "Авто-форматування тексту",
+    "en": "Formats your text automatically on send: links, code and markup are detected for you."
+  },
+  {
+    "offset": 79121296,
+    "ru": "При отправке часть кириллицы заменяется похожими по звучанию латинскими буквами: «Заказать» → «Zаkаzаtь». Разметка, ссылки и эмодзи не съезжают.",
+    "uk": "Під час надсилання частина кирилиці замінюється схожими за звучанням латинськими літерами.",
+    "en": "On send, some Cyrillic letters are swapped for Latin look‑alikes of the same sound. Formatting, links and emoji stay in place."
+  },
+  {
+    "offset": 79121888,
+    "ru": "После голосового сообщения автовоспроизведение следующего не начинается.",
+    "uk": "Не слухати наст. голосове",
+    "en": "Stops autoplay after a voice message instead of continuing to the next one."
+  },
+  {
+    "offset": 79122160,
+    "ru": "В меню сообщения появляется пункт для быстрого сохранения его в избранное.",
+    "uk": "Кнопка «В обране» в меню повідомлень",
+    "en": "Adds a menu item to quickly save a message to your favourites."
+  },
+  {
+    "offset": 79122448,
+    "ru": "Отключает автоматический переход к следующему каналу при прокрутке до конца.",
+    "uk": "Не перемикатися між каналами",
+    "en": "Disables automatically jumping to the next channel when you scroll to the end."
+  },
+  {
+    "offset": 79122736,
+    "ru": "Зелёная точка онлайна у аватарки отправителя в группах, темах и каналах. В личных чатах и чатах с ботами не показывается.",
+    "uk": "Зелена крапка онлайну біля аватарки відправника в групах, темах і каналах. У особистих чатах і чатах з ботами не показується.",
+    "en": "A green online dot on the sender's avatar in groups, topics and channels. Not shown in private chats or bot chats."
+  },
+  {
+    "offset": 79123328,
+    "ru": "Список папок переезжает из шапки вниз, к нижней панели вкладок.",
+    "uk": "Теки знизу",
+    "en": "Moves the folder list from the header down to the tab bar."
+  },
+  {
+    "offset": 79123552,
+    "ru": "Вкладка «Подарки» в профилях не показывается.",
+    "uk": "Сховати подарунки",
+    "en": "Hides the Gifts tab in profiles."
+  },
+  {
+    "offset": 79123744,
+    "ru": "Сообщения собеседника становятся полупрозрачными, когда он отвечает именно вам — ответ заметнее в общей переписке.",
+    "uk": "Напівпрозоро, коли згадують",
+    "en": "Fades the other person's messages when they reply directly to you, making the reply stand out."
+  },
+  {
+    "offset": 79124288,
+    "ru": "Скрывает эти пояснения под названиями опций — меню становится компактнее.",
+    "uk": "Сховати описи функцій",
+    "en": "Hides these explanations under option titles, making the menu more compact."
+  },
+  {
+    "offset": 79124560,
+    "ru": "В шапке списка чатов появляется кнопка быстрого переключения между вашими аккаунтами.",
+    "uk": "Перемикач акаунту в шапці",
+    "en": "Adds a quick account-switch button to the chat list header."
+  },
+  {
+    "offset": 79124832,
+    "ru": "Убирает крупный заголовок «Чаты» — список начинается сразу с диалогов.",
+    "uk": "Сховати напис «Чати»",
+    "en": "Removes the large “Chats” title so the list starts right away."
+  },
+  {
+    "offset": 79125104,
+    "ru": "Скрывает премиум-значок рядом с вашим именем в шапке списка чатов.",
+    "uk": "Сховати преміум-статус у шапці",
+    "en": "Hides the Premium badge next to your name in the chat list header."
+  },
+  {
+    "offset": 79125376,
+    "ru": "Убирает вкладку «Контакты» из нижней панели.",
+    "uk": "Сховати вкладку «Контакти»",
+    "en": "Removes the Contacts tab from the bottom bar."
+  },
+  {
+    "offset": 79125584,
+    "ru": "Убирает вкладку «Звонки» из нижней панели.",
+    "uk": "Сховати вкладку «Дзвінки»",
+    "en": "Removes the Calls tab from the bottom bar."
+  },
+  {
+    "offset": 79125776,
+    "ru": "Лента историй сверху списка чатов не показывается.",
+    "uk": "Сховати сторіс",
+    "en": "Hides the stories strip above the chat list."
+  },
+  {
+    "offset": 79125952,
+    "ru": "Убирает кнопку поиска (лупу) из нижней панели вкладок.",
+    "uk": "Сховати кнопку пошуку (лупа)",
+    "en": "Removes the search button from the bottom tab bar."
+  },
+  {
+    "offset": 79126192,
+    "ru": "Добавляет вкладку с лентой постов из ваших каналов.",
+    "uk": "Стрічка постів з каналів",
+    "en": "Adds a tab with a feed of posts from your channels."
+  },
+  {
+    "offset": 79126400,
+    "ru": "Как в Telegram для Android: рядом с «Настройками» появляется отдельная вкладка «Профиль».",
+    "uk": "Як у Telegram для Android: поряд із «Налаштуваннями» з’являється окрема вкладка «Профіль».",
+    "en": "Like Telegram for Android: a separate Profile tab appears next to Settings."
+  },
+  {
+    "offset": 79126800,
+    "ru": "Подписи вкладок в нижней панели скрываются, а иконки центрируются по высоте панели.",
+    "uk": "Сховати підписи вкладок",
+    "en": "Hides tab titles in the bottom bar and centres the icons vertically."
+  },
+  {
+    "offset": 79127088,
+    "ru": "Высота нижней панели вкладок в процентах от стандартной.",
+    "uk": "Висота панелі",
+    "en": "Height of the bottom tab bar as a percentage of the default."
+  },
+  {
+    "offset": 79127296,
+    "ru": "Ширина нижней панели вкладок в процентах от стандартной.",
+    "uk": "Ширина панелі",
+    "en": "Width of the bottom tab bar as a percentage of the default."
+  },
+  {
+    "offset": 79127504,
+    "ru": "Прокси включается автоматически при запуске приложения.",
+    "uk": "Автопідключення проксі",
+    "en": "Turns the proxy on automatically when the app starts."
+  },
+  {
+    "offset": 79127728,
+    "ru": "Локально подменяет отображаемый баланс звёзд. На реальный баланс и покупки не влияет.",
+    "uk": "Локальний баланс зірок",
+    "en": "Locally replaces the displayed Stars balance. Your real balance and purchases are unaffected."
+  },
+  {
+    "offset": 79128320,
+    "ru": "Заменяет системный шрифт интерфейса на выбранный вами.",
+    "uk": "Увімкнути власний шрифт",
+    "en": "Replaces the interface font with one of your choice."
+  },
+  {
+    "offset": 79128544,
+    "ru": "Постоянные уведомления",
+    "uk": "Постійні сповіщення",
+    "en": "Persistent Notifications"
+  },
+  {
+    "offset": 79128880,
+    "ru": "Может сильно увеличить расход батареи, так как Whitegram будет вечно висеть в фоне, пока вы его сами не уберёте.",
+    "uk": "Може сильно збільшити витрату батареї, тому що Whitegram буде постійно працювати у фоні, доки ви самі його не закриєте.",
+    "en": "May significantly increase battery usage because Whitegram will stay in the background until you close it manually."
+  },
+  {
+    "offset": 79129824,
+    "ru": "Подключите своего бота обычным аккаунтом и читайте его переписку прямо здесь. Токен подставляется сам — выбирать его в BotFather не нужно.",
+    "uk": "Підключіть свого бота звичайним акаунтом.",
+    "en": "Connect your own bot as a regular account and read its chats right here. The token is filled in for you — no BotFather needed."
+  },
+  {
+    "offset": 79130304,
+    "ru": "Whitegram запоминает время последнего появления контакта в сети.",
+    "uk": "Зберігати останній онлайн",
+    "en": "Whitegram records when each contact was last online."
+  },
+  {
+    "offset": 79130544,
+    "ru": "Whitegram сохраняет даты прочтения ваших сообщений собеседниками.",
+    "uk": "Зберігати дату прочитання",
+    "en": "Whitegram saves the dates your messages were read."
+  },
+  {
+    "offset": 79131168,
+    "ru": "Канал с новостями Whitegram: что нового в сборках и когда выйдет следующая.",
+    "uk": "Канал з новинами Whitegram: що нового у збірках і коли вийде наступна.",
+    "en": "The Whitegram news channel: what is new in each build and when the next one lands."
+  },
+  {
+    "offset": 79131536,
+    "ru": "Личный чат с автором Whitegram — сюда пишут про ошибки и просят новые функции.",
+    "uk": "Особистий чат з автором Whitegram — сюди пишуть про помилки й просять нові функції.",
+    "en": "A direct chat with the author of Whitegram — report bugs and request features here."
+  },
+  {
+    "offset": 79131936,
+    "ru": "Открывает бот Openlock — это отдельный сторонний VPN, в Whitegram его нет.",
+    "uk": "Відкриває бот Openlock — це окремий сторонній VPN, у Whitegram його немає.",
+    "en": "Opens the Openlock bot — a separate third-party VPN, not part of Whitegram."
+  },
+  {
+    "offset": 79132368,
+    "ru": "«Квадратные аватары» меняют форму фотографий. «Компактный список» уменьшает аватары и отступы. «Размер стикеров» масштабирует стикеры в чате (10–200%). «Оригинальные иконки Telegram» добавляет их в меню выбора иконки. «Круглые кнопки» убирает текст под кнопками и делает их круглыми. «Персональный цвет» использует профильный цвет как фон. «Блюр аватара» при увеличении аватарки показывает размытый фон.",
+    "uk": "«Квадратні аватари» змінюють форму фотографій. «Компактний список» зменшує аватари та відступи. «Розмір стікерів» масштабує стікери в чаті (10–200%). «Оригінальні іконки Telegram» додає їх до меню вибору іконки. «Круглі кнопки» прибирає текст під кнопками і робить їх круглими. «Персональний колір» використовує колір профілю як фон. «Блюр аватара» при збільшенні аватарки показує розмитий фон.",
+    "en": "«Square Avatars» changes photo shapes. «Compact List» reduces avatars and padding. «Sticker Size» scales stickers in chat (10–200%). «Original Telegram Icons» adds them to the icon picker. «Round Buttons» removes text under profile buttons. «Profile Color» uses the profile color as background. «Avatar Blur» shows a blurred background when zooming in on an avatar."
+  },
+  {
+    "offset": 79134208,
+    "ru": "«Обводка» добавляет тонкую рамку вокруг каждого сообщения. «Прозрачные» скрывают фон — виден только текст. «Полупрозрачные» делают фон видимым на 70%. «Liquid Glass» заменяет фон пузырьков блюром. Опции взаимно исключают друг друга.",
+    "uk": "«Обведення» додає тонку рамку навколо кожного повідомлення. «Прозорі» приховують фон — видно лише текст. «Напівпрозорі» роблять фон видимим на 70%. «Liquid Glass» замінює фон бульбашок блюром. Опції взаємно виключають одна одну.",
+    "en": "«Border» adds a thin frame around each message. «Transparent» hides the background — only text is visible. «Semi-transparent» makes the background 70% visible. «Liquid Glass» replaces bubble backgrounds with blur. Options are mutually exclusive."
+  },
+  {
+    "offset": 79135312,
+    "ru": "Удалённые сообщения остаются в чате полупрозрачными со значком 🗑. Повторное удаление убирает их окончательно.",
+    "uk": "Видалені повідомлення залишаються в чаті напівпрозорими зі значком 🗑. Повторне видалення прибирає їх остаточно.",
+    "en": "Deleted messages stay semi-transparent in chat with a 🗑 icon. Deleting again removes them permanently."
+  },
+  {
+    "offset": 79135856,
+    "ru": "Оригинальный текст отображается зачёркнутым под сообщением. Значок ✏️ рядом со временем указывает на редактирование.",
+    "uk": "Оригінальний текст відображається закресленим під повідомленням. Значок ✏️ поруч із часом вказує на редагування.",
+    "en": "The original text is shown crossed-out below the message. The ✏️ icon next to the timestamp indicates an edit."
+  },
+  {
+    "offset": 79136432,
+    "ru": "«Кэш удалённых» убирает метки просмотра. «Кэш изменённых» стирает историю редактирования. «Сохранённая история» сбрасывает метки удаления (сообщения, сохранённые через «Сохранять историю»).",
+    "uk": "«Кеш видалених» прибирає позначки перегляду. «Кеш змінених» стирає історію редагування. «Збережена історія» скидає позначки видалення (повідомлення, збережені через «Зберігати історію»).",
+    "en": "«Deleted Cache» removes view markers. «Edited Cache» erases edit history. «Saved History» resets deletion markers (messages saved via «Save Chat History»)."
+  },
+  {
+    "offset": 79137328,
+    "ru": "Выберите камеру по умолчанию для кружков.",
+    "uk": "Виберіть камеру за замовчуванням для кружечків.",
+    "en": "Choose the default camera for video circles."
+  },
+  {
+    "offset": 79137552,
+    "ru": "Каждая опция независима. «Читать при действиях» — помечает сообщения прочитанными при любом действии с собеседником.",
+    "uk": "Кожна опція незалежна. «Читати при діях» — позначає повідомлення прочитаними при будь-якій дії із співрозмовником.",
+    "en": "Each option is independent. «Read on Action» marks messages as read when any interaction with a contact occurs."
+  },
+  {
+    "offset": 79138128,
+    "ru": "«Отключить рекламу» скрывает спонсорские сообщения. «Обход защищённого контента» — разблокировка пересылки, скриншотов, сохранения медиа из защищённых каналов; одноразовый контент не исчезает; снятие блюра с платных медиа. «Защита от мошенников» предупреждает в профилях из базы скамеров Whitegram.",
+    "uk": "«Вимкнути рекламу» приховує спонсорські повідомлення. «Обхід захищеного контенту» — розблокування пересилання, скриншотів, збереження медіа із захищених каналів; одноразовий контент не зникає; зняття блюру з платних медіа. «Захист від шахраїв» попереджає в профілях із бази скамерів Whitegram.",
+    "en": "«Disable Ads» hides sponsored messages. «Protected Content Bypass» unlocks forwarding, screenshots, and saving media from protected channels; view-once content stays; removes blur from paid media. «Scammer Protection» warns in profiles from the Whitegram scammer database."
+  },
+  {
+    "offset": 79139520,
+    "ru": "«ID и DC» добавляет технические данные в профиль. «Секунды» показывают точное время. «Полные просмотры» — реальное число (1 234 вместо 1К). «Скрыть номер» убирает номер из профиля. «Дата создания» — дата основания канала/группы.",
+    "uk": "«ID та DC» додає технічні дані в профіль. «Секунди» показують точний час. «Повні перегляди» — реальне число (1 234 замість 1К). «Сховати номер» прибирає номер із профілю. «Дата створення» — дата заснування каналу/групи.",
+    "en": "«ID & DC» adds technical data to profiles. «Seconds» shows exact timestamps. «Full Views» shows the real number (1,234 instead of 1K). «Hide Phone» removes the number from your profile. «Creation Date» shows when a channel/group was founded."
+  },
+  {
+    "offset": 79140592,
+    "ru": "«Панель форматирования» показывает кнопки форматирования над клавиатурой. «Перевести» всегда показывает кнопку перевода независимо от языка. «Максимальная скорость» увеличивает число параллельных загрузок до 16. «Сохранять историю» сохраняет удалённые сообщения в локальную базу — восстановите чат через меню «Ещё» в профиле собеседника.",
+    "uk": "«Панель форматування» показує кнопки форматування над клавіатурою. «Перекласти» завжди показує кнопку перекладу незалежно від мови. «Максимальна швидкість» збільшує кількість паралельних завантажень до 16. «Зберігати історію» зберігає видалені повідомлення в локальну базу — відновіть чат через меню «Ще» в профілі співрозмовника.",
+    "en": "«Formatting Toolbar» shows formatting buttons above the keyboard. «Translate» always shows the translate button regardless of language. «Max Speed» increases parallel downloads to 16. «Save History» saves deleted messages to a local database — restore chats via the «More» menu in a contact's profile."
+  },
+  {
+    "offset": 79142176,
+    "ru": "Позволяет убрать ненужные разделы из настроек Telegram. Хотя бы один основной раздел должен оставаться видимым.",
+    "uk": "Дозволяє прибрати непотрібні розділи з налаштувань Telegram. Принаймні один основний розділ має залишатися видимим.",
+    "en": "Allows you to hide unwanted sections from Telegram settings. At least one core section must remain visible."
+  },
+  {
+    "offset": 79142704,
+    "ru": "Скрывает ненужные вкладки из нижней панели навигации. «Подписи» убирает текст под иконками. «Высота»/«Ширина» масштабируют панель (50–150%). Требуется перезапуск.",
+    "uk": "Приховує непотрібні вкладки з нижньої панелі навігації. «Підписи» прибирає текст під іконками. «Висота»/«Ширина» масштабують панель (50–150%). Потрібен перезапуск.",
+    "en": "Hides unwanted tabs from the bottom navigation bar. «Labels» removes text under icons. «Height»/«Width» scales the bar (50–150%). Restart required."
+  },
+  {
+    "offset": 79143472,
+    "ru": "Отображает произвольное число звёзд в профиле. Визуальный эффект — реальный баланс не изменяется.",
+    "uk": "Відображає довільне число зірок у профілі. Візуальний ефект — реальний баланс не змінюється.",
+    "en": "Displays a custom star count in your profile. Visual effect only — real balance is unchanged."
+  },
+  {
+    "offset": 79143936,
+    "ru": "Нажмите «Выбрать файл шрифта» и откройте .ttf/.otf файл прямо из приложения Файлы. Шрифт применится после перезапуска.",
+    "uk": "Натисніть «Вибрати файл шрифту» і відкрийте .ttf/.otf файл безпосередньо з програми Файли. Шрифт застосується після перезапуску.",
+    "en": "Tap «Select Font File» and open a .ttf/.otf file directly from the Files app. The font applies after a restart."
+  },
+  {
+    "offset": 79144528,
+    "ru": "Сохраняет ключи авторизации в iOS Keychain. При переустановке нажмите «Восстановить» для входа без повторной авторизации.",
+    "uk": "Зберігає ключі авторизації в iOS Keychain. При перевстановленні натисніть «Відновити» для входу без повторної авторизації.",
+    "en": "Saves authorization keys in iOS Keychain. After reinstallation, tap «Restore» to log in without re-authorizing."
+  },
+  {
+    "offset": 79145104,
+    "ru": "«Последний онлайн» запоминает приблизительное время активности даже при скрытом статусе. «Дата прочтения» сохраняет локально когда было прочитано сообщение.",
+    "uk": "«Останній онлайн» запам'ятовує приблизний час активності навіть при прихованому статусі. «Дата прочитання» зберігає локально, коли було прочитано повідомлення.",
+    "en": "«Last Online» remembers approximate activity time even when the status is hidden. «Read Date» saves locally when a message was read."
+  },
+  {
+    "offset": 79145856,
+    "ru": "Показывает текущее состояние системы. Кнопка «Скопировать диагностику» копирует полный отчёт в буфер.",
+    "uk": "Показує поточний стан системи. Кнопка «Скопіювати діагностику» копіює повний звіт у буфер.",
+    "en": "Shows the current system state. The «Copy Diagnostics» button copies the full report to the clipboard."
+  },
+  {
+    "offset": 79146336,
+    "ru": "JS-плагины расширяют функциональность Whitegram без пересборки. Плагины выполняются в изолированной среде JavaScriptCore.",
+    "uk": "JS-плагіни розширюють функціональність Whitegram без перекомпіляції. Плагіни виконуються в ізольованому середовищі JavaScriptCore.",
+    "en": "JS plugins extend Whitegram without rebuilding. Plugins run in an isolated JavaScriptCore environment."
+  },
+  {
+    "offset": 79146880,
+    "ru": "VPN от разработчика Whitegram. Даёт доступ к открытому интернету с блокировкой рекламы и телеметрии. Обходит замедление и «Белые списки» операторов РФ.",
+    "uk": "VPN від розробника Whitegram. Надає доступ до відкритого інтернету з блокуванням реклами та телеметрії. Обходить сповільнення та «Білі списки» операторів РФ.",
+    "en": "VPN by the Whitegram developer. Provides open internet access with ad and telemetry blocking. Bypasses throttling and Russian ISP whitelists."
+  },
+  {
+    "offset": 79148160,
+    "ru": "Вернуть к исходному",
+    "uk": "Повернути до оригіналу",
+    "en": "Revert to Original"
+  },
+  {
+    "offset": 79148352,
+    "ru": "Выбрать от автора",
+    "uk": "Вибрати від автора",
+    "en": "Select from Author"
+  },
+  {
+    "offset": 79148480,
+    "ru": "Переслать скрытно",
+    "uk": "Переслати приховано",
+    "en": "Forward Anonymously"
+  },
+  {
+    "offset": 79148928,
+    "ru": "Подтвердить голосовой звонок?",
+    "uk": "Підтвердити голосовий дзвінок?",
+    "en": "Confirm voice call?"
+  },
+  {
+    "offset": 79149152,
+    "ru": "Подтвердить видеозвонок?",
+    "uk": "Підтвердити відеодзвінок?",
+    "en": "Confirm video call?"
+  },
+  {
+    "offset": 79149360,
+    "ru": "Включить VirusTotal",
+    "uk": "Увімкнути VirusTotal",
+    "en": "Enable VirusTotal"
+  },
+  {
+    "offset": 79149456,
+    "ru": "Проверяем соединение...",
+    "uk": "Перевіряємо з'єднання...",
+    "en": "Checking connection..."
+  },
+  {
+    "offset": 79149584,
+    "ru": "Соединение активно ✓",
+    "uk": "З'єднання активне ✓",
+    "en": "Connection active ✓"
+  },
+  {
+    "offset": 79150224,
+    "ru": "Включить смену голоса",
+    "uk": "Увімкнути зміну голосу",
+    "en": "Enable Voice Changer"
+  },
+  {
+    "offset": 79150352,
+    "ru": "Применять выбранный эффект к новым голосовым сообщениям и кружкам.",
+    "uk": "Застосовувати вибраний ефект до нових голосових повідомлень і кружечків.",
+    "en": "Apply the selected effect to new voice messages and round videos."
+  },
+  {
+    "offset": 79151040,
+    "ru": "Эффект записывается непосредственно в новое сообщение. Уже отправленные записи не изменяются.",
+    "uk": "Ефект записується безпосередньо в нове повідомлення. Уже надіслані записи не змінюються.",
+    "en": "The effect is captured directly into the outgoing recording. Existing messages are never modified."
+  },
+  {
+    "offset": 79151696,
+    "ru": "Включить Gemini AI",
+    "uk": "Увімкнути Gemini AI",
+    "en": "Enable Gemini AI"
+  },
+  {
+    "offset": 79151792,
+    "ru": "API ключ Gemini",
+    "uk": "Включает функции на базе Google Gemini: ответы, пересказ и обработку текста.",
+    "en": "Enables Google Gemini features: replies, summaries and text processing."
+  },
+  {
+    "offset": 79152144,
+    "ru": "Какая модель Gemini используется для запросов.",
+    "uk": "Модель Gemini",
+    "en": "Which Gemini model is used for requests."
+  },
+  {
+    "offset": 79152320,
+    "ru": "Включить Whitegram AI",
+    "uk": "Увімкнути Whitegram AI",
+    "en": "Enable Whitegram AI"
+  },
+  {
+    "offset": 79152752,
+    "ru": "Модель Groq",
+    "uk": "Какой сервис ИИ используется по умолчанию.",
+    "en": "Which AI service is used by default."
+  },
+  {
+    "offset": 79153200,
+    "ru": "Запросы к Gemini идут через сервер Whitegram — работает там, где сервис недоступен напрямую.",
+    "uk": "Маршрут запиту Gemini",
+    "en": "Routes Gemini requests through the Whitegram server, so it works where the service is blocked."
+  },
+  {
+    "offset": 79153504,
+    "ru": "Запросы к Groq идут через сервер Whitegram — работает там, где сервис недоступен напрямую.",
+    "uk": "Маршрут запиту Groq",
+    "en": "Routes Groq requests through the Whitegram server, so it works where the service is blocked."
+  },
+  {
+    "offset": 79153936,
+    "ru": "Не выбран",
+    "uk": "Голосовые сообщения перед отправкой обрабатываются и звучат выбранным голосом.",
+    "en": "Processes voice messages before sending so they use the selected voice."
+  },
+  {
+    "offset": 79154320,
+    "ru": "Голос, которым будут звучать ваши голосовые сообщения.",
+    "uk": "Голос для заміни",
+    "en": "The voice your voice messages will use."
+  },
+  {
+    "offset": 79154512,
+    "ru": "Плагин установлен",
+    "uk": "Плагін встановлено",
+    "en": "Plugin Installed"
+  },
+  {
+    "offset": 79154640,
+    "ru": "«%@» v%@ добавлен и активирован.",
+    "uk": "«%@» v%@ додано й активовано.",
+    "en": "“%@” v%@ has been added and enabled."
+  },
+  {
+    "offset": 79154816,
+    "ru": "Нет установленных плагинов",
+    "uk": "Немає встановлених плагінів",
+    "en": "No installed plugins"
+  },
+  {
+    "offset": 79154976,
+    "ru": "Нажмите + чтобы добавить .plugin, .wgplugin или .js файл",
+    "uk": "Натисніть + щоб додати .plugin, .wgplugin або .js файл",
+    "en": "Tap + to add a .plugin, .wgplugin or .js file"
+  },
+  {
+    "offset": 79155568,
+    "ru": "Синтаксис верный",
+    "uk": "Синтаксис правильний",
+    "en": "Syntax looks correct"
+  },
+  {
+    "offset": 79155680,
+    "ru": "Использует Whitegram API",
+    "uk": "Використовує Whitegram API",
+    "en": "Uses Whitegram API"
+  },
+  {
+    "offset": 79155904,
+    "ru": "Описание не добавлено.",
+    "uk": "Опис не додано.",
+    "en": "No description provided."
+  },
+  {
+    "offset": 79156080,
+    "ru": "«%@» будет удалён без возможности восстановления.",
+    "uk": "«%@» буде видалено без можливості відновлення.",
+    "en": "“%@” will be permanently deleted."
+  },
+  {
+    "offset": 79156320,
+    "ru": "Плагины пишутся на Python (.plugin, .wgplugin) или JavaScript (.js).\nНажмите + для установки.",
+    "uk": "Плагіни пишуться на Python (.plugin, .wgplugin) або JavaScript (.js).\nНатисніть + для встановлення.",
+    "en": "Plugins can be written in Python (.plugin, .wgplugin) or JavaScript (.js).\nTap + to install."
+  },
+  {
+    "offset": 79156704,
+    "ru": "Открыть в Whitegram",
+    "uk": "Відкрити в Whitegram",
+    "en": "Open in Whitegram"
+  },
+  {
+    "offset": 79156832,
+    "ru": "Метаданные отсутствуют",
+    "uk": "Метадані відсутні",
+    "en": "Metadata missing"
+  },
+  {
+    "offset": 79156960,
+    "ru": "Не использует Whitegram API",
+    "uk": "Не використовує Whitegram API",
+    "en": "Whitegram API not used"
+  },
+  {
+    "offset": 79157184,
+    "ru": "Синтаксис не проверяется",
+    "uk": "Синтаксис не перевіряється",
+    "en": "Syntax check skipped"
+  },
+  {
+    "offset": 79157328,
+    "ru": "Файл может не быть плагином Whitegram",
+    "uk": "Файл може не бути плагіном Whitegram",
+    "en": "File may not be a Whitegram plugin"
+  },
+  {
+    "offset": 79157504,
+    "ru": "Возможно, не плагин",
+    "uk": "Можливо, не плагін",
+    "en": "Possibly not a plugin"
+  },
+  {
+    "offset": 79157632,
+    "ru": "Этот файл не похож на плагин Whitegram. Установить всё равно?",
+    "uk": "Цей файл не схожий на плагін Whitegram. Встановити все одно?",
+    "en": "This file doesn't look like a Whitegram plugin. Install anyway?"
+  },
+  {
+    "offset": 79158064,
+    "ru": "Тонування скла",
+    "uk": "Стеклянные панели получают лёгкий оттенок вместо полностью прозрачного стекла — контуры панелей заметнее.",
+    "en": "Gives glass panels a slight tint instead of fully clear glass, making their edges easier to see."
+  },
+  {
+    "offset": 79158416,
+    "ru": "Заменить настоящий Liquid Glass\nна телеграмовский аналог",
+    "uk": "Замінити справжній Liquid Glass\nна телеграмівський аналог",
+    "en": "Replace real Liquid Glass\nwith Telegram's own"
+  },
+  {
+    "offset": 79158672,
+    "ru": "Вместо системного стекла iOS 26 рисуется собственная реализация Telegram: размытие и нарисованные блики. Применяется ко всему интерфейсу сразу — и к Telegram, и ко всем поверхностям Whitegram: пузырям, профилю, настройкам, меню и списку чатов. Заметно легче для видеоядра.",
+    "uk": "Замість системного скла iOS 26 малюється власна реалізація Telegram.",
+    "en": "Draws Telegram's own glass implementation — blur plus hand-drawn highlights — instead of the iOS 26 system material. Applies to the whole interface at once, both Telegram's and every Whitegram surface. Noticeably lighter on the GPU."
+  },
+  {
+    "offset": 79159520,
+    "ru": "Заменить Liquid Glass\nна обычный цвет Telegram",
+    "uk": "Замінити Liquid Glass\nна звичайний колір Telegram",
+    "en": "Replace Liquid Glass\nwith the Telegram color"
+  },
+  {
+    "offset": 79159728,
+    "ru": "Убирает стеклянный материал со всех панелей (таб-бар, шапки, меню, окна) и заливает их обычным сплошным цветом интерфейса Telegram — как до появления Liquid Glass. Экономит ресурсы и делает интерфейс контрастнее.",
+    "uk": "Прибирає скляний матеріал з усіх панелей і заливає їх звичайним суцільним кольором інтерфейсу Telegram.",
+    "en": "Removes the glass material from every panel (tab bar, headers, menus, sheets) and fills them with the plain Telegram interface color, as before Liquid Glass."
+  },
+  {
+    "offset": 79160992,
+    "ru": "Субтитры недоступны: разрешите распознавание речи в Настройках → Конфиденциальность → Распознавание речи.",
+    "uk": "Субтитри недоступні: дозвольте розпізнавання мовлення в Налаштуваннях → Конфіденційність → Розпізнавання мовлення.",
+    "en": "Subtitles unavailable: allow speech recognition in Settings → Privacy → Speech Recognition."
+  },
+  {
+    "offset": 79161520,
+    "ru": "Не удалось создать субтитры. Убедитесь, что видео загружено и выбранный язык поддерживается.",
+    "uk": "Не вдалося створити субтитри. Переконайтесь, що відео завантажено і вибрана мова підтримується.",
+    "en": "Failed to generate subtitles. Make sure the video is downloaded and the selected language is supported."
+  },
+  {
+    "offset": 79162128,
+    "ru": "Стена, спецэффекты, значок в профиле",
+    "uk": "Стіна, спецефекти, значок у профілі",
+    "en": "Wall, effects, profile badge"
+  },
+  {
+    "offset": 79162320,
+    "ru": "Локальные уведомления",
+    "uk": "Локальні сповіщення",
+    "en": "Local notifications"
+  },
+  {
+    "offset": 79162448,
+    "ru": "Скорость, кроссфейд, эквалайзер",
+    "uk": "Швидкість, кросфейд, еквалайзер",
+    "en": "Speed, crossfade, equalizer"
+  },
+  {
+    "offset": 79162944,
+    "ru": "Настроить эквалайзер",
+    "uk": "Налаштувати еквалайзер",
+    "en": "Configure Equalizer"
+  },
+  {
+    "offset": 79163392,
+    "ru": "Аккаунт «%@» уже добавлен.",
+    "uk": "Акаунт «%@» уже додано.",
+    "en": "Account \"%@\" is already added."
+  },
+  {
+    "offset": 79163520,
+    "ru": "Восстановить %d аккаунт(а/ов)?",
+    "uk": "Відновити %d акаунт(ів)?",
+    "en": "Restore %d account(s)?"
+  },
+  {
+    "offset": 79163664,
+    "ru": "Восстановлено аккаунтов: %d",
+    "uk": "Відновлено акаунтів: %d",
+    "en": "Restored accounts: %d"
+  },
+  {
+    "offset": 79163808,
+    "ru": "%d аккаунт(ов) записано в Keychain",
+    "uk": "%d акаунт(ів) записано в Keychain",
+    "en": "%d account(s) saved to Keychain"
+  },
+  {
+    "offset": 79163968,
+    "ru": "Whitegram API пока не отдал результаты",
+    "uk": "Whitegram API поки не віддав результати",
+    "en": "Whitegram API returned no results yet"
+  },
+  {
+    "offset": 79164144,
+    "ru": "Введите название трека",
+    "uk": "Введіть назву треку",
+    "en": "Enter a track name"
+  },
+  {
+    "offset": 79164272,
+    "ru": "Не удалось загрузить текст",
+    "uk": "Не вдалося завантажити текст",
+    "en": "Failed to load lyrics"
+  },
+  {
+    "offset": 79164720,
+    "ru": "Ищу в Genius...",
+    "uk": "Шукаю в Genius...",
+    "en": "Searching Genius..."
+  },
+  {
+    "offset": 79165008,
+    "ru": "Нажмите на карту чтобы выбрать точку",
+    "uk": "Натисніть на карту, щоб вибрати точку",
+    "en": "Tap the map to pick a point"
+  },
+  {
+    "offset": 79165200,
+    "ru": "История онлайна контактов",
+    "uk": "Історія онлайну контактів",
+    "en": "Contacts Online History"
+  },
+  {
+    "offset": 79165360,
+    "ru": "История записывается только пока приложение открыто",
+    "uk": "Історія записується лише поки застосунок відкритий",
+    "en": "History is recorded only while the app is open"
+  },
+  {
+    "offset": 79165872,
+    "ru": "Выберите до 3 реакций, которые люди смогут ставить в вашем профиле",
+    "uk": "Виберіть до 3 реакцій, які люди зможуть ставити у вашому профілі",
+    "en": "Choose up to 3 reactions people can leave on your profile"
+  },
+  {
+    "offset": 79166256,
+    "ru": "Чаты с сохранёнными сообщениями",
+    "uk": "Чати зі збереженими повідомленнями",
+    "en": "Chats with saved messages"
+  },
+  {
+    "offset": 79166528,
+    "ru": "Чаты, в которых включено «Сохранять историю».\nНажмите на чат, чтобы восстановить все сообщения.",
+    "uk": "Чати, у яких увімкнено «Зберігати історію».\nНатисніть на чат, щоб відновити всі повідомлення.",
+    "en": "Chats where \"Save History\" is enabled.\nTap a chat to restore all messages."
+  },
+  {
+    "offset": 79167040,
+    "ru": "Будет восстановлено %d сообщений. Они снова станут видимыми в чате.",
+    "uk": "Буде відновлено %d повідомлень. Вони знову стануть видимими в чаті.",
+    "en": "%d messages will be restored and visible in the chat again."
+  },
+  {
+    "offset": 79167360,
+    "ru": "Шрифт изменен: %@. Перезапустите Whitegram",
+    "uk": "Шрифт змінено: %@. Перезапустіть Whitegram",
+    "en": "Font changed: %@. Restart Whitegram"
+  },
+  {
+    "offset": 79167568,
+    "ru": "Шрифт выбран: %@. Перезапустите Whitegram",
+    "uk": "Шрифт вибрано: %@. Перезапустіть Whitegram",
+    "en": "Font selected: %@. Restart Whitegram"
+  },
+  {
+    "offset": 79167776,
+    "ru": "Восстановлено %d сообщений (%d новых).",
+    "uk": "Відновлено %d повідомлень (%d нових).",
+    "en": "Restored %d messages (%d new)."
+  },
+  {
+    "offset": 79167952,
+    "ru": "Восстановлено настроек: %d. Перезапустите Whitegram",
+    "uk": "Відновлено налаштувань: %d. Перезапустіть Whitegram",
+    "en": "Restored %d settings. Restart Whitegram"
+  },
+  {
+    "offset": 79168192,
+    "ru": "🔥  Осталось %d %@ до первого огонька",
+    "uk": "🔥  Лишилось %d %@ до першого вогника",
+    "en": "🔥  %d %@ left until the first flame"
+  },
+  {
+    "offset": 79168368,
+    "ru": "Веха %d дней\nЕщё %d %@",
+    "uk": "Віха %d днів\nЩе %d %@",
+    "en": "%d-day milestone\n%d %@ to go"
+  },
+  {
+    "offset": 79168480,
+    "ru": "Вы не контактировали с «%@»",
+    "uk": "Ви не контактували з «%@»",
+    "en": "You have not contacted \"%@\""
+  },
+  {
+    "offset": 79168624,
+    "ru": "⏳  Сегодня ещё нет взаимного ответа.\nНапишите «%@» прямо сейчас!",
+    "uk": "⏳  Сьогодні ще немає взаємної відповіді.\nНапишіть «%@» прямо зараз!",
+    "en": "⏳  No mutual reply today yet.\nMessage \"%@\" right now!"
+  },
+  {
+    "offset": 79168944,
+    "ru": "Вы общаетесь всего %d %@. До старта огонька осталось %d %@.",
+    "uk": "Ви спілкуєтесь лише %d %@. До старту вогника лишилось %d %@.",
+    "en": "You have been chatting for only %d %@. %d %@ left until the flame starts."
+  },
+  {
+    "offset": 79169248,
+    "ru": "Ответьте друг другу сегодня",
+    "uk": "Відповідайте один одному сьогодні",
+    "en": "Reply to each other today"
+  },
+  {
+    "offset": 79169408,
+    "ru": "Этот этап уже пройден",
+    "uk": "Цей етап вже пройдений",
+    "en": "This milestone has already been reached"
+  },
+  {
+    "offset": 79169552,
+    "ru": "Недоступно, пока текущая веха не будет окончена",
+    "uk": "Недоступно, поки поточна віха не буде закінчена",
+    "en": "Unavailable until the current milestone is completed"
+  },
+  {
+    "offset": 79169808,
+    "ru": "До отметки: %d %@",
+    "uk": "До відмітки: %d %@",
+    "en": "Until milestone: %d %@"
+  },
+  {
+    "offset": 79169904,
+    "ru": "Вы общаетесь с «%@» более %@. Не упустите шанс растить огонька!",
+    "uk": "Ви спілкуєтесь з «%@» понад %@. Не втратьте шанс ростити вогник!",
+    "en": "You have been chatting with \"%@\" for more than %@. Keep the flame growing!"
+  },
+  {
+    "offset": 79170224,
+    "ru": "Ошибка сети: %@",
+    "uk": "Помилка мережі: %@",
+    "en": "Network error: %@"
+  },
+  {
+    "offset": 79170320,
+    "ru": "%d — Ошибка сервера",
+    "uk": "%d — Помилка сервера",
+    "en": "%d — Server error"
+  },
+  {
+    "offset": 79170448,
+    "ru": "Скачивание %d%%",
+    "uk": "Завантаження %d%%",
+    "en": "Downloading %d%%"
+  },
+  {
+    "offset": 79170544,
+    "ru": "%d из %d движков",
+    "uk": "%d з %d рушіїв",
+    "en": "%d of %d engines"
+  },
+  {
+    "offset": 79170640,
+    "ru": "Найдено объектов: %d",
+    "uk": "Знайдено об'єктів: %d",
+    "en": "Objects found: %d"
+  },
+  {
+    "offset": 79170832,
+    "ru": "Пользователь с ID %lld снова сможет видеть вашу стену.",
+    "uk": "Користувач з ID %lld знову зможе бачити вашу стіну.",
+    "en": "User with ID %lld will be able to see your wall again."
+  },
+  {
+    "offset": 79171088,
+    "ru": "Использовать другие\nиконки опций в настройках",
+    "uk": "Використовувати інші\nіконки опцій у налаштуваннях",
+    "en": "Use alternate\noption icons in settings"
+  },
+  {
+    "offset": 79171328,
+    "ru": "Записывать голосовые\nс кружками в одноразовом режиме",
+    "uk": "Записувати голосові\nта кружечки в одноразовому режимі",
+    "en": "Record voice and video\nmessages as view-once"
+  },
+  {
+    "offset": 79171600,
+    "ru": "Скрыть нижний таббар",
+    "uk": "Сховати нижню панель",
+    "en": "Hide Bottom Tab Bar"
+  },
+  {
+    "offset": 79171792,
+    "ru": "Убирает бота Crypto Bot из списка контактов. Сам чат с ним остаётся на месте и открывается через поиск.",
+    "uk": "Прибирає бота Crypto Bot зі списку контактів. Сам чат з ним залишається і відкривається через пошук.",
+    "en": "Removes the Crypto Bot from the contacts list. The chat itself stays and can still be opened from search."
+  },
+  {
+    "offset": 79172272,
+    "ru": "Скрыть кнопку\nзаписи голосового",
+    "uk": "Сховати кнопку\nзапису голосового",
+    "en": "Hide the voice\nrecord button"
+  },
+  {
+    "offset": 79172432,
+    "ru": "Предупреждение Siri/Диктовка",
+    "uk": "Попередження Siri/Диктування",
+    "en": "Siri/Dictation Warning"
+  },
+  {
+    "offset": 79172592,
+    "ru": "Перед транскрипцией предупреждает, что распознавание может использовать серверы Apple.",
+    "uk": "Попереджати про Siri при транскрипції",
+    "en": "Warns before transcription that recognition may use Apple's servers."
+  },
+  {
+    "offset": 79173120,
+    "ru": "Настройки пароля",
+    "uk": "Налаштування пароля",
+    "en": "Password Settings"
+  },
+  {
+    "offset": 79173296,
+    "ru": "Введите кодовое слово для подтверждения смены пароля.",
+    "uk": "Введіть кодове слово для підтвердження зміни пароля.",
+    "en": "Enter your recovery word to confirm the password change."
+  },
+  {
+    "offset": 79173648,
+    "ru": "Выберите тип блокировки",
+    "uk": "Оберіть тип блокування",
+    "en": "Choose Lock Type"
+  },
+  {
+    "offset": 79174256,
+    "ru": "Введите пароль для доступа",
+    "uk": "Введіть пароль для доступу",
+    "en": "Enter password to access"
+  },
+  {
+    "offset": 79174736,
+    "ru": "Выберите количество цифр",
+    "uk": "Оберіть кількість цифр",
+    "en": "Choose number of digits"
+  },
+  {
+    "offset": 79174992,
+    "ru": "Запомните этот PIN",
+    "uk": "Запам'ятайте цей PIN",
+    "en": "Remember this PIN"
+  },
+  {
+    "offset": 79175104,
+    "ru": "PIN не совпадает",
+    "uk": "PIN не збігається",
+    "en": "PINs don't match"
+  },
+  {
+    "offset": 79175392,
+    "ru": "Ключ не совпадает",
+    "uk": "Ключ не збігається",
+    "en": "Patterns don't match"
+  },
+  {
+    "offset": 79175520,
+    "ru": "Если забудете пароль — сможете сбросить его по этому слову",
+    "uk": "Якщо забудете пароль — зможете скинути його за цим словом",
+    "en": "If you forget your password, you can reset it using this word"
+  },
+  {
+    "offset": 79175808,
+    "ru": "Минимум 3 символа",
+    "uk": "Мінімум 3 символи",
+    "en": "Minimum 3 characters"
+  },
+  {
+    "offset": 79175904,
+    "ru": "Введите кодовое слово для сброса пароля",
+    "uk": "Введіть кодове слово для скидання пароля",
+    "en": "Enter the recovery word to reset the password"
+  },
+  {
+    "offset": 79176240,
+    "ru": "Неверное кодовое слово",
+    "uk": "Невірне кодове слово",
+    "en": "Wrong recovery word"
+  },
+  {
+    "offset": 79176368,
+    "ru": "Введите кодовое слово, чтобы удалить пароль на чат «%@»",
+    "uk": "Введіть кодове слово, щоб видалити пароль чату «%@»",
+    "en": "Enter the recovery word to remove the password for \"%@\""
+  },
+  {
+    "offset": 79176640,
+    "ru": "Для открытия чата «%@» потребуется ввести пароль",
+    "uk": "Для відкриття чату «%@» потрібно буде ввести пароль",
+    "en": "A password will be required to open \"%@\""
+  },
+  {
+    "offset": 79176880,
+    "ru": "Скрыть канал-спонсор",
+    "uk": "Сховати канал-спонсор",
+    "en": "Hide Sponsored Channel"
+  },
+  {
+    "offset": 79177008,
+    "ru": "Заменить Liquid Glass\nна блюр",
+    "uk": "Замінити Liquid Glass\nна блюр",
+    "en": "Replace Liquid Glass\nwith blur"
+  },
+  {
+    "offset": 79177136,
+    "ru": "Вернуть старый\nинтерфейс\nTelegram",
+    "uk": "Повернути старий\nінтерфейс\nTelegram",
+    "en": "Restore old\nTelegram\ninterface"
+  },
+  {
+    "offset": 79177296,
+    "ru": "Liquid Glass подарки",
+    "uk": "Liquid Glass подарунки",
+    "en": "Liquid Glass Gifts"
+  },
+  {
+    "offset": 79177392,
+    "ru": "Обновлённый вид\nинтерфейса чата",
+    "uk": "Оновлений вигляд\nінтерфейсу чату",
+    "en": "Updated chat\ninterface appearance"
+  },
+  {
+    "offset": 79177568,
+    "ru": "Строчка из песни в профиле",
+    "uk": "Рядок із пісні в профілі",
+    "en": "Song Lyric in Profile"
+  },
+  {
+    "offset": 79177776,
+    "ru": "Выбрать строчку песни",
+    "uk": "Вибрати рядок пісні",
+    "en": "Select Song Lyric"
+  },
+  {
+    "offset": 79178000,
+    "ru": "Включить стену в профиле",
+    "uk": "Увімкнути стіну в профілі",
+    "en": "Enable Profile Wall"
+  },
+  {
+    "offset": 79178128,
+    "ru": "Значок\n«Пользователь Whitegram» в профиле",
+    "uk": "Значок\n«Користувач Whitegram» у профілі",
+    "en": "Badge\n‘Whitegram user’ in the profile"
+  },
+  {
+    "offset": 79178336,
+    "ru": "Сбросить видео-обои",
+    "uk": "Скинути відео-шпалери",
+    "en": "Reset Video Wallpaper"
+  },
+  {
+    "offset": 79178464,
+    "ru": "Восстановить настройки из Keychain",
+    "uk": "Відновити налаштування з Keychain",
+    "en": "Restore Settings from Keychain"
+  },
+  {
+    "offset": 79178624,
+    "ru": "Сохранить настройки в Keychain",
+    "uk": "Зберегти налаштування в Keychain",
+    "en": "Save Settings to Keychain"
+  },
+  {
+    "offset": 79178784,
+    "ru": "Отображать в профиле собеседника,\nчто я у него\nвзаимно в контактах",
+    "uk": "Відображати в профілі співрозмовника,\nщо я в нього\nвзаємно в контактах",
+    "en": "Show on the contact's profile\nthat we are\nmutually in contacts"
+  },
+  {
+    "offset": 79179120,
+    "ru": "В профиле человека появляется карточка «В контактах» — она показывает, что вы есть в контактах друг у друга. Видна только вам.",
+    "uk": "У профілі людини з’являється картка «В контактах» — вона показує, що ви є в контактах одне в одного. Видно лише вам.",
+    "en": "Adds an “In contacts” card to a person's profile showing that you are in each other's contact lists. Visible only to you."
+  },
+  {
+    "offset": 79179712,
+    "ru": "Отображать ОЗУ\nпод часами сверху",
+    "uk": "Відображати ОЗП\nпід годинником зверху",
+    "en": "Show RAM\nunder the top clock"
+  },
+  {
+    "offset": 79179888,
+    "ru": "Отображать\nприблизительную дату регистрации\nв профиле",
+    "uk": "Відображати\nприблизну дату реєстрації\nу профілі",
+    "en": "Show\nthe approximate registration date\nin the profile"
+  },
+  {
+    "offset": 79180240,
+    "ru": "Применять в профиль",
+    "uk": "Застосувати в профіль",
+    "en": "Apply in Profile"
+  },
+  {
+    "offset": 79180368,
+    "ru": "Выбранное видео ставится фоном не только в звонках, но и на экране профиля и настроек.",
+    "uk": "Обране відео стає тлом не лише у дзвінках, а й на екрані профілю та налаштувань.",
+    "en": "The selected video is used as the background on the profile and settings screens too, not only in calls."
+  },
+  {
+    "offset": 79180800,
+    "ru": "Видео-обои\nпо всему интерфейсу",
+    "uk": "Відео-шпалери\nпо всьому інтерфейсу",
+    "en": "Video wallpaper\nacross the interface"
+  },
+  {
+    "offset": 79180992,
+    "ru": "Поставить обои\nна задний фон профиля",
+    "uk": "Поставити шпалери\nна фон профілю",
+    "en": "Set wallpaper\non the profile background"
+  },
+  {
+    "offset": 79181184,
+    "ru": "Сбросить обои профиля",
+    "uk": "Скинути шпалери профілю",
+    "en": "Reset Profile Wallpaper"
+  },
+  {
+    "offset": 79181312,
+    "ru": "Показывать обои всем",
+    "uk": "Показувати шпалери всім",
+    "en": "Show Wallpaper to Everyone"
+  },
+  {
+    "offset": 79181440,
+    "ru": "Заблокированные на стене",
+    "uk": "Заблоковані на стіні",
+    "en": "Wall Blocked Users"
+  },
+  {
+    "offset": 79181568,
+    "ru": "Включить уведомления",
+    "uk": "Увімкнути сповіщення",
+    "en": "Enable Notifications"
+  },
+  {
+    "offset": 79181696,
+    "ru": "Отображать ваши действия\nв значке в профиле",
+    "uk": "Відображати ваші дії\nу значку в профілі",
+    "en": "Show your activity\nin the profile badge"
+  },
+  {
+    "offset": 79181920,
+    "ru": "Отображать ваши действия\nс точной информацией",
+    "uk": "Відображати ваші дії\nз точною інформацією",
+    "en": "Show your activity\nwith precise details"
+  },
+  {
+    "offset": 79182144,
+    "ru": "Огонек с собеседником",
+    "uk": "Вогник із співрозмовником",
+    "en": "Streak with Contact"
+  },
+  {
+    "offset": 79182288,
+    "ru": "Широкие посты\nв каналах",
+    "uk": "Широкі пости\nв каналах",
+    "en": "Wide posts\nin channels"
+  },
+  {
+    "offset": 79182416,
+    "ru": "В настройках используются иконки Whitegram вместо стандартных.",
+    "uk": "Кастомні іконки налаштувань",
+    "en": "Uses Whitegram icons in Settings instead of the stock ones."
+  },
+  {
+    "offset": 79182656,
+    "ru": "Записанные голосовые и кружки отправляются как одноразовые — получатель посмотрит их один раз.",
+    "uk": "Автоматично відправляти записи одноразово",
+    "en": "Sends recorded voice messages and video messages as view-once."
+  },
+  {
+    "offset": 79182992,
+    "ru": "Кнопка записи голосовых и кружков убирается из панели ввода.",
+    "uk": "Сховати кнопку запису голосових і кружків",
+    "en": "Removes the voice and video message record button from the input panel."
+  },
+  {
+    "offset": 79183264,
+    "ru": "Подарки в профиле рисуются на стеклянных подложках Liquid Glass.",
+    "uk": "Liquid Glass подарунки у профілі",
+    "en": "Draws profile gifts on Liquid Glass backgrounds."
+  },
+  {
+    "offset": 79183504,
+    "ru": "Секции профиля рисуются стеклом Liquid Glass вместо сплошных плашек.",
+    "uk": "Скляний профіль",
+    "en": "Draws profile sections with Liquid Glass instead of solid panels."
+  },
+  {
+    "offset": 79183744,
+    "ru": "Секции настроек рисуются стеклом Liquid Glass вместо сплошных плашек.",
+    "uk": "Скляний список налаштувань",
+    "en": "Draws settings sections with Liquid Glass instead of solid panels."
+  },
+  {
+    "offset": 79184016,
+    "ru": "Внешний вид карточки играющего трека в профиле и в чате.",
+    "uk": "Стиль картки музики",
+    "en": "The appearance of the now-playing card in profiles and chats."
+  },
+  {
+    "offset": 79184240,
+    "ru": "Лента коротких записей в вашем профиле — её видят и могут читать другие пользователи Whitegram.",
+    "uk": "Стрічка коротких записів у вашому профілі — її бачать та можуть читати інші користувачі Whitegram.",
+    "en": "A feed of short posts on your profile that other Whitegram users can see and read."
+  },
+  {
+    "offset": 79184688,
+    "ru": "Небольшой значок Whitegram рядом с вашим именем. Виден только пользователям Whitegram.",
+    "uk": "Невеликий значок Whitegram поряд із вашим іменем. Видно лише користувачам Whitegram.",
+    "en": "A small Whitegram mark next to your name. Only visible to Whitegram users."
+  },
+  {
+    "offset": 79185056,
+    "ru": "Счётчик дней подряд, в которые вы с собеседником писали друг другу.",
+    "uk": "Лічильник днів поспіль, у які ви зі співрозмовником писали одне одному.",
+    "en": "Counts the consecutive days you and the other person have written to each other."
+  },
+  {
+    "offset": 79185424,
+    "ru": "Значок показывает, чем вы заняты прямо сейчас — например, слушаете музыку.",
+    "uk": "Значок показує, чим ви зайняті просто зараз — наприклад, слухаєте музику.",
+    "en": "The badge shows what you are doing right now — listening to music, for instance."
+  },
+  {
+    "offset": 79185808,
+    "ru": "К действию добавляются подробности: название трека, имя исполнителя и подобное.",
+    "uk": "До дії додаються подробиці: назва треку, ім’я виконавця тощо.",
+    "en": "Adds details to the activity: track title, artist name and the like."
+  },
+  {
+    "offset": 79186176,
+    "ru": "Строчка из любимой песни под вашим именем в профиле.",
+    "uk": "Рядок з улюбленої пісні під вашим іменем у профілі.",
+    "en": "A line from a song you like, shown under your name."
+  },
+  {
+    "offset": 79186432,
+    "ru": "Найдите песню и выберите ту самую строчку, которая будет в профиле.",
+    "uk": "Знайдіть пісню та виберіть той самий рядок, що буде в профілі.",
+    "en": "Find a song and pick the exact line to show on your profile."
+  },
+  {
+    "offset": 79186752,
+    "ru": "Строчка проявляется по словам, как в караоке.",
+    "uk": "Рядок проявляється по словах, як у караоке.",
+    "en": "The line reveals itself word by word, karaoke style."
+  },
+  {
+    "offset": 79186992,
+    "ru": "Произвольная цитата в профиле — своя фраза вместо строчки из песни.",
+    "uk": "Довільна цитата в профілі — своя фраза замість рядка з пісні.",
+    "en": "A free-form quote on your profile — your own words instead of a song line."
+  },
+  {
+    "offset": 79187328,
+    "ru": "Текст цитаты, который увидят в вашем профиле.",
+    "uk": "Текст цитати, який побачать у вашому профілі.",
+    "en": "The quote text people will see on your profile."
+  },
+  {
+    "offset": 79187568,
+    "ru": "Своя карточка\nиграющего трека",
+    "uk": "Своя картка\nтреку, що грає",
+    "en": "Custom now-playing\ncard"
+  },
+  {
+    "offset": 79187712,
+    "ru": "Заменяет стеклянный материал панелей и кнопок обычным размытием. Нельзя включить вместе с «Заменить Liquid Glass на обычный цвет Telegram» — это два разных способа убрать стекло.",
+    "uk": "Замінює скляний матеріал панелей і кнопок звичайним розмиттям. Не вмикається разом із «Замінити Liquid Glass на звичайний колір Telegram».",
+    "en": "Replaces the glass material on panels and buttons with a plain blur. Cannot be combined with ‘Replace Liquid Glass with the Telegram color’."
+  },
+  {
+    "offset": 79188432,
+    "ru": "Возвращает интерфейс Telegram 11.15: таб-бар, шапки, папки, поле ввода и панели — как до перехода на Liquid Glass.",
+    "uk": "Повертає інтерфейс Telegram 11.15: таб-бар, заголовки, теки, поле введення та панелі — як до переходу на Liquid Glass.",
+    "en": "Restores the Telegram 11.15 interface: tab bar, headers, folders, input field and panels, the way they were before Liquid Glass."
+  },
+  {
+    "offset": 79188960,
+    "ru": "Чистый чёрный фон вместо тёмно-серого — экономит батарею на OLED-экранах.",
+    "uk": "Чистий чорний фон замість темно-сірого — заощаджує батарею на OLED-екранах.",
+    "en": "A pure black background instead of dark grey — saves battery on OLED screens."
+  },
+  {
+    "offset": 79189328,
+    "ru": "Функция применяется только к людям, с которыми вы взаимно есть в контактах.",
+    "uk": "Якщо ви обидва взаємно в контактах",
+    "en": "Applies only to people who have you in their contacts and vice versa."
+  },
+  {
+    "offset": 79189616,
+    "ru": "Шапка чата рисуется в обновлённом стиле Whitegram: другая компоновка имени, статуса и кнопок.",
+    "uk": "Новий вигляд заголовка чату",
+    "en": "Draws the chat header in the updated Whitegram style with a different layout of name, status and buttons."
+  },
+  {
+    "offset": 79189968,
+    "ru": "Под часами в статус-баре показывается текущее потребление оперативной памяти приложением.",
+    "uk": "Показувати використання ОЗУ під годинником",
+    "en": "Shows the app's current memory usage under the clock in the status bar."
+  },
+  {
+    "offset": 79190320,
+    "ru": "В профиле показывается приблизительная дата регистрации аккаунта, рассчитанная по его ID.",
+    "uk": "Показувати приблизну дату реєстрації",
+    "en": "Shows an approximate account registration date in profiles, estimated from the user ID."
+  },
+  {
+    "offset": 79190672,
+    "ru": "Снимает лимит на число избранных стикеров.",
+    "uk": "Безкінечні вибрані стікери",
+    "en": "Removes the limit on favourite stickers."
+  },
+  {
+    "offset": 79190864,
+    "ru": "Запросы смены голоса идут через сервер Whitegram — работает там, где сервис недоступен напрямую.",
+    "uk": "Маршрут запиту",
+    "en": "Routes voice-changer requests through the Whitegram server, so it works where the service is blocked."
+  },
+  {
+    "offset": 79191184,
+    "ru": "Вместо обоев чата проигрывается выбранное видео — по всему интерфейсу переписки.",
+    "uk": "Відео на тлі чату",
+    "en": "Plays a chosen video instead of the chat wallpaper across the chat interface."
+  },
+  {
+    "offset": 79191456,
+    "ru": "На фон профиля ставятся выбранные обои. Имеет приоритет над персональным цветом профиля.",
+    "uk": "Шпалери профілю",
+    "en": "Sets a chosen wallpaper as the profile background. Takes priority over the personal profile colour."
+  },
+  {
+    "offset": 79191776,
+    "ru": "Локальные уведомления Whitegram о событиях, которых нет в стандартных уведомлениях Telegram.",
+    "uk": "Локальні сповіщення Whitegram",
+    "en": "Local Whitegram notifications about events Telegram does not notify you about."
+  },
+  {
+    "offset": 79192064,
+    "ru": "Посты в каналах занимают всю ширину экрана без боковых отступов.",
+    "uk": "Широкі пости в каналах",
+    "en": "Makes channel posts span the full screen width without side margins."
+  },
+  {
+    "offset": 79192320,
+    "ru": "Скачать треки в вантрэкс",
+    "uk": "Завантажити треки в вантрэкс",
+    "en": "Download tracks to Onetracks"
+  },
+  {
+    "offset": 79192464,
+    "ru": "Скачать треки в вантрэкс ↗",
+    "uk": "Завантажити треки в вантрэкс ↗",
+    "en": "Download tracks to Onetracks ↗"
+  },
+  {
+    "offset": 79192640,
+    "ru": "Нет сохранённых сессий",
+    "uk": "Немає збережених сесій",
+    "en": "No saved sessions"
+  },
+  {
+    "offset": 79192768,
+    "ru": "Все аккаунты уже добавлены",
+    "uk": "Усі акаунти вже додано",
+    "en": "All accounts are already added"
+  },
+  {
+    "offset": 79192912,
+    "ru": "Уже в системе",
+    "uk": "Уже в системі",
+    "en": "Already signed in"
+  },
+  {
+    "offset": 79193136,
+    "ru": "Нажмите для восстановления. Смахните влево для удаления.",
+    "uk": "Натисніть, щоб відновити. Проведіть вліво, щоб видалити.",
+    "en": "Tap to restore. Swipe left to delete."
+  },
+  {
+    "offset": 79193552,
+    "ru": "Сохранить активные аккаунты",
+    "uk": "Зберегти активні акаунти",
+    "en": "Save active accounts"
+  },
+  {
+    "offset": 79193872,
+    "ru": "Восстановить аккаунт?",
+    "uk": "Відновити акаунт?",
+    "en": "Restore account?"
+  },
+  {
+    "offset": 79194000,
+    "ru": "Сохраните аккаунты в iOS Keychain. После переустановки они вернутся в один клик.",
+    "uk": "Збережіть акаунти в iOS Keychain. Після перевстановлення вони повернуться в один клік.",
+    "en": "Save accounts to the iOS Keychain. After reinstalling, they come back in one tap."
+  },
+  {
+    "offset": 79194464,
+    "ru": "Поиск настроек...",
+    "uk": "Пошук налаштувань...",
+    "en": "Search settings..."
+  },
+  {
+    "offset": 79194576,
+    "ru": "Продолжайте писать друг другу каждый день — и огонёк загорится!",
+    "uk": "Продовжуйте писати одне одному щодня — і вогник загориться!",
+    "en": "Keep messaging each other every day — and the flame will light up!"
+  },
+  {
+    "offset": 79194960,
+    "ru": "🏆  Все вехи достигнуты!",
+    "uk": "🏆  Усі віхи досягнуто!",
+    "en": "🏆  All milestones reached!"
+  },
+  {
+    "offset": 79195088,
+    "ru": "🟢  Сегодня оба ответили — серия продолжается!",
+    "uk": "🟢  Сьогодні обидва відповіли — серія триває!",
+    "en": "🟢  Both replied today — the streak continues!"
+  },
+  {
+    "offset": 79195344,
+    "ru": "Пишите друг другу каждый день, чтобы не потерять серию!",
+    "uk": "Пишіть одне одному щодня, щоб не втратити серію!",
+    "en": "Message each other every day so you don't lose the streak!"
+  },
+  {
+    "offset": 79195616,
+    "ru": "Пишите друг другу каждый день, чтобы начать серию!",
+    "uk": "Пишіть одне одному щодня, щоб почати серію!",
+    "en": "Message each other every day to start a streak!"
+  },
+  {
+    "offset": 79195904,
+    "ru": "Ваша серия началась.",
+    "uk": "Ваша серія почалася.",
+    "en": "Your streak has begun."
+  },
+  {
+    "offset": 79196032,
+    "ru": "Анализ ещё выполняется",
+    "uk": "Аналіз ще виконується",
+    "en": "Analysis is still running"
+  },
+  {
+    "offset": 79196160,
+    "ru": "Ошибка разбора ответа",
+    "uk": "Помилка розбору відповіді",
+    "en": "Failed to parse the response"
+  },
+  {
+    "offset": 79196304,
+    "ru": "429 — Превышен лимит запросов",
+    "uk": "429 — Перевищено ліміт запитів",
+    "en": "429 — Request limit exceeded"
+  },
+  {
+    "offset": 79196464,
+    "ru": "401 — Недействительный API ключ",
+    "uk": "401 — Недійсний API-ключ",
+    "en": "401 — Invalid API key"
+  },
+  {
+    "offset": 79196608,
+    "ru": "Превышено время ожидания анализа",
+    "uk": "Перевищено час очікування аналізу",
+    "en": "Analysis timed out"
+  },
+  {
+    "offset": 79196768,
+    "ru": "404 — Не найдено в базе",
+    "uk": "404 — Не знайдено в базі",
+    "en": "404 — Not found in the database"
+  },
+  {
+    "offset": 79196912,
+    "ru": "Открыть полный отчёт",
+    "uk": "Відкрити повний звіт",
+    "en": "Open full report"
+  },
+  {
+    "offset": 79197040,
+    "ru": "VirusTotal анализирует...",
+    "uk": "VirusTotal аналізує...",
+    "en": "VirusTotal is analyzing..."
+  },
+  {
+    "offset": 79197152,
+    "ru": "Анализ завершён",
+    "uk": "Аналіз завершено",
+    "en": "Analysis complete"
+  },
+  {
+    "offset": 79197312,
+    "ru": "Выберите объект",
+    "uk": "Виберіть об'єкт",
+    "en": "Select an object"
+  },
+  {
+    "offset": 79197536,
+    "ru": "Обнаружено движками:",
+    "uk": "Виявлено рушіями:",
+    "en": "Detected by engines:"
+  },
+  {
+    "offset": 79197664,
+    "ru": "Загружаем файл...",
+    "uk": "Завантажуємо файл...",
+    "en": "Uploading the file..."
+  },
+  {
+    "offset": 79197776,
+    "ru": "VirusTotal думает...",
+    "uk": "VirusTotal думає...",
+    "en": "VirusTotal is thinking..."
+  },
+  {
+    "offset": 79197872,
+    "ru": "Отправляем запрос...",
+    "uk": "Надсилаємо запит...",
+    "en": "Sending the request..."
+  },
+  {
+    "offset": 79198064,
+    "ru": "Выберите объект для анализа",
+    "uk": "Виберіть об'єкт для аналізу",
+    "en": "Select an object to analyze"
+  },
+  {
+    "offset": 79198224,
+    "ru": "Отправляем файл",
+    "uk": "Надсилаємо файл",
+    "en": "Sending the file"
+  },
+  {
+    "offset": 79198384,
+    "ru": "Файл не загружен",
+    "uk": "Файл не завантажено",
+    "en": "File not uploaded"
+  },
+  {
+    "offset": 79198496,
+    "ru": "Ошибка конвертации аудио",
+    "uk": "Помилка конвертації аудіо",
+    "en": "Audio conversion error"
+  },
+  {
+    "offset": 79198640,
+    "ru": "401 — Недействительный API ключ ElevenLabs",
+    "uk": "401 — Недійсний API-ключ ElevenLabs",
+    "en": "401 — Invalid ElevenLabs API key"
+  },
+  {
+    "offset": 79198896,
+    "ru": "Разблокировать?",
+    "uk": "Розблокувати?",
+    "en": "Blocked on the wall"
+  },
+  {
+    "offset": 79199072,
+    "ru": "Список пуст",
+    "uk": "Список порожній",
+    "en": "The list is empty"
+  },
+  {
+    "offset": 79199232,
+    "ru": "Введите ваш API ключ из Google AI Studio (aistudio.google.com)",
+    "uk": "Введіть ваш API-ключ з Google AI Studio (aistudio.google.com)",
+    "en": "Enter your API key from Google AI Studio (aistudio.google.com)"
+  },
+  {
+    "offset": 79199456,
+    "ru": "Все записи о статусах онлайн/офлайн будут удалены. Продолжить?",
+    "uk": "Усі записи про статуси онлайн/офлайн буде видалено. Продовжити?",
+    "en": "All online/offline status records will be deleted. Continue?"
+  },
+  {
+    "offset": 79199808,
+    "ru": "Кэш удаленных сообщений очищен. Перезапустите Whitegram",
+    "uk": "Кеш видалених повідомлень очищено. Перезапустіть Whitegram",
+    "en": "The deleted messages cache has been cleared. Restart Whitegram"
+  },
+  {
+    "offset": 79200080,
+    "ru": "Скопировать в буфер или поделиться?",
+    "uk": "Скопіювати в буфер чи поділитися?",
+    "en": "Copy to clipboard or share?"
+  },
+  {
+    "offset": 79200256,
+    "ru": "История онлайна очищена.",
+    "uk": "Історію онлайну очищено.",
+    "en": "Online history cleared."
+  },
+  {
+    "offset": 79200384,
+    "ru": "Очистить кэш удалённых",
+    "uk": "Очистити кеш видалених",
+    "en": "Clear deleted cache"
+  },
+  {
+    "offset": 79200544,
+    "ru": "Ошибка смены иконки",
+    "uk": "Помилка зміни іконки",
+    "en": "Failed to change the icon"
+  },
+  {
+    "offset": 79200672,
+    "ru": "Хотя бы один раздел настроек должен оставаться видимым.",
+    "uk": "Принаймні один розділ налаштувань має залишатися видимим.",
+    "en": "At least one settings section must remain visible."
+  },
+  {
+    "offset": 79201024,
+    "ru": "Не удалось прочитать файл.",
+    "uk": "Не вдалося прочитати файл.",
+    "en": "Failed to read the file."
+  },
+  {
+    "offset": 79201184,
+    "ru": "Введите масштаб в % (50–100). По умолчанию: 100",
+    "uk": "Введіть масштаб у % (50–100). За замовчуванням: 100",
+    "en": "Enter the scale in % (50–100). Default: 100"
+  },
+  {
+    "offset": 79201408,
+    "ru": "⚠️ Видеообои могут приостанавливать фоновую музыку. Выберите действие",
+    "uk": "⚠️ Відеошпалери можуть призупиняти фонову музику. Виберіть дію",
+    "en": "⚠️ Video wallpapers may pause background music. Choose an action"
+  },
+  {
+    "offset": 79201840,
+    "ru": "Сохранённая история очищена.",
+    "uk": "Збережену історію очищено.",
+    "en": "Saved history cleared."
+  },
+  {
+    "offset": 79202048,
+    "ru": "Найти опцию Whitegram",
+    "uk": "Знайти опцію Whitegram",
+    "en": "Find a Whitegram option"
+  },
+  {
+    "offset": 79202192,
+    "ru": "Кэш измененных сообщений очищен. Перезапустите Whitegram",
+    "uk": "Кеш змінених повідомлень очищено. Перезапустіть Whitegram",
+    "en": "The edited messages cache has been cleared. Restart Whitegram"
+  },
+  {
+    "offset": 79202480,
+    "ru": "Введите юзернейм (без @, до 32 символов):",
+    "uk": "Введіть юзернейм (без @, до 32 символів):",
+    "en": "Enter a username (without @, up to 32 characters):"
+  },
+  {
+    "offset": 79202832,
+    "ru": "Не удалось сохранить настройки в Keychain",
+    "uk": "Не вдалося зберегти налаштування в Keychain",
+    "en": "Failed to save settings to the Keychain"
+  },
+  {
+    "offset": 79203104,
+    "ru": "Загрузка моделей...",
+    "uk": "Завантаження моделей...",
+    "en": "Loading models..."
+  },
+  {
+    "offset": 79203232,
+    "ru": "Введите ваш API ключ с virustotal.com",
+    "uk": "Введіть ваш API-ключ з virustotal.com",
+    "en": "Enter your API key from virustotal.com"
+  },
+  {
+    "offset": 79203408,
+    "ru": "Авто-форматирование при отправке",
+    "uk": "Авто-форматування під час надсилання",
+    "en": "Auto-formatting on send"
+  },
+  {
+    "offset": 79203648,
+    "ru": "Выберите AI провайдера",
+    "uk": "Виберіть AI-провайдера",
+    "en": "Choose an AI provider"
+  },
+  {
+    "offset": 79203776,
+    "ru": "Нельзя скрыть",
+    "uk": "Не можна сховати",
+    "en": "Cannot be hidden"
+  },
+  {
+    "offset": 79203872,
+    "ru": "Видео на фоне чата",
+    "uk": "Відео на фоні чату",
+    "en": "Video in the chat background"
+  },
+  {
+    "offset": 79204160,
+    "ru": "Файл имеет неверный формат.",
+    "uk": "Файл має неправильний формат.",
+    "en": "The file has an invalid format."
+  },
+  {
+    "offset": 79204352,
+    "ru": "Поділитися",
+    "uk": "Цвет бейджа острова",
+    "en": "Dynamic Island badge color"
+  },
+  {
+    "offset": 79204464,
+    "ru": "Введите масштаб в % (10–200). По умолчанию: 100",
+    "uk": "Введіть масштаб у % (10–200). За замовчуванням: 100",
+    "en": "Enter the scale in % (10–200). Default: 100"
+  },
+  {
+    "offset": 79204688,
+    "ru": "supportsAlternateIcons = false.\n\nПереустановите приложение через TrollStore или AltStore с платным аккаунтом разработчика.",
+    "uk": "supportsAlternateIcons = false.\n\nПеревстановіть застосунок через TrollStore або AltStore з платним акаунтом розробника.",
+    "en": "supportsAlternateIcons = false.\n\nReinstall the app via TrollStore or AltStore with a paid developer account."
+  },
+  {
+    "offset": 79205248,
+    "ru": "⚠️ Внимание: видеообои могут приостанавливать фоновую музыку из-за воспроизведения видео.",
+    "uk": "⚠️ Увага: відеошпалери можуть призупиняти фонову музику через відтворення відео.",
+    "en": "⚠️ Warning: video wallpapers may pause background music because of video playback."
+  },
+  {
+    "offset": 79205680,
+    "ru": "База пуста или не удалось прочитать файл.",
+    "uk": "База порожня або не вдалося прочитати файл.",
+    "en": "The database is empty or the file could not be read."
+  },
+  {
+    "offset": 79205904,
+    "ru": "История редактирования всех сообщений будет удалена. Продолжить?",
+    "uk": "Історію редагування всіх повідомлень буде видалено. Продовжити?",
+    "en": "The edit history of all messages will be deleted. Continue?"
+  },
+  {
+    "offset": 79206224,
+    "ru": "Перезапустите Whitegram для применения изменений",
+    "uk": "Перезапустіть Whitegram, щоб застосувати зміни",
+    "en": "Restart Whitegram to apply the changes"
+  },
+  {
+    "offset": 79206448,
+    "ru": "Смена иконки недоступна",
+    "uk": "Зміна іконки недоступна",
+    "en": "Changing the icon is unavailable"
+  },
+  {
+    "offset": 79206592,
+    "ru": "Метки удаления будут сброшены — сообщения, сохранённые функцией «Сохранять историю», снова станут невидимыми. Продолжить?",
+    "uk": "Мітки видалення буде скинуто — повідомлення, збережені функцією «Зберігати історію», знову стануть невидимими. Продовжити?",
+    "en": "Deletion marks will be reset — messages saved by the 'Store history' feature will become invisible again. Continue?"
+  },
+  {
+    "offset": 79207200,
+    "ru": "Введите ваш API ключ с elevenlabs.io",
+    "uk": "Введіть ваш API-ключ з elevenlabs.io",
+    "en": "Enter your API key from elevenlabs.io"
+  },
+  {
+    "offset": 79207376,
+    "ru": "Настройки Whitegram сохранены в Keychain",
+    "uk": "Налаштування Whitegram збережено в Keychain",
+    "en": "Whitegram settings saved to the Keychain"
+  },
+  {
+    "offset": 79207648,
+    "ru": "Очистить кэш изменённых",
+    "uk": "Очистити кеш змінених",
+    "en": "Clear edited cache"
+  },
+  {
+    "offset": 79207776,
+    "ru": "Настройки Whitegram успешно импортированы.",
+    "uk": "Налаштування Whitegram успішно імпортовано.",
+    "en": "Whitegram settings imported successfully."
+  },
+  {
+    "offset": 79208048,
+    "ru": "Все удалённые сообщения перестанут отображаться как удалённые. Продолжить?",
+    "uk": "Усі видалені повідомлення перестануть відображатися як видалені. Продовжити?",
+    "en": "All deleted messages will stop being shown as deleted. Continue?"
+  },
+  {
+    "offset": 79208416,
+    "ru": "В Keychain нет сохраненных настроек",
+    "uk": "У Keychain немає збережених налаштувань",
+    "en": "There are no saved settings in the Keychain"
+  },
+  {
+    "offset": 79208608,
+    "ru": "Очистить сохранённые чаты",
+    "uk": "Очистити збережені чати",
+    "en": "Clear saved chats"
+  },
+  {
+    "offset": 79208816,
+    "ru": "Не удалось прочитать файл настроек.",
+    "uk": "Не вдалося прочитати файл налаштувань.",
+    "en": "Failed to read the settings file."
+  },
+  {
+    "offset": 79209024,
+    "ru": "Введите API ключ с console.groq.com. Бесплатно!",
+    "uk": "Введіть API-ключ з console.groq.com. Безкоштовно!",
+    "en": "Enter an API key from console.groq.com. Free!"
+  },
+  {
+    "offset": 79209232,
+    "ru": "Введите желаемое количество (1–9 999 999):",
+    "uk": "Введіть бажану кількість (1–9 999 999):",
+    "en": "Enter the desired amount (1–9,999,999):"
+  },
+  {
+    "offset": 79209488,
+    "ru": "Вставьте API ключ",
+    "uk": "Вставте API-ключ",
+    "en": "Paste the API key"
+  },
+  {
+    "offset": 79209744,
+    "ru": "Имя устройства, которое Telegram передаёт серверу в initConnection. Вступит в силу после переподключения.",
+    "uk": "Ім'я пристрою, яке Telegram передає серверу в initConnection. Набуде чинності після перепідключення.",
+    "en": "The device name that Telegram sends to the server in initConnection. Takes effect after reconnecting."
+  },
+  {
+    "offset": 79210304,
+    "ru": "Выбрать новое видео",
+    "uk": "Вибрати нове відео",
+    "en": "Choose a new video"
+  },
+  {
+    "offset": 79210432,
+    "ru": "собеседником",
+    "uk": "співрозмовником",
+    "en": "the other person"
+  },
+  {
+    "offset": 79210688,
+    "ru": "Список установленных наборов: включить, выключить или удалить.",
+    "uk": "Список встановлених наборів: увімкнути, вимкнути або видалити.",
+    "en": "Your installed packs: enable, disable or delete them."
+  },
+  {
+    "offset": 79211008,
+    "ru": "Набор иконок заменяет значки по всему приложению. Одновременно может быть включён только один набор; всё, чего в наборе нет, остаётся стандартным.",
+    "uk": "Набір іконок замінює значки в усьому застосунку. Одночасно може бути увімкнено лише один набір; усе, чого в наборі немає, залишається стандартним.",
+    "en": "An icon pack replaces icons across the whole app. Only one pack can be active at a time; anything a pack does not include stays stock."
+  },
+  {
+    "offset": 79211696,
+    "ru": "Пока пусто",
+    "uk": "Поки порожньо",
+    "en": "Nothing here yet"
+  },
+  {
+    "offset": 79211792,
+    "ru": "Нажмите «+», чтобы добавить набор иконок из файла .wgicons или .zip.",
+    "uk": "Натисніть «+», щоб додати набір іконок із файлу .wgicons або .zip.",
+    "en": "Tap “+” to add an icon pack from a .wgicons or .zip file."
+  },
+  {
+    "offset": 79212080,
+    "ru": "Включённым может быть только один набор.",
+    "uk": "Увімкненим може бути лише один набір.",
+    "en": "Only one pack can be enabled at a time."
+  },
+  {
+    "offset": 79212288,
+    "ru": "Удалить набор иконок?",
+    "uk": "Видалити набір іконок?",
+    "en": "Delete this icon pack?"
+  },
+  {
+    "offset": 79212416,
+    "ru": "Набор «%@» включён",
+    "uk": "Набір «%@» увімкнено",
+    "en": "Icon pack “%@” enabled"
+  },
+  {
+    "offset": 79212544,
+    "ru": "Не удалось добавить набор",
+    "uk": "Не вдалося додати набір",
+    "en": "Could not add the pack"
+  },
+  {
+    "offset": 79212672,
+    "ru": "Это не файл набора иконок.",
+    "uk": "Це не файл набору іконок.",
+    "en": "That is not an icon pack file."
+  },
+  {
+    "offset": 79212800,
+    "ru": "В архиве нет файла manifest.json.",
+    "uk": "В архіві немає файлу manifest.json.",
+    "en": "The archive has no manifest.json."
+  },
+  {
+    "offset": 79212976,
+    "ru": "В архиве нет ни одной иконки в папке icons.",
+    "uk": "В архіві немає жодної іконки в теці icons.",
+    "en": "The archive has no icons in its icons folder."
+  },
+  {
+    "offset": 79213184,
+    "ru": "Архив повреждён или не читается.",
+    "uk": "Архів пошкоджено або не читається.",
+    "en": "The archive is damaged or unreadable."
+  },
+  {
+    "offset": 79213360,
+    "ru": "Что-то пошло не так.",
+    "uk": "Щось пішло не так.",
+    "en": "Something went wrong."
+  },
+  {
+    "offset": 79213552,
+    "ru": "Установить и включить",
+    "uk": "Встановити та увімкнути",
+    "en": "Install and enable"
+  },
+  {
+    "offset": 79213744,
+    "ru": "Предпросмотр недоступен",
+    "uk": "Попередній перегляд недоступний",
+    "en": "No preview available"
+  },
+  {
+    "offset": 79213888,
+    "ru": "Открыть как обычный файл",
+    "uk": "Відкрити як звичайний файл",
+    "en": "Open as a regular file"
+  },
+  {
+    "offset": 79214032,
+    "ru": "Набор помечен как цветной. Большинство иконок в приложении перекрашивается под тему, поэтому такие иконки могут отображаться сплошной заливкой.",
+    "uk": "Набір позначено як кольоровий. Більшість іконок у застосунку перефарбовується під тему, тому такі іконки можуть відображатися суцільною заливкою.",
+    "en": "This pack is marked as full-colour. Most icons in the app are recoloured by the theme, so they may appear as flat silhouettes."
+  },
+  {
+    "offset": 79215072,
+    "ru": "История доступна только для\nсообщений, изменённых после\nустановки Whitegram",
+    "uk": "Історія доступна лише для\nповідомлень, змінених після\nвстановлення Whitegram",
+    "en": "History is available only for\nmessages edited after\nWhitegram was installed"
+  },
+  {
+    "offset": 79215504,
+    "ru": "%@\nПрименится после перезапуска Whitegram.",
+    "uk": "%@\nЗастосується після перезапуску Whitegram.",
+    "en": "%@\nWill apply after restarting Whitegram."
+  },
+  {
+    "offset": 79215712,
+    "ru": "Не удалось открыть шрифт",
+    "uk": "Не вдалося відкрити шрифт",
+    "en": "Failed to Open Font"
+  },
+  {
+    "offset": 79216208,
+    "ru": "Настройка применится после перезапуска приложения",
+    "uk": "Налаштування застосується після перезапуску застосунку",
+    "en": "The setting will apply after restarting the app"
+  },
+  {
+    "offset": 79216656,
+    "ru": "Не удалось сохранить шрифт",
+    "uk": "Не вдалося зберегти шрифт",
+    "en": "Failed to Save Font"
+  },
+  {
+    "offset": 79216832,
+    "ru": "Текст с таймкодами\nне найден для этого трека",
+    "uk": "Текст із таймкодами\nне знайдено для цього треку",
+    "en": "Synced lyrics\nwere not found for this track"
+  },
+  {
+    "offset": 79217136,
+    "ru": "Нету ни одного подходящего трека",
+    "uk": "Немає жодного відповідного треку",
+    "en": "No matching tracks found"
+  },
+  {
+    "offset": 79217296,
+    "ru": "Показываю текст песни %@",
+    "uk": "Показую текст пісні %@",
+    "en": "Showing lyrics for %@"
+  },
+  {
+    "offset": 79217424,
+    "ru": "Привет! Я Whitegram AI на базе Groq (%@).\n\nЧем могу помочь? Могу читать переписки, отправлять сообщения, управлять профилем и многое другое.",
+    "uk": "Привіт! Я Whitegram AI на базі Groq (%@).\n\nЧим можу допомогти? Можу читати листування, надсилати повідомлення, керувати профілем і багато іншого.",
+    "en": "Hi! I am Whitegram AI powered by Groq (%@).\n\nHow can I help? I can read chats, send messages, manage your profile, and more."
+  },
+  {
+    "offset": 79218048,
+    "ru": "Привет! Я Whitegram AI на базе Google Gemini.\n\nЧем могу помочь? Могу читать переписки, отправлять сообщения, управлять профилем и многое другое.",
+    "uk": "Привіт! Я Whitegram AI на базі Google Gemini.\n\nЧим можу допомогти? Можу читати листування, надсилати повідомлення, керувати профілем і багато іншого.",
+    "en": "Hi! I am Whitegram AI powered by Google Gemini.\n\nHow can I help? I can read chats, send messages, manage your profile, and more."
+  },
+  {
+    "offset": 79218816,
+    "ru": "Удалить всю переписку?",
+    "uk": "Видалити все листування?",
+    "en": "Delete the whole conversation?"
+  },
+  {
+    "offset": 79218944,
+    "ru": "⚠️ Нет ответа от модели.",
+    "uk": "⚠️ Немає відповіді від моделі.",
+    "en": "⚠️ No response from the model."
+  },
+  {
+    "offset": 79219168,
+    "ru": "Включить скрытие просмотра сторис перед открытием?",
+    "uk": "Увімкнути приховування перегляду сторіс перед відкриттям?",
+    "en": "Enable hidden story views before opening?"
+  },
+  {
+    "offset": 79219616,
+    "ru": "Экспорт отменен",
+    "uk": "Експорт скасовано",
+    "en": "Export cancelled"
+  },
+  {
+    "offset": 79219728,
+    "ru": "Экспорт чата…",
+    "uk": "Експорт чату…",
+    "en": "Exporting chat…"
+  },
+  {
+    "offset": 79219824,
+    "ru": "Читаем историю…",
+    "uk": "Читаємо історію…",
+    "en": "Reading history…"
+  },
+  {
+    "offset": 79219936,
+    "ru": "Формируем файл…",
+    "uk": "Формуємо файл…",
+    "en": "Building file…"
+  },
+  {
+    "offset": 79220032,
+    "ru": "Готово: %d сообщений",
+    "uk": "Готово: %d повідомлень",
+    "en": "Done: %d messages"
+  },
+  {
+    "offset": 79220320,
+    "ru": "ЭКСПОРТ СООБЩЕНИЙ WHITEGRAM",
+    "uk": "ЕКСПОРТ ПОВІДОМЛЕНЬ WHITEGRAM",
+    "en": "WHITEGRAM MESSAGE EXPORT"
+  },
+  {
+    "offset": 79220512,
+    "ru": "Всего сообщений: %d",
+    "uk": "Усього повідомлень: %d",
+    "en": "Total messages: %d"
+  },
+  {
+    "offset": 79221120,
+    "ru": "Сколько сообщений отправить?",
+    "uk": "Скільки повідомлень надіслати?",
+    "en": "How many messages to send?"
+  },
+  {
+    "offset": 79221280,
+    "ru": "Введите число от 1 до 1000.",
+    "uk": "Введіть число від 1 до 1000.",
+    "en": "Enter a number from 1 to 1000."
+  },
+  {
+    "offset": 79221408,
+    "ru": "Интервал между сообщениями",
+    "uk": "Інтервал між повідомленнями",
+    "en": "Interval Between Messages"
+  },
+  {
+    "offset": 79221568,
+    "ru": "Секунды. 0 = отправить подряд без паузы.",
+    "uk": "Секунди. 0 = надіслати поспіль без паузи.",
+    "en": "Seconds. 0 = send consecutively without delay."
+  },
+  {
+    "offset": 79221776,
+    "ru": "Транскрипция использует Siri и может отправлять данные на серверы Apple.",
+    "uk": "Транскрипція використовує Siri і може надсилати дані на сервери Apple.",
+    "en": "Transcription uses Siri and may send data to Apple servers."
+  },
+  {
+    "offset": 79222096,
+    "ru": "Фотографии, предоставленные Telegram-пользователем @GunmeN_NemnuG.\nАвторские права находятся под его рукой.",
+    "uk": "Фотографії, надані Telegram-користувачем @GunmeN_NemnuG.\nАвторські права належать йому.",
+    "en": "Photos provided by Telegram user @GunmeN_NemnuG.\nCopyright belongs to him."
+  },
+  {
+    "offset": 79222512,
+    "ru": "Проблемы с подключением?",
+    "uk": "Проблеми з підключенням?",
+    "en": "Connection Problems?"
+  },
+  {
+    "offset": 79222704,
+    "ru": "Все прокси Telegram будут удалены, автоподключение отключено. Приложение подключится напрямую к Telegram.",
+    "uk": "Усі проксі Telegram буде видалено, автопідключення вимкнено. Застосунок підключиться напряму до Telegram.",
+    "en": "All Telegram proxies will be removed and auto-connect will be disabled. The app will connect directly to Telegram."
+  },
+  {
+    "offset": 79223216,
+    "ru": "Отправить видеосообщением",
+    "uk": "Надіслати відеоповідомленням",
+    "en": "Send as Video Message"
+  },
+  {
+    "offset": 79223376,
+    "ru": "С переводом",
+    "uk": "З перекладом",
+    "en": "With Translation"
+  },
+  {
+    "offset": 79223472,
+    "ru": "Незакрытые скобки или кавычки",
+    "uk": "Незакриті дужки або лапки",
+    "en": "Unclosed brackets or quotes"
+  },
+  {
+    "offset": 79223616,
+    "ru": "События Whitegram",
+    "uk": "Події Whitegram",
+    "en": "Whitegram Events"
+  },
+  {
+    "offset": 79223792,
+    "ru": "Обои были успешно добавлены",
+    "uk": "Шпалери успішно додано",
+    "en": "Wallpaper was added successfully"
+  },
+  {
+    "offset": 79223952,
+    "ru": "Ошибка добавления обоев: код %d",
+    "uk": "Помилка додавання шпалер: код %d",
+    "en": "Wallpaper add error: code %d"
+  },
+  {
+    "offset": 79224176,
+    "ru": "Восстановлено %d сообщ. из резервной копии.",
+    "uk": "Відновлено %d повід. з резервної копії.",
+    "en": "Restored %d msg. from backup."
+  },
+  {
+    "offset": 79224368,
+    "ru": "Выкл режим призрака",
+    "uk": "Вимкнути режим привида",
+    "en": "Disable Ghost Mode"
+  },
+  {
+    "offset": 79224496,
+    "ru": "Вкл режим призрака",
+    "uk": "Увімкнути режим привида",
+    "en": "Enable Ghost Mode"
+  },
+  {
+    "offset": 79224816,
+    "ru": "Сбросить визуальный текст",
+    "uk": "Скинути візуальний текст",
+    "en": "Reset Visual Text"
+  },
+  {
+    "offset": 79225152,
+    "ru": "Видимые сообщения восстановлены.",
+    "uk": "Видимі повідомлення відновлено.",
+    "en": "Visible messages restored."
+  },
+  {
+    "offset": 79225376,
+    "ru": "Изменение отображается только у вас",
+    "uk": "Зміна відображається лише у вас",
+    "en": "This change is visible only to you"
+  },
+  {
+    "offset": 79225568,
+    "ru": "История изменения",
+    "uk": "Бета-тестер Whitegram",
+    "en": "Whitegram Beta Tester"
+  },
+  {
+    "offset": 79225680,
+    "ru": "Взаимодействует с ботом",
+    "uk": "Взаємодіє з ботом",
+    "en": "Interacting with a bot"
+  },
+  {
+    "offset": 79225808,
+    "ru": "Слушать радиостанции",
+    "uk": "Слухати радіостанції",
+    "en": "Listen to radio stations"
+  },
+  {
+    "offset": 79226000,
+    "ru": "Взаимодействует с ботом %@",
+    "uk": "Взаємодіє з ботом %@",
+    "en": "Interacting with bot %@"
+  },
+  {
+    "offset": 79226192,
+    "ru": "Читает канал %@",
+    "uk": "Читає канал %@",
+    "en": "Reading channel %@"
+  },
+  {
+    "offset": 79226352,
+    "ru": "Разработчик Whitegram",
+    "uk": "Розробник Whitegram",
+    "en": "Whitegram Developer"
+  },
+  {
+    "offset": 79226768,
+    "ru": "Смена голоса не удалась",
+    "uk": "Зміна голосу не вдалася",
+    "en": "Voice Change Failed"
+  },
+  {
+    "offset": 79226960,
+    "ru": "Отправить оригинальный голос?",
+    "uk": "Надіслати оригінальний голос?",
+    "en": "Send the original voice message?"
+  },
+  {
+    "offset": 79227136,
+    "ru": "Ошибка сервера (%d). Проверьте настройки.",
+    "uk": "Помилка сервера (%d). Перевірте налаштування.",
+    "en": "Server error (%d). Check settings."
+  },
+  {
+    "offset": 79227360,
+    "ru": "Легенда видеозвонков",
+    "uk": "Легенда відеодзвінків",
+    "en": "Video Call Legend"
+  },
+  {
+    "offset": 79227488,
+    "ru": "Этот пользователь использует локальный Telegram Premium",
+    "uk": "Цей користувач використовує локальний Telegram Premium",
+    "en": "This user is using local Telegram Premium"
+  },
+  {
+    "offset": 79227824,
+    "ru": "Последний статус (%@)",
+    "uk": "Останній статус (%@)",
+    "en": "Last Status (%@)"
+  },
+  {
+    "offset": 79228016,
+    "ru": "Дата регистрации",
+    "uk": "Дата реєстрації",
+    "en": "Registration Date"
+  },
+  {
+    "offset": 79228112,
+    "ru": "Внешний вид сообщения",
+    "uk": "Вигляд повідомлення",
+    "en": "Message Appearance"
+  },
+  {
+    "offset": 79228240,
+    "ru": "Изменить внешний вид сообщения",
+    "uk": "Змінити вигляд повідомлення",
+    "en": "Change Message Appearance"
+  },
+  {
+    "offset": 79228512,
+    "ru": "Цвет градиента сверху",
+    "uk": "Колір градієнта згори",
+    "en": "Gradient color (top)"
+  },
+  {
+    "offset": 79228640,
+    "ru": "Цвет градиента снизу",
+    "uk": "Колір градієнта знизу",
+    "en": "Gradient color (bottom)"
+  },
+  {
+    "offset": 79229056,
+    "ru": "Добавить анимацию отправки",
+    "uk": "Додати анімацію надсилання",
+    "en": "Typing animation"
+  },
+  {
+    "offset": 79229472,
+    "ru": "Обычное сообщение собеседника",
+    "uk": "Звичайне повідомлення співрозмовника",
+    "en": "A regular incoming message"
+  },
+  {
+    "offset": 79229648,
+    "ru": "Так будет выглядеть ваше сообщение",
+    "uk": "Так виглядатиме ваше повідомлення",
+    "en": "This is how your message will look"
+  },
+  {
+    "offset": 79229872,
+    "ru": "Свой цвет пузыря",
+    "uk": "Власний колір бульбашки",
+    "en": "Custom bubble color"
+  },
+  {
+    "offset": 79229984,
+    "ru": "Верхний и нижний цвет градиента. Ваши сообщения увидят такими и другие пользователи Whitegram.",
+    "uk": "Верхній і нижній колір градієнта. Ваші повідомлення такими побачать й інші користувачі Whitegram.",
+    "en": "Top and bottom gradient colors. Other Whitegram users see your messages this way too."
+  },
+  {
+    "offset": 79230496,
+    "ru": "Форма меняет контур пузыря. Рассчитана на широкое горизонтальное сообщение.",
+    "uk": "Форма змінює контур бульбашки. Розрахована на широке горизонтальне повідомлення.",
+    "en": "The shape changes the bubble outline. It is designed for a wide horizontal message."
+  },
+  {
+    "offset": 79230896,
+    "ru": "Свечение вокруг пузыря",
+    "uk": "Сяйво навколо бульбашки",
+    "en": "Glow around the bubble"
+  },
+  {
+    "offset": 79231024,
+    "ru": "Печатать текст по буквам",
+    "uk": "Друкувати текст по літерах",
+    "en": "Type the text out letter by letter"
+  },
+  {
+    "offset": 79231184,
+    "ru": "При появлении сообщения текст набирается посимвольно.",
+    "uk": "Коли повідомлення з’являється, текст набирається посимвольно.",
+    "en": "When the message appears its text is typed out character by character."
+  },
+  {
+    "offset": 79231504,
+    "ru": "Правила взаимоисключающие: оформление действует либо только в этом чате, либо во всех сразу.",
+    "uk": "Правила взаємовиключні: оформлення діє або лише в цьому чаті, або в усіх одразу.",
+    "en": "The rules are mutually exclusive: the style applies either to this chat only or to every chat."
+  },
+  {
+    "offset": 79231936,
+    "ru": "Сбросить оформление",
+    "uk": "Скинути оформлення",
+    "en": "Reset appearance"
+  },
+  {
+    "offset": 79232064,
+    "ru": "Оформление не синхронизировано",
+    "uk": "Оформлення не синхронізовано",
+    "en": "Appearance not synced"
+  },
+  {
+    "offset": 79232224,
+    "ru": "Не удалось отправить оформление на сервер Whitegram: пока оно применяется только у вас, собеседники видят обычные сообщения. Whitegram попробует отправить его снова автоматически.",
+    "uk": "Не вдалося надіслати оформлення на сервер Whitegram: поки воно застосовується лише у вас. Whitegram спробує надіслати його знову автоматично.",
+    "en": "The appearance could not be uploaded to the Whitegram server: for now it applies only on your device, and other people see plain messages. Whitegram will retry automatically."
+  },
+  {
+    "offset": 79232976,
+    "ru": "Открывать чаты, скрытые по правилам Telegram",
+    "uk": "Відкривати чати, приховані за правилами Telegram",
+    "en": "Open chats hidden by Telegram rules"
+  },
+  {
+    "offset": 79234816,
+    "ru": "Использовать функции\nWhitegram",
+    "uk": "Використовувати функції\nWhitegram",
+    "en": "Use Whitegram\nfeatures"
+  },
+  {
+    "offset": 79235232,
+    "ru": "Описание Whitegram поддерживает форматирование, переносы строк, до 1200 символов и одну картинку. Его видят пользователи Whitegram; в обычном Telegram остаётся стандартное поле «о себе».",
+    "uk": "Опис Whitegram підтримує форматування, переноси рядків, до 1200 символів і одну картинку.",
+    "en": "The Whitegram bio supports formatting, line breaks, up to 1200 characters and one image. Whitegram users see it; in regular Telegram the standard bio is shown."
+  },
+  {
+    "offset": 79235872,
+    "ru": "Добавить спец. эффекты\nна задний фон профиля",
+    "uk": "Додати спецефекти\nна тло профілю",
+    "en": "Add special effects\nto the profile background"
+  },
+  {
+    "offset": 79236080,
+    "ru": "Включает раздел спецэффектов для фона вашего профиля. Выбранный эффект уходит в Whitegram и виден всем пользователям Whitegram, которые к вам зайдут; в обычном Telegram профиль выглядит как всегда.",
+    "uk": "Вмикає розділ спецефектів для тла вашого профілю. Обраний ефект бачать усі користувачі Whitegram.",
+    "en": "Enables special effects for your profile background. The chosen effect is shared through Whitegram and visible to every Whitegram user who opens your profile."
+  },
+  {
+    "offset": 79236768,
+    "ru": "Режим спец.эффектов",
+    "uk": "Режим спецефектів",
+    "en": "Special effects mode"
+  },
+  {
+    "offset": 79237024,
+    "ru": "Оставаться в чате после бана",
+    "uk": "Залишатися в чаті після бану",
+    "en": "Stay in chat after being banned"
+  },
+  {
+    "offset": 79237184,
+    "ru": "После бана чат не закрывается и не превращается в заглушку: сохраняются название и аватарка, остаётся вся уже загруженная переписка, а плашка «вы больше не участник» не показывается. Новые сообщения при этом не приходят — после бана сервер Telegram историю не отдаёт, и обойти это на стороне приложения нельзя.",
+    "uk": "Після бану чат не закривається: зберігаються назва й аватарка, залишається вся вже завантажена переписка. Нові повідомлення не надходять — після бану сервер історію не віддає.",
+    "en": "After a ban the chat is not closed and does not turn into a stub: the title and photo are kept, the already downloaded history stays readable, and the \"you are no longer a member\" bar is hidden. New messages will not arrive — after a ban Telegram's server stops serving that history, and no client can work around it."
+  },
+  {
+    "offset": 79238416,
+    "ru": "Диагностика Keychain",
+    "uk": "Діагностика Keychain",
+    "en": "Keychain diagnostics"
+  },
+  {
+    "offset": 79238688,
+    "ru": "Копии сессий хранятся в Keychain и переживают удаление приложения: после переустановки аккаунты можно вернуть без входа по коду.\n\nКопии доступны, только если приложение подписано тем же сертификатом — при смене подписи iOS не даёт прочитать прежние записи.",
+    "uk": "Копії сесій зберігаються в Keychain і переживають видалення застосунку: після перевстановлення акаунти можна повернути без входу за кодом.\n\nКопії доступні, лише якщо застосунок підписано тим самим сертифікатом.",
+    "en": "Session backups live in the Keychain and survive app deletion: after a reinstall you can restore accounts without an SMS login.\n\nThey stay readable only while the app is signed with the same certificate."
+  },
+  {
+    "offset": 79239840,
+    "ru": "Копий пока нет. Нажмите «Сохранить активные аккаунты».",
+    "uk": "Копій поки немає. Натисніть «Зберегти активні акаунти».",
+    "en": "No backups yet. Tap “Back up active accounts”."
+  },
+  {
+    "offset": 79240128,
+    "ru": "Уже добавлен",
+    "uk": "Вже додано",
+    "en": "Back up active accounts"
+  },
+  {
+    "offset": 79240224,
+    "ru": "Восстановить все аккаунты",
+    "uk": "Відновити всі акаунти",
+    "en": "Restore all accounts"
+  },
+  {
+    "offset": 79240368,
+    "ru": "Эти аккаунты уже подключены — восстанавливать нечего.",
+    "uk": "Ці акаунти вже підключено — відновлювати нічого.",
+    "en": "These accounts are already connected — nothing to restore."
+  },
+  {
+    "offset": 79240736,
+    "ru": "Создали записи аккаунтов — сейчас проверим ключи:",
+    "uk": "Створили записи акаунтів — зараз перевіримо ключі:",
+    "en": "Account records created — verifying the keys:"
+  },
+  {
+    "offset": 79240976,
+    "ru": "Уже подключены, копия не нужна:",
+    "uk": "Вже підключені, копія не потрібна:",
+    "en": "Already connected, no restore needed:"
+  },
+  {
+    "offset": 79241152,
+    "ru": "Запись аккаунта уже есть в приложении — не трогаем её, чтобы не потерять рабочий вход. Если аккаунт не работает, выйдите из него и восстановите заново:",
+    "uk": "Запис акаунта вже є в застосунку — не чіпаємо його, щоб не втратити робочий вхід. Якщо акаунт не працює, вийдіть із нього й відновіть заново:",
+    "en": "This account already has a record in the app — left untouched so a working login is not lost. If it does not work, log out of it and restore again:"
+  },
+  {
+    "offset": 79241856,
+    "ru": "Бот подключается обычным аккаунтом: вы читаете и отвечаете на его переписку прямо здесь. У ботовой сессии нет списка чатов на сервере — собеседники появляются по мере того, как пишут.",
+    "uk": "Бот підключається звичайним акаунтом: ви читаєте та відповідаєте на його листування просто тут.",
+    "en": "A bot connects as a regular account: you read and answer its chats right here. A bot session has no server-side chat list — people show up as they write."
+  },
+  {
+    "offset": 79242704,
+    "ru": "У этого аккаунта нет ботов. Заведите бота в @BotFather и войдите по токену.",
+    "uk": "У цього акаунта немає ботів. Створіть бота в @BotFather і увійдіть за токеном.",
+    "en": "This account owns no bots. Create one in @BotFather and sign in with its token."
+  },
+  {
+    "offset": 79243056,
+    "ru": "Войти по токену",
+    "uk": "Увійти за токеном",
+    "en": "Sign in with a token"
+  },
+  {
+    "offset": 79243168,
+    "ru": "Токен нигде не сохраняется: он используется один раз, чтобы получить ключ сессии. Новые боты создаются только в @BotFather.",
+    "uk": "Токен ніде не зберігається. Нові боти створюються лише в @BotFather.",
+    "en": "The token is never stored: it is used once to obtain a session key. New bots are created in @BotFather only."
+  },
+  {
+    "offset": 79243664,
+    "ru": "Строка вида 123456789:AA… из BotFather.",
+    "uk": "Рядок виду 123456789:AA… з BotFather.",
+    "en": "The 123456789:AA… string from BotFather."
+  },
+  {
+    "offset": 79243840,
+    "ru": "Нужны две части, разделённые знаком «|».",
+    "uk": "Потрібні дві частини, розділені «|».",
+    "en": "Two parts separated by “|” are required."
+  },
+  {
+    "offset": 79244048,
+    "ru": "Telegram не отдал токен этого бота приложению. Откройте @BotFather → /mybots → бот → API Token и вставьте строку сюда.",
+    "uk": "Telegram не віддав токен цього бота застосунку. Відкрийте @BotFather → /mybots → бот → API Token і вставте рядок сюди.",
+    "en": "Telegram refused to hand this bot's token to the app. Open @BotFather → /mybots → the bot → API Token and paste the string here."
+  },
+  {
+    "offset": 79244640,
+    "ru": "Вы под ботом. Сторис, звонки, контакты и статус «в сети» у ботовой сессии отсутствуют — это ограничение Telegram, а не приложения.",
+    "uk": "Ви під ботом. Сторіс, дзвінки та контакти ботовій сесії недоступні.",
+    "en": "You are signed in as a bot. Stories, calls, contacts and online status do not exist for a bot session — that is a Telegram limitation."
+  },
+  {
+    "offset": 79245280,
+    "ru": "Показывается в профиле бота под именем.",
+    "uk": "Показується у профілі бота під ім'ям.",
+    "en": "Shown in the bot profile under its name."
+  },
+  {
+    "offset": 79245520,
+    "ru": "Показывается на пустом экране чата до первого запуска.",
+    "uk": "Показується на порожньому екрані чату.",
+    "en": "Shown on the empty chat screen before the first start."
+  },
+  {
+    "offset": 79245840,
+    "ru": "По одной в строке: /start — описание",
+    "uk": "По одній у рядку: /start — опис",
+    "en": "One per line: /start — description"
+  },
+  {
+    "offset": 79246208,
+    "ru": "Подпись и ссылка через вертикальную черту.",
+    "uk": "Підпис і посилання через вертикальну риску.",
+    "en": "Label and URL separated by a vertical bar."
+  },
+  {
+    "offset": 79246432,
+    "ru": "Доступно %@, всего заработано %@",
+    "uk": "Доступно %@, усього зароблено %@",
+    "en": "Available %@, earned in total %@"
+  },
+  {
+    "offset": 79246704,
+    "ru": "Сервер не отдал статистику по звёздам этому боту.",
+    "uk": "Сервер не віддав статистику зірок.",
+    "en": "The server did not return Stars stats for this bot."
+  },
+  {
+    "offset": 79246928,
+    "ru": "Сервер отклонил изменение",
+    "uk": "Сервер відхилив зміну",
+    "en": "The server rejected the change"
+  },
+  {
+    "offset": 79247072,
+    "ru": "Возможности сессии",
+    "uk": "Можливості сесії",
+    "en": "Session capabilities"
+  },
+  {
+    "offset": 79247184,
+    "ru": "Проверить, что доступно",
+    "uk": "Перевірити, що доступно",
+    "en": "Check what is available"
+  },
+  {
+    "offset": 79247376,
+    "ru": "Ограничения ботов не описаны в схеме API: метод есть у всех, а ответит ли сервер — выясняется только запросом. Проверка ничего не меняет, только читает.",
+    "uk": "Обмеження ботів не описані у схемі API — перевірка лише читає.",
+    "en": "Bot restrictions are not encoded in the API schema: a method exists for everyone, but whether the server answers is only found out by asking. The check only reads."
+  },
+  {
+    "offset": 79247952,
+    "ru": "Метод только для обычных аккаунтов — боту не положен. Это норма, а не ошибка.",
+    "uk": "Метод лише для звичайних акаунтів — боту він не належить. Це норма, а не помилка.",
+    "en": "A user-only method — bots do not get it. This is normal, not an error."
+  },
+  {
+    "offset": 79248336,
+    "ru": "Входим ботом",
+    "uk": "Входимо ботом",
+    "en": "Signing in as a bot"
+  },
+  {
+    "offset": 79248432,
+    "ru": "Меняем токен на ключ сессии. Номер телефона не нужен — это займёт пару секунд.",
+    "uk": "Змінюємо токен на ключ сесії. Номер телефону не потрібен — це займе кілька секунд.",
+    "en": "Exchanging the token for a session key. No phone number needed — this takes a couple of seconds."
+  },
+  {
+    "offset": 79248848,
+    "ru": "Пока никто не написал",
+    "uk": "Поки ніхто не написав",
+    "en": "Nobody has written yet"
+  },
+  {
+    "offset": 79248976,
+    "ru": "У ботовой сессии нет списка чатов на сервере — Telegram его боту не отдаёт. Собеседники появятся здесь сами, как только напишут боту.",
+    "uk": "У ботової сесії немає списку чатів на сервері — Telegram його боту не віддає. Співрозмовники з'являться тут самі, щойно напишуть боту.",
+    "en": "A bot session has no server-side chat list — Telegram does not hand one to bots. People will appear here on their own as soon as they write to the bot."
+  },
+  {
+    "offset": 79249616,
+    "ru": "Выйти из бота?",
+    "uk": "Вийти з бота?",
+    "en": "Log out of the bot?"
+  },
+  {
+    "offset": 79249712,
+    "ru": "Аккаунт будет убран только из Whitegram. Сам бот и его токен в BotFather останутся как есть — его можно добавить снова.",
+    "uk": "Акаунт буде прибрано лише з Whitegram. Сам бот і його токен залишаться.",
+    "en": "The account will be removed from Whitegram only. The bot itself and its BotFather token stay as they are — you can add it again."
+  },
+  {
+    "offset": 79250192,
+    "ru": "Не удалось войти",
+    "uk": "Не вдалося увійти",
+    "en": "Could not sign in"
+  },
+  {
+    "offset": 79250304,
+    "ru": "Этот бот уже добавлен в приложение.",
+    "uk": "Цього бота вже додано.",
+    "en": "This bot is already added."
+  },
+  {
+    "offset": 79250464,
+    "ru": "Токен недействителен. Проверьте его в BotFather.",
+    "uk": "Токен недійсний.",
+    "en": "The token is invalid. Check it in BotFather."
+  },
+  {
+    "offset": 79250640,
+    "ru": "Слишком много попыток. Повторите через %d с.",
+    "uk": "Забагато спроб. Повторіть через %d с.",
+    "en": "Too many attempts. Try again in %d s."
+  },
+  {
+    "offset": 79250848,
+    "ru": "Сервер отклонил api_id этой сборки.",
+    "uk": "Сервер відхилив api_id.",
+    "en": "The server rejected this build's api_id."
+  },
+  {
+    "offset": 79251008,
+    "ru": "Похоже, это не токен бота.",
+    "uk": "Схоже, це не токен бота.",
+    "en": "That does not look like a bot token."
+  },
+  {
+    "offset": 79251152,
+    "ru": "Нет связи с сервером.",
+    "uk": "Немає зв'язку із сервером.",
+    "en": "No connection to the server."
+  },
+  {
+    "offset": 79251280,
+    "ru": "Этим ботом владеет другой аккаунт.",
+    "uk": "Цим ботом володіє інший акаунт.",
+    "en": "This bot belongs to another account."
+  },
+  {
+    "offset": 79251520,
+    "ru": "Сервер ответил ошибкой: %@",
+    "uk": "Сервер відповів помилкою: %@",
+    "en": "The server returned an error: %@"
+  },
+  {
+    "offset": 79251680,
+    "ru": "Сервер отклонил ключ",
+    "uk": "Сервер відхилив ключ",
+    "en": "The server rejected the key"
+  },
+  {
+    "offset": 79251808,
+    "ru": "Записи созданы, но эти аккаунты не поднялись: Telegram отклонил сохранённый ключ. Так бывает, если сессию завершили с другого устройства или менялся облачный пароль. Для них нужен обычный вход по коду.",
+    "uk": "Записи створено, але ці акаунти не піднялися: Telegram відхилив збережений ключ. Для них потрібен звичайний вхід за кодом.",
+    "en": "The records were created, but these accounts did not come up: Telegram rejected the stored key. This happens when the session was terminated elsewhere or the cloud password changed. They need a normal login."
+  },
+  {
+    "offset": 79252672,
+    "ru": "Удалить все копии",
+    "uk": "Видалити всі копії",
+    "en": "Delete all backups"
+  },
+  {
+    "offset": 79252800,
+    "ru": "Все резервные копии сессий будут удалены из Keychain. Отменить нельзя.",
+    "uk": "Усі резервні копії сесій буде видалено з Keychain. Скасувати неможливо.",
+    "en": "All session backups will be removed from the Keychain. This cannot be undone."
+  },
+  {
+    "offset": 79253136,
+    "ru": "Нажмите на аккаунт, чтобы восстановить его отдельно или убрать копию.",
+    "uk": "Натисніть на акаунт, щоб відновити його окремо або прибрати копію.",
+    "en": "Tap an account to restore it individually or remove its backup."
+  },
+  {
+    "offset": 79253520,
+    "ru": "Месяц (1–12), можно оставить пустым",
+    "uk": "Місяць (1–12), можна лишити порожнім",
+    "en": "Month (1–12), optional"
+  },
+  {
+    "offset": 79253680,
+    "ru": "День (1–31), можно оставить пустым",
+    "uk": "День (1–31), можна лишити порожнім",
+    "en": "Day (1–31), optional"
+  },
+  {
+    "offset": 79253840,
+    "ru": "Укажите, когда был зарегистрирован аккаунт. Достаточно одного года — месяц и день можно не заполнять. Эта дата будет видна в вашем профиле другим пользователям Whitegram и поможет точнее показывать примерные даты регистрации у остальных.",
+    "uk": "Вкажіть, коли було зареєстровано акаунт. Досить одного року — місяць і день можна не заповнювати.",
+    "en": "Tell us when this account was registered. The year alone is enough — month and day are optional. The date is shown in your profile to other Whitegram users and helps estimate registration dates for everyone else more precisely."
+  },
+  {
+    "offset": 79254736,
+    "ru": "Этот аккаунт внесён в нашу базу данных мошенников. Этот человек может вас обмануть, украсть ваш аккаунт или NFT подарки. Будьте крайне осторожны!",
+    "uk": "Цей акаунт внесено до нашої бази шахраїв. Ця людина може вас обманути, вкрасти ваш акаунт або NFT-подарунки. Будьте дуже обережні!",
+    "en": "This account is listed in our scammer database. This person may deceive you or steal your account or NFT gifts. Be extremely careful!"
+  },
+  {
+    "offset": 79255392,
+    "ru": "Этот пользователь больше не сможет видеть вашу стену и писать на ней.",
+    "uk": "Цей користувач більше не зможе бачити вашу стіну та писати на ній.",
+    "en": "This user will no longer be able to see your wall or post on it."
+  },
+  {
+    "offset": 79255792,
+    "ru": "Не удалось заблокировать пользователя. Проверьте соединение с Whitegram API.",
+    "uk": "Не вдалося заблокувати користувача. Перевірте з'єднання з Whitegram API.",
+    "en": "Failed to block user. Check your Whitegram API connection."
+  },
+  {
+    "offset": 79256240,
+    "ru": "Вы были заблокированы этим пользователем",
+    "uk": "Вас заблокував цей користувач",
+    "en": "You were blocked by this user"
+  },
+  {
+    "offset": 79256496,
+    "ru": "Удалить выбранные: %d",
+    "uk": "Видалити вибрані: %d",
+    "en": "Delete Selected: %d"
+  },
+  {
+    "offset": 79256624,
+    "ru": "Стена выключена",
+    "uk": "Стіна вимкнена",
+    "en": "Wall is disabled"
+  },
+  {
+    "offset": 79256752,
+    "ru": "Стена пока пустая",
+    "uk": "Стіна поки порожня",
+    "en": "The wall is empty"
+  },
+  {
+    "offset": 79256880,
+    "ru": "Написать на стене…",
+    "uk": "Написати на стіні…",
+    "en": "Write on the wall…"
+  },
+  {
+    "offset": 79257008,
+    "ru": "Выбрано: %d",
+    "uk": "Вибрано: %d",
+    "en": "left"
+  }
+]
