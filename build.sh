@@ -6,7 +6,6 @@ BUILD_DIR="$ROOT/build"
 PATCH_DIR="$BUILD_DIR/patched"
 mkdir -p "$BUILD_DIR" "$PATCH_DIR"
 
-# Merge the small runtime-only catalog additions into the embedded locale packs.
 python3 - "$ROOT" <<'PY'
 from pathlib import Path
 import json, sys
@@ -57,7 +56,9 @@ def replace_function(text: str, signature: str, replacement: str) -> str:
                 return text[:start] + replacement + text[i + 1:]
     raise SystemExit(f"closing brace not found: {signature}")
 
-# ---- Legacy-safe path for iOS 15-25; dedicated safe startup for iOS 26+ ----
+# iOS 15-25 keeps the already-tested ultra-lean path.
+# iOS 26+ skips every Foundation/UIKit runtime mutation in the dylib constructor
+# and delegates installation to the delayed compatibility module.
 tweak = (root / "Sources" / "Tweak.m").read_text(encoding="utf-8")
 tweak = tweak.replace('WGTranslateString(', 'WGTranslateStringExact(')
 tweak = tweak.replace('WGTranslateAttributedString(', 'WGTranslateAttributedStringExact(')
@@ -67,7 +68,6 @@ tweak = tweak.replace(
 )
 tweak = tweak.replace('            WGInstallWhitegramLanguagePickerHookWithRetry(0);\n', '')
 tweak = tweak.replace('            WGScheduleSafeUIKitScan(0.30);\n', '')
-
 tweak = tweak.replace(
     '#pragma mark - Entry point\n',
     '#pragma mark - Entry point\n\nextern void WGIOS26InstallCompatibilityHooksLater(void);\n'
@@ -79,16 +79,9 @@ tweak = replace_function(
     @autoreleasepool {
         NSInteger major = NSProcessInfo.processInfo.operatingSystemVersion.majorVersion;
         if (major >= 26) {
-            /*
-             * iOS 26: never touch Foundation's attributed-string class cluster
-             * from the dylib constructor. Install a single direct-IMP hook only
-             * after UIApplication has launched.
-             */
             WGIOS26InstallCompatibilityHooksLater();
             return;
         }
-
-        /* iOS 15-25: preserve the already-tested ultra-lean runtime. */
         WGInstallAttributedStringHooks();
         WGInstallUIKitHooks();
     }
@@ -105,7 +98,6 @@ if 'major >= 26' not in tweak or 'WGIOS26InstallCompatibilityHooksLater' not in 
     raise SystemExit('iOS 26 compatibility branch missing')
 (out / "TweakLean.m").write_text(tweak, encoding="utf-8")
 
-# ---- Strict O(1) exact translation hot path ----
 fast = (root / "Sources" / "WGTranslationsFast.m").read_text(encoding="utf-8")
 fast = replace_function(
     fast,
@@ -166,8 +158,7 @@ fast = replace_function(
 }'''
 )
 (out / "WGTranslationsFast.m").write_text(fast, encoding="utf-8")
-
-print('Prepared dual runtime: tested iOS15-25 path + delayed direct-IMP iOS26 path')
+print('Prepared dual runtime: iOS15-25 tested path + iOS26 delayed direct-IMP path')
 PY
 
 ACTIVE_SOURCES=(
@@ -177,7 +168,6 @@ ACTIVE_SOURCES=(
   "$ROOT/Sources/WGLanguageGesturesLean.m"
 )
 
-# Visible icon/runtime-network paths are forbidden from the linked binary.
 for forbidden in \
   'systemImageNamed:@"globe"' \
   'iKiraPlus.WhitegramLanguages' \
@@ -193,7 +183,6 @@ for forbidden in \
   fi
 done
 
-# iOS 26 source must not use the old selector-alias class-cluster chain.
 if grep -Fq 'wg_nf_original_initWithString:attributes:' "$ROOT/Sources/WGIOS26Compatibility.m"; then
   echo "ERROR: legacy attributed-string alias chain leaked into iOS26 path" >&2
   exit 1
@@ -252,9 +241,12 @@ fi
 grep -Fq 'Telegram : @ikiraplus' "$STRINGS_FILE"
 grep -Fq 'Whitegram Features Language' "$STRINGS_FILE"
 grep -Fq 'Apariencia' "$STRINGS_FILE"
-grep -Fq 'WGIOS26InstallCompatibilityHooksLater' "$STRINGS_FILE"
+
+# Function names are Mach-O symbols, not guaranteed to appear in `strings`.
+nm -gU "$BIN" > "$BUILD_DIR/symbols.txt"
+grep -Fq '_WGIOS26InstallCompatibilityHooksLater' "$BUILD_DIR/symbols.txt"
 
 file "$BIN"
 otool -L "$BIN"
-echo "IOS26_COMPAT_OK: class-cluster hook deferred until launch, single direct original IMP, no startup scan/polling/network/icon"
+echo "IOS26_COMPAT_OK: no constructor-time class-cluster swizzle on iOS26; delayed single direct-IMP hook after launch"
 echo "Built: $BIN"
