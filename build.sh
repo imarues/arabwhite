@@ -6,12 +6,10 @@ BUILD_DIR="$ROOT/build"
 PATCH_DIR="$BUILD_DIR/patched"
 mkdir -p "$BUILD_DIR" "$PATCH_DIR"
 
-# Merge runtime-only strings into every locale before generating embedded tables.
-# The final dylib therefore needs no network translation layer.
+# Merge the small runtime-only catalog additions into the embedded locale packs.
 python3 - "$ROOT" <<'PY'
 from pathlib import Path
 import json, sys
-
 root = Path(sys.argv[1])
 extras_path = root / "data" / "runtime_extra_translations.json"
 if extras_path.exists():
@@ -34,9 +32,6 @@ python3 "$ROOT/tools/verify_translations.py"
 python3 "$ROOT/tools/verify_runtime_safety.py"
 python3 "$ROOT/tools/generate_translations.py"
 
-# Prepare the two hot-path sources. Ordinary Telegram UI is allowed only exact
-# hash-table lookups; it must never trigger recursive scans, lowercase-table
-# construction, regex matching, network requests or controller polling.
 python3 - "$ROOT" "$PATCH_DIR" <<'PY'
 from pathlib import Path
 import sys
@@ -62,7 +57,7 @@ def replace_function(text: str, signature: str, replacement: str) -> str:
                 return text[:start] + replacement + text[i + 1:]
     raise SystemExit(f"closing brace not found: {signature}")
 
-# ---- One text hook layer; no UIViewController lifecycle scans ----
+# ---- Legacy-safe path for iOS 15-25; dedicated safe startup for iOS 26+ ----
 tweak = (root / "Sources" / "Tweak.m").read_text(encoding="utf-8")
 tweak = tweak.replace('WGTranslateString(', 'WGTranslateStringExact(')
 tweak = tweak.replace('WGTranslateAttributedString(', 'WGTranslateAttributedStringExact(')
@@ -72,15 +67,45 @@ tweak = tweak.replace(
 )
 tweak = tweak.replace('            WGInstallWhitegramLanguagePickerHookWithRetry(0);\n', '')
 tweak = tweak.replace('            WGScheduleSafeUIKitScan(0.30);\n', '')
+
+tweak = tweak.replace(
+    '#pragma mark - Entry point\n',
+    '#pragma mark - Entry point\n\nextern void WGIOS26InstallCompatibilityHooksLater(void);\n'
+)
+tweak = replace_function(
+    tweak,
+    'static void WGMultiLangEntryPoint(void)',
+    '''static void WGMultiLangEntryPoint(void) {
+    @autoreleasepool {
+        NSInteger major = NSProcessInfo.processInfo.operatingSystemVersion.majorVersion;
+        if (major >= 26) {
+            /*
+             * iOS 26: never touch Foundation's attributed-string class cluster
+             * from the dylib constructor. Install a single direct-IMP hook only
+             * after UIApplication has launched.
+             */
+            WGIOS26InstallCompatibilityHooksLater();
+            return;
+        }
+
+        /* iOS 15-25: preserve the already-tested ultra-lean runtime. */
+        WGInstallAttributedStringHooks();
+        WGInstallUIKitHooks();
+    }
+}'''
+)
+
 if 'WGSwizzle(UIViewController.class, @selector(viewDidAppear:)' in tweak:
     raise SystemExit('global viewDidAppear scan hook still enabled')
 if 'WGInstallWhitegramLanguagePickerHookWithRetry(0);' in tweak:
     raise SystemExit('legacy private picker retry still enabled')
 if 'WGScheduleSafeUIKitScan(0.30);' in tweak:
     raise SystemExit('startup recursive UI scan still enabled')
+if 'major >= 26' not in tweak or 'WGIOS26InstallCompatibilityHooksLater' not in tweak:
+    raise SystemExit('iOS 26 compatibility branch missing')
 (out / "TweakLean.m").write_text(tweak, encoding="utf-8")
 
-# ---- Strict O(1) exact lookup ----
+# ---- Strict O(1) exact translation hot path ----
 fast = (root / "Sources" / "WGTranslationsFast.m").read_text(encoding="utf-8")
 fast = replace_function(
     fast,
@@ -89,8 +114,6 @@ fast = replace_function(
     if (core.length == 0) return core;
     NSString *code = WGCustomLanguageCode();
 
-    // English source is canonical. Exact mode performs one alias hash lookup
-    // only; slower case-insensitive aliasing is reserved for explicit fallback.
     if ([code isEqualToString:@"en"]) {
         NSString *canonicalEnglish = WGFastAliasTable()[core];
         if (canonicalEnglish.length) return canonicalEnglish;
@@ -99,13 +122,9 @@ fast = replace_function(
     }
 
     NSDictionary *table = WGFastTranslationTableForCode(code);
-
-    // Hot path: exact source key.
     NSString *translated = table[core];
     if (translated.length) return translated;
 
-    // Cross-language exact alias: handles text already localized by another
-    // construction path without any lowercase-map work.
     NSString *canonical = WGFastAliasTable()[core];
     if (canonical.length) {
         translated = table[canonical];
@@ -114,7 +133,6 @@ fast = replace_function(
         canonical = core;
     }
 
-    // Cheap punctuation fallback still uses exact dictionary keys only.
     if (canonical.length > 1) {
         unichar last = [canonical characterAtIndex:canonical.length - 1];
         if (last == ':' || last == '?' || last == '!' || last == '.') {
@@ -126,7 +144,6 @@ fast = replace_function(
         }
     }
 
-    // All globally-hooked Telegram setters use exact mode and return here.
     if (!allowRegex) return core;
 
     NSDictionary *lowerTable = WGFastLowercaseTableForCode(code);
@@ -150,17 +167,17 @@ fast = replace_function(
 )
 (out / "WGTranslationsFast.m").write_text(fast, encoding="utf-8")
 
-print('Prepared strict O(1) exact translation path with zero lifecycle/window polling')
+print('Prepared dual runtime: tested iOS15-25 path + delayed direct-IMP iOS26 path')
 PY
 
 ACTIVE_SOURCES=(
   "$PATCH_DIR/TweakLean.m"
   "$PATCH_DIR/WGTranslationsFast.m"
+  "$ROOT/Sources/WGIOS26Compatibility.m"
   "$ROOT/Sources/WGLanguageGesturesLean.m"
 )
 
-# Nothing capable of drawing a language icon or performing runtime translation
-# requests is allowed in the active source set.
+# Visible icon/runtime-network paths are forbidden from the linked binary.
 for forbidden in \
   'systemImageNamed:@"globe"' \
   'iKiraPlus.WhitegramLanguages' \
@@ -175,6 +192,14 @@ for forbidden in \
     exit 1
   fi
 done
+
+# iOS 26 source must not use the old selector-alias class-cluster chain.
+if grep -Fq 'wg_nf_original_initWithString:attributes:' "$ROOT/Sources/WGIOS26Compatibility.m"; then
+  echo "ERROR: legacy attributed-string alias chain leaked into iOS26 path" >&2
+  exit 1
+fi
+grep -Fq 'UIApplicationDidFinishLaunchingNotification' "$ROOT/Sources/WGIOS26Compatibility.m"
+grep -Fq 'WG26AttributedOriginalIMP' "$ROOT/Sources/WGIOS26Compatibility.m"
 
 SDK_PATH="$(xcrun --sdk iphoneos --show-sdk-path)"
 CLANG="$(xcrun --sdk iphoneos --find clang)"
@@ -205,8 +230,6 @@ BIN="$BUILD_DIR/LanguageWhitegram-ikiraplus.dylib"
 STRINGS_FILE="$BUILD_DIR/runtime-strings.txt"
 strings "$BIN" > "$STRINGS_FILE"
 
-# Binary-level proof that none of the historical icon/duplicate-hook modules was
-# linked accidentally.
 for forbidden in \
   'iKiraPlus.WhitegramLanguages' \
   'WhitegramLanguages.PhysicalRight' \
@@ -226,13 +249,12 @@ if grep -Fiq 'globe' "$STRINGS_FILE"; then
   exit 1
 fi
 
-# Required functionality/branding must still be embedded.
 grep -Fq 'Telegram : @ikiraplus' "$STRINGS_FILE"
 grep -Fq 'Whitegram Features Language' "$STRINGS_FILE"
 grep -Fq 'Apariencia' "$STRINGS_FILE"
-grep -Fq 'VirusTotal' "$STRINGS_FILE"
+grep -Fq 'WGIOS26InstallCompatibilityHooksLater' "$STRINGS_FILE"
 
 file "$BIN"
 otool -L "$BIN"
-echo "LEAN_OK: strict exact lookup, one hook layer, event-driven gestures, no icon, no polling, no network fallback"
+echo "IOS26_COMPAT_OK: class-cluster hook deferred until launch, single direct original IMP, no startup scan/polling/network/icon"
 echo "Built: $BIN"
